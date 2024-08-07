@@ -1,4 +1,4 @@
-//! # Module containing the [BitBoard] struct
+//! # Contains the [BitBoard] struct
 //! The BitBoard struct represents a bitboard used for storing the state of the board.
 //! The bitboard is a 9-bit integer where each bit represents a square on the board.
 //!
@@ -14,25 +14,25 @@ use std::ops::{BitAnd, BitAndAssign, BitOr, BitOrAssign, BitXor, BitXorAssign, N
 /// # Fields
 /// * `0` - The bitboard value as an u16
 #[derive(Copy, Clone, Debug, PartialEq)]
-pub struct BitBoard(u16);
+pub struct BitBoard(
+    /// 9-bit integer encoded as an u16, the upper 7 bits are always unset
+    u16,
+);
 
 impl BitBoard {
     /// Creates a new BitBoard with the given value
     /// # Arguments
-    /// * `n` - The value of the bitboard, must be in 0..=1023
+    /// * `n` - The value of the bitboard, must be in 0..2^9
     pub fn new(n: u16) -> Self {
-        debug_assert!(n < 1024, "BitBoard value out of bounds");
+        debug_assert!(n < u16::pow(2, 9), "BitBoard value out of bounds");
         BitBoard(n)
     }
 
-    /// Returns a new BitBoard with no squares set
-    pub const EMPTY: BitBoard = BitBoard(0);
+    /// Contains a BitBoard with no squares set
+    pub const EMPTY: Self = BitBoard(0);
 
-    /// Returns the index of the first set square in the board
-    ///
+    /// Returns the index of the first set square in the board.
     /// If no square is set, returns None.
-    ///
-    /// Used to iterate over the board
     /// # Returns
     /// The index of the first set square in the board
     pub fn first_square(&self) -> Option<u8> {
@@ -43,17 +43,26 @@ impl BitBoard {
         }
     }
 
-    /// Pops the first set square from the board
-    ///
+    /// Pops the first set square from the board.
     /// If no square is set, returns None.
-    ///
-    /// Used to iterate over the board
     /// # Returns
     /// The index of the first set square in the board
     pub fn pop_first_square(&mut self) -> Option<u8> {
         let square = self.first_square();
         square.inspect(|s| self.0 ^= 1 << *s as u16);
         square
+    }
+}
+
+impl From<BitBoard> for u32 {
+    fn from(board: BitBoard) -> Self {
+        board.0 as u32
+    }
+}
+
+impl From<BitBoard> for u16 {
+    fn from(board: BitBoard) -> Self {
+        board.0
     }
 }
 
@@ -116,6 +125,15 @@ impl BitXorAssign for BitBoard {
     }
 }
 
+impl Default for BitBoard {
+    fn default() -> Self {
+        BitBoard::EMPTY
+    }
+}
+
+/// # Iterator over the set squares in a BitBoard
+///
+/// The iterator returns the index of the set squares in the board.
 pub struct BitBoardIterator {
     board: BitBoard,
 }

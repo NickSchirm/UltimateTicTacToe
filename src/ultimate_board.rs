@@ -1,10 +1,10 @@
-//! # Module containing the [UltimateBoard] struct
-//! The UltimateBoard struct represents the board of the ultimate Tic Tac Toe game.
+//! # Contains the [UltimateBoard] struct
+//! The UltimateBoard struct represents the board of the [Ultimate Tic Tac Toe game](https://en.wikipedia.org/wiki/Ultimate_tic-tac-toe).
 //! The board is represented as a 3x3 array of [Board] structs.
 //!
 //! The UltimateBoard also contains the status of the game and the status of each board as well as the next board to play on.
 //!
-//! The board contains a Zobrist hash used storing the evaluation of the board in a [Transposition table](https://www.chessprogramming.org/Transposition_Table).
+//! The board contains a [Zobrist hash](https://www.chessprogramming.org/Zobrist_Hashing) used to store the evaluation of a [Heuristic](crate::heuristic::Heuristic) in a [Transposition table](https://www.chessprogramming.org/Transposition_Table).
 
 use std::fmt;
 use std::fmt::Display;
@@ -33,6 +33,42 @@ const WIN_POSITIONS: [[u8; 3]; 8] = [
     [2, 4, 6],
 ];
 
+/// All possible partial win positions for the ultimate board
+const PARTIAL_WIN_POSITIONS: [[u8; 2]; 24] = [
+    // ROW 1
+    [0, 1],
+    [0, 2],
+    [1, 2],
+    // ROW 2
+    [3, 4],
+    [3, 5],
+    [4, 5],
+    // ROW 3
+    [6, 7],
+    [6, 8],
+    [7, 8],
+    // COLUMN 1
+    [0, 3],
+    [0, 6],
+    [3, 6],
+    // COLUMN 2
+    [1, 4],
+    [1, 7],
+    [4, 7],
+    // COLUMN 3
+    [2, 5],
+    [2, 8],
+    [5, 8],
+    // DIAGONAL 1
+    [0, 4],
+    [0, 8],
+    [4, 8],
+    // DIAGONAL 2
+    [2, 4],
+    [2, 6],
+    [4, 6],
+];
+
 /// Number of squares in Ultimate Tic Tac Toe
 const NUM_POSITIONS: usize = 9 * 9;
 
@@ -55,8 +91,17 @@ static ZOBRIST_VALUES: Lazy<[u64; NUM_ZOBRIST_VALUES]> = Lazy::new(|| {
     values
 });
 
-/// Offset for the Zobrist values for the next board index
-const ZOBRIST_VALUES_NEXT_BOARD_INDEX_OFFSET: usize = NUM_POSITIONS * 2;
+/// Offset of the `next_board_index` hashes in [Zobrist values](ZOBRIST_VALUES)
+pub const ZOBRIST_VALUES_NEXT_BOARD_INDEX_OFFSET: usize = NUM_POSITIONS * 2;
+
+/// The indices of the corners of a [UltimateBoard]
+pub const CORNER_INDICES: [usize; 4] = [0, 2, 6, 8];
+
+/// The indices of the edges of a [UltimateBoard]
+pub const EDGE_INDICES: [usize; 4] = [1, 3, 5, 7];
+
+/// The index of the center of a [UltimateBoard]
+pub const CENTER_INDEX: usize = 4;
 
 /// Struct representing the ultimate board
 ///
@@ -86,7 +131,7 @@ impl UltimateBoard {
     /// Create a new ultimate board using the default values
     /// # Returns
     /// A new ultimate board
-    pub fn new() -> UltimateBoard {
+    pub fn new() -> Self {
         let mut boards = [Board::new(0); 9];
 
         for (i, board) in boards.iter_mut().enumerate() {
@@ -153,6 +198,13 @@ impl UltimateBoard {
         self.boards
     }
 
+    /// Get the current player
+    /// # Returns
+    /// The current player
+    pub fn get_current_player(&self) -> Player {
+        self.current_player
+    }
+
     /// Get the Zobrist hash of the board
     /// # Returns
     /// The Zobrist hash of the board
@@ -165,6 +217,36 @@ impl UltimateBoard {
     /// The index of the next board to play on
     pub fn get_next_board_index(&self) -> Option<u8> {
         self.next_board_index
+    }
+
+    /// Get the partial win difference for a player
+    /// # Arguments
+    /// * `player` - The player to get the partial win difference for
+    /// # Returns
+    /// The partial win difference for the player
+    pub fn get_partial_wins_difference(&self, player: Player) -> i8 {
+        let mut diff = 0;
+
+        for partial_win in PARTIAL_WIN_POSITIONS.iter() {
+            let mut player_count = 0;
+            let mut opponent_count = 0;
+
+            for &index in partial_win.iter() {
+                match self.board_status[index as usize] {
+                    GameResult::Win(p) if p == player => player_count += 1,
+                    GameResult::Win(_) => opponent_count += 1,
+                    _ => {}
+                }
+            }
+
+            if player_count > 0 && opponent_count == 0 {
+                diff += 1;
+            } else if opponent_count > 0 && player_count == 0 {
+                diff -= 1;
+            }
+        }
+
+        diff
     }
 
     /// Get the possible moves for the ultimate board

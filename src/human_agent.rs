@@ -1,7 +1,13 @@
-//! # Module containing the [HumanAgent] struct
+//! # Contains the [HumanAgent] struct
 //! The HumanAgent struct represents an [Agent] that allows a human player to play the game.
 //! The human player can input the moves via the console.
-//! The board is printed to the console after each move.
+//! The board is printed to the console before each move.
+//!
+//! If:
+//! * a move is invalid, the player is prompted to input a new move.
+//! * the player has to play on a specific board, the board is highlighted by a colorful border.
+//!
+//! You can start a game with a human player by calling the [start_game_with_human] function.
 
 use colored::{Colorize, CustomColor};
 use itertools::Itertools;
@@ -19,18 +25,20 @@ static BACKGROUND_COLOR: Lazy<CustomColor> = Lazy::new(|| CustomColor::new(30, 3
 static X_COLOR: Lazy<CustomColor> = Lazy::new(|| CustomColor::new(154, 46, 34));
 static O_COLOR: Lazy<CustomColor> = Lazy::new(|| CustomColor::new(18, 128, 106));
 
-/// A [Agent] that allows a human player to play the game.
+/// An [Agent] that allows a human player to play the game.
 ///
 /// The human player can input the moves via the console.
-/// The board is printed to the console after each move.
+/// The board is printed to the console before each move.
 ///
+/// If:
+/// * a move is invalid, the player is prompted to input a new move.
+/// * the player has to play on a specific board, the board is highlighted by a colorful border.
+///
+/// You can start a game with a human player by calling the [start_game_with_human] function.
+#[derive(Default)]
 pub struct HumanAgent {}
 
 impl HumanAgent {
-    pub fn new() -> HumanAgent {
-        HumanAgent {}
-    }
-
     fn print_board(board: UltimateBoard, highlighted_board: Option<u8>) {
         for row in 0..17 {
             let big_row = if row < 6 {
@@ -45,12 +53,32 @@ impl HumanAgent {
                 let color = HumanAgent::convert_to_color(highlighted_board, big_row);
 
                 // Print small board border
-                print!("{}", "               ".on_custom_color(color[0]));
-                print!("|");
-                print!("{}", "               ".on_custom_color(color[1]));
-                print!("|");
-                print!("{}", "               ".on_custom_color(color[2]));
-                println!();
+                if (row == 0 || row == 6 || row == 12) && highlighted_board.is_none() {
+                    print!(
+                        "{}{}",
+                        3 * big_row + 1,
+                        "              ".on_custom_color(color[0])
+                    );
+                    print!("|");
+                    print!(
+                        "{}{}",
+                        3 * big_row + 2,
+                        "              ".on_custom_color(color[1])
+                    );
+                    print!("|");
+                    print!(
+                        "{}{}",
+                        3 * big_row + 3,
+                        "              ".on_custom_color(color[2])
+                    );
+                } else {
+                    print!("{}", "               ".on_custom_color(color[0]));
+                    print!("|");
+                    print!("{}", "               ".on_custom_color(color[1]));
+                    print!("|");
+                    print!("{}", "               ".on_custom_color(color[2]));
+                }
+                println!()
             } else if row == 5 || row == 11 {
                 // Print board divider
                 println!(
@@ -76,10 +104,23 @@ impl HumanAgent {
                     print!(
                         "{}",
                         row.iter()
-                            .map(|item| match item {
+                            .enumerate()
+                            .map(|(index, item)| match item {
                                 BoardSymbol::X => " X ".on_custom_color(*X_COLOR),
                                 BoardSymbol::O => " O ".on_custom_color(*O_COLOR),
-                                BoardSymbol::Empty => "   ".on_custom_color(*BACKGROUND_COLOR),
+                                BoardSymbol::Empty => {
+                                    match highlighted_board {
+                                        Some(next_board_index) => {
+                                            if next_board_index == i {
+                                                format!(" {} ", 3 * sub_row + index as u8 + 1)
+                                                    .on_custom_color(*BACKGROUND_COLOR)
+                                            } else {
+                                                "   ".on_custom_color(*BACKGROUND_COLOR)
+                                            }
+                                        }
+                                        None => "   ".on_custom_color(*BACKGROUND_COLOR),
+                                    }
+                                }
                             })
                             .join(" ")
                     );
@@ -272,9 +313,12 @@ impl Agent for HumanAgent {
     }
 }
 
+/// # Starts a game with a human player.
+///
+/// The human player can input the moves via the console.
 pub fn start_game_with_human() {
     let mut game = crate::game::Game::new(
-        Box::new(HumanAgent::new()),
+        Box::new(HumanAgent::default()),
         Box::new(crate::minimax_agent::MiniMaxAgent::new(
             8,
             1,

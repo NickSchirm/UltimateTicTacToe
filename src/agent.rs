@@ -1,4 +1,4 @@
-//! # Module containing the [Agent] trait
+//! # Contains the [Agent] trait
 //! This module contains the Agent trait, which represents an agent that can play Ultimate Tic Tac Toe.
 
 use crate::ultimate_board::UltimateBoard;

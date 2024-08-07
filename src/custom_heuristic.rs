@@ -1,27 +1,38 @@
-//! # Module containing the [CustomHeuristic] struct
+//! # Contains the [CustomHeuristic] and [CustomMiniBoardHeuristic] struct
 //! The CustomHeuristic struct represents a heuristic that uses a custom evaluation function.
 //! The heuristic is used by the [MiniMaxAgent](crate::minimax_agent::MiniMaxAgent) to evaluate the best move.
 
+use crate::board::Board;
 use crate::game_result::GameResult;
-use crate::heuristic::{Heuristic, MAX_VALUE, MIN_VALUE};
+use crate::heuristic::{Heuristic, MiniBoardHeuristic, MAX_VALUE, MIN_VALUE};
 use crate::player::Player;
 use crate::ultimate_board::UltimateBoard;
+use once_cell::sync::Lazy;
+use std::collections::HashMap;
 
-/// A [Heuristic] that uses a custom evaluation function to evaluate the best move
+/// # Contains the evaluation of all legal [boards](Board) for the [CustomMiniBoardHeuristic].
+///
+/// The evaluation is calculated from the perspective of [Player::One].
+static SMALL_BOARD_LOOKUP_TABLE: Lazy<HashMap<u32, i32>> =
+    Lazy::new(|| CustomMiniBoardHeuristic.initialize());
+
+/// A [Heuristic] that uses a custom evaluation function to evaluate the best move.
 /// # Fields
-/// * `player` - The [Player] for which the heuristic should evaluate the best move
+/// * `player` - The [Player] for which the heuristic should evaluate the best move.
+#[derive(Clone)]
 pub struct CustomHeuristic {
     player: Player,
 }
 
 impl CustomHeuristic {
-    pub fn new(player: Player) -> CustomHeuristic {
+    pub fn new(player: Player) -> Self {
+        let _ = SMALL_BOARD_LOOKUP_TABLE.get(&0).unwrap();
         CustomHeuristic { player }
     }
 }
 
 impl Heuristic for CustomHeuristic {
-    fn evaluate(&self, board: UltimateBoard) -> isize {
+    fn evaluate(&self, board: UltimateBoard) -> i32 {
         let mut value = 0;
 
         if board.get_game_status() == GameResult::Win(self.player) {
@@ -33,11 +44,9 @@ impl Heuristic for CustomHeuristic {
         }
 
         // Reward having more positions set on small boards than the opponent
-        for board in board.get_boards() {
-            let positions_set_difference = board.get_positions_set_difference(self.player) as isize;
-            if positions_set_difference > 0 {
-                value += positions_set_difference;
-            }
+        for small_board in board.get_boards() {
+            value += SMALL_BOARD_LOOKUP_TABLE.get(&small_board.to_key()).unwrap()
+                * (if self.player == Player::One { 1 } else { -1 });
         }
 
         // Reward controlLing the center of the board
@@ -55,6 +64,26 @@ impl Heuristic for CustomHeuristic {
                 }
             }
         }
+
+        value
+    }
+}
+
+/// A [MiniBoardHeuristic] that uses a custom evaluation function to evaluate [boards](Board).
+pub struct CustomMiniBoardHeuristic;
+
+impl MiniBoardHeuristic for CustomMiniBoardHeuristic {
+    fn evaluate(&self, board: Board) -> i32 {
+        let mut value = 0;
+
+        let positions_set_difference = board.get_positions_set_difference(Player::One) as i32;
+        if positions_set_difference > 0 {
+            value += positions_set_difference;
+        }
+
+        let partial_wins_difference = board.get_partial_wins_difference(Player::One) as i32;
+
+        value += partial_wins_difference * 2;
 
         value
     }

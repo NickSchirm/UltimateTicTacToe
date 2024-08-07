@@ -1,6 +1,6 @@
-//! # Module containing the [Player] enum
+//! # Contains the [Player] enum
 //! The Player enum represents the two players of the game.
-//! The enum can be used to determine the current player and the opponent.
+//! The enum can be used to determine the opponent of a player.
 
 /// Enum representing the two players
 #[derive(Clone, Copy, Debug, PartialEq)]
@@ -13,7 +13,7 @@ impl Player {
     /// Get the opponent of the current player
     /// # Returns
     /// The opponent of the current player
-    pub fn get_opponent(&self) -> Player {
+    pub fn get_opponent(&self) -> Self {
         match self {
             Player::One => Player::Two,
             Player::Two => Player::One,
@@ -21,7 +21,7 @@ impl Player {
     }
 
     /// Get an iterator of all players
-    pub fn iter() -> impl Iterator<Item = Player> {
+    pub fn iter() -> impl Iterator<Item = Self> {
         [Player::One, Player::Two].iter().copied()
     }
 }

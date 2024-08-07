@@ -4,6 +4,7 @@
 //! The game can be played by two agents.
 //!
 //! Provided agents:
+//! * [HumanAgent](human_agent::HumanAgent): An agent that requires user input to play
 //! * [RandomAgent](random_agent::RandomAgent): An agent that plays random moves
 //! * [MiniMaxAgent](minimax_agent::MiniMaxAgent): An agent that uses the minimax algorithm to determine the best move
 //!
@@ -35,6 +36,7 @@ pub mod heuristic;
 pub mod human_agent;
 pub mod minimax_agent;
 pub mod monte_carlo_game_search_heuristic;
+pub mod parameterized_heuristic;
 pub mod player;
 pub mod random_agent;
 pub mod ultimate_board;

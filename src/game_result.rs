@@ -1,4 +1,4 @@
-//! # Module containing the [GameResult] enum
+//! # Contains the [GameResult] enum
 //! The GameResult enum represents the possible results of a game of Ultimate Tic Tac Toe.
 //! The enum can be used to determine the winner of a game, if it's a draw or if the game is still ongoing.
 

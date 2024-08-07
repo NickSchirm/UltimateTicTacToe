@@ -1,4 +1,4 @@
-//! # Module containing the [MiniMaxAgent] struct
+//! # Contains the [MiniMaxAgent] struct
 //! The MiniMaxAgent struct represents an [Agent] that uses the minimax algorithm to determine the best move.
 //! The agent uses the provided [Heuristic] to evaluate the board state.
 
@@ -9,6 +9,7 @@ use crate::ultimate_board::UltimateBoard;
 use std::cmp::{max, min};
 use std::collections::HashMap;
 
+#[allow(rustdoc::private_intra_doc_links)]
 /// An Ultimate Tic Tac Toe agent that uses the minimax algorithm to determine the best move.
 /// The agent uses the provided heuristic to evaluate the board state.
 ///
@@ -18,10 +19,13 @@ use std::collections::HashMap;
 /// * [Quiescence search](https://www.chessprogramming.org/Quiescence_Search) to combat the [Horizon effect](https://www.chessprogramming.org/Horizon_Effect)
 ///
 /// Note: Quiescence search depth has a large impact on the performance of the agent. The effect of Quiescence search may be small.
-/// Quiescence search can be disabled by setting the depth to 0.
+/// Quiescence search can be disabled by setting the [quiescence_search_depth](MiniMaxAgent::quiescence_search_depth) to 0.
 pub struct MiniMaxAgent<H> {
+    /// The depth minimax should search to
     depth: u32,
+    /// The depth the quiescence search should search to
     quiescence_search_depth: u32,
+    /// The heuristic used to evaluate the board state
     heuristic: H,
 }
 
@@ -36,9 +40,9 @@ impl<H: Heuristic> MiniMaxAgent<H> {
 
     /// Returns the best move for the current player
     ///
-    /// Uses the minimax algorithm to determine the best move
+    /// The minimax algorithm is used to determine the best move.
     ///
-    /// Is the root call for the minimax algorithm
+    /// This is the root call for the minimax algorithm.
     ///
     /// For more info see [`MiniMaxAgent::minimax`]
     /// # Arguments
@@ -54,8 +58,8 @@ impl<H: Heuristic> MiniMaxAgent<H> {
 
         let mut best_move = None;
 
-        let mut alpha = isize::MIN;
-        let beta = isize::MAX;
+        let mut alpha = i32::MIN;
+        let beta = i32::MAX;
 
         // Iterate over all possible moves
         // Maximizing
@@ -84,9 +88,11 @@ impl<H: Heuristic> MiniMaxAgent<H> {
 
     /// The minimax algorithm
     ///
-    /// Uses alpha-beta pruning to reduce the number of nodes that need to be evaluated
+    /// Alpha-beta pruning is used to reduce the number of nodes that need to be evaluated.
     ///
-    /// Uses a [transposition table](https://www.chessprogramming.org/Transposition_Table) to store the values of already evaluated nodes
+    /// A [transposition table](https://www.chessprogramming.org/Transposition_Table) is used to store the values of already evaluated nodes.
+    ///
+    /// Calls [MiniMaxAgent::quiescence_search] if the depth is 0.
     /// # Arguments
     /// * `board` - The current state of the board
     /// * `depth` - The depth of the minimax algorithm
@@ -100,10 +106,10 @@ impl<H: Heuristic> MiniMaxAgent<H> {
         board: UltimateBoard,
         depth: u32,
         maximizing: bool,
-        mut alpha: isize,
-        mut beta: isize,
-        transposition_table: &mut HashMap<u64, isize>,
-    ) -> isize {
+        mut alpha: i32,
+        mut beta: i32,
+        transposition_table: &mut HashMap<u64, i32>,
+    ) -> i32 {
         if depth == 0 {
             return self.quiescence_search(
                 board,
@@ -174,6 +180,9 @@ impl<H: Heuristic> MiniMaxAgent<H> {
     /// This algorithm is used to avoid the [horizon effect](https://www.chessprogramming.org/Horizon_Effect).
     ///
     /// Only continues searching if the next move can be made on any open square.
+    ///
+    /// If the depth is 0, the [heuristic](MiniMaxAgent::heuristic) is used to evaluate the board.
+    /// the quiescence search can be disabled by setting [quiescence_search_depth](MiniMaxAgent::quiescence_search_depth) to 0.
     /// # Arguments
     /// * `board` - The current state of the board
     /// * `depth` - The depth of the quiescence search algorithm
@@ -187,9 +196,9 @@ impl<H: Heuristic> MiniMaxAgent<H> {
         board: UltimateBoard,
         depth: u32,
         maximizing: bool,
-        mut alpha: isize,
-        mut beta: isize,
-    ) -> isize {
+        mut alpha: i32,
+        mut beta: i32,
+    ) -> i32 {
         if depth == 0 {
             return self.heuristic.evaluate(board);
         }

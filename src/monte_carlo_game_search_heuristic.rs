@@ -1,4 +1,4 @@
-//! # Module containing the [MonteCarloGameSearchHeuristic] struct
+//! # Contains the [MonteCarloGameSearchHeuristic] struct
 //! The MonteCarloGameSearchHeuristic struct represents a [Heuristic] that uses Monte Carlo Tree Search to evaluate the best move.
 //! The heuristic uses random games to evaluate the best move.
 
@@ -20,13 +20,14 @@ use rand::prelude::SliceRandom;
 /// * The heuristic is not deterministic.
 /// * The heuristic is not guaranteed to find the best move.
 /// * The heuristic is really slow compared to [CustomHeuristic](crate::custom_heuristic::CustomHeuristic) while providing worse results.
+#[derive(Clone)]
 pub struct MonteCarloGameSearchHeuristic {
     player: Player,
     num_simulations: u32,
 }
 
 impl MonteCarloGameSearchHeuristic {
-    pub fn new(player: Player, num_simulations: u32) -> MonteCarloGameSearchHeuristic {
+    pub fn new(player: Player, num_simulations: u32) -> Self {
         MonteCarloGameSearchHeuristic {
             player,
             num_simulations,
@@ -52,7 +53,7 @@ impl MonteCarloGameSearchHeuristic {
 }
 
 impl Heuristic for MonteCarloGameSearchHeuristic {
-    fn evaluate(&self, board: UltimateBoard) -> isize {
+    fn evaluate(&self, board: UltimateBoard) -> i32 {
         let possible_moves = board.get_possible_moves();
         let mut results = vec![];
 
@@ -94,9 +95,7 @@ impl Heuristic for MonteCarloGameSearchHeuristic {
             } else {
                 let (_, best_wins, best_losses, _) = best_move.unwrap();
 
-                if wins > best_wins {
-                    best_move = Some((current_move, wins, losses, draws));
-                } else if wins == best_wins && losses < best_losses {
+                if (wins > best_wins) || (wins == best_wins && losses < best_losses) {
                     best_move = Some((current_move, wins, losses, draws));
                 }
             }
