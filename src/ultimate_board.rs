@@ -1,12 +1,14 @@
+use std::fmt;
+use std::fmt::Display;
+
+use once_cell::sync::Lazy;
+use rand_chacha::rand_core::{RngCore, SeedableRng};
+use rand_chacha::ChaCha20Rng;
+
 use crate::board::{Board, BoardSymbol};
 use crate::game_result::GameResult;
 use crate::game_result::GameResult::Continue;
 use crate::player::Player;
-use once_cell::sync::Lazy;
-use rand_chacha::rand_core::{RngCore, SeedableRng};
-use rand_chacha::ChaCha20Rng;
-use std::fmt;
-use std::fmt::Display;
 
 const WIN_POSITIONS: [[u8; 3]; 8] = [
     // Rows

@@ -16,6 +16,8 @@ const DEPTH: u32 = 3;
 const QUIESCENCE_SEARCH_DEPTH: u32 = 3;
 
 fn main() {
+    hausarbeit::human_agent::start_game_with_human();
+
     rayon::ThreadPoolBuilder::new()
         .num_threads(7)
         .build_global()
@@ -56,36 +58,6 @@ fn main() {
             GameResult::Draw => wins[2] += 1,
             _ => {}
         });
-
-    // for num_game in 0..NUM_GAMES {
-    //     if num_game % 2 == 0 {
-    //         let mut heuristic = CustomHeuristic::new(One);
-    //         let mut agent1 = MiniMaxAgent::new(DEPTH, &mut heuristic);
-    //         let mut agent2 = RandomAgent::new();
-    //
-    //         let mut game = Game::new(&mut agent1, &mut agent2);
-    //         let result = game.play();
-    //         match result {
-    //             GameResult::Win(player) => wins[player as usize] += 1,
-    //             GameResult::Draw => wins[2] += 1,
-    //             _ => {}
-    //         }
-    //     } else {
-    //         let mut heuristic = CustomHeuristic::new(Two);
-    //         let mut agent1 = RandomAgent::new();
-    //         let mut agent2 = MiniMaxAgent::new(DEPTH, &mut heuristic);
-    //
-    //         let mut game = Game::new(&mut agent2, &mut agent1);
-    //         let result = game.play();
-    //         match result {
-    //             GameResult::Win(player) => wins[((player as usize) + 1) % 2] += 1,
-    //             GameResult::Draw => wins[2] += 1,
-    //             _ => {}
-    //         }
-    //     }
-    //
-    //     println!("Game {} finished", num_game);
-    // }
 
     println!("\nResults:");
     println!(

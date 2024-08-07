@@ -16,14 +16,13 @@
 //! use hausarbeit::game::Game;
 //! use hausarbeit::random_agent::RandomAgent;
 //!
-//! fn main() {
-//!     let agent_one = RandomAgent::new();
-//!     let agent_two = RandomAgent::new();
+//! let agent_one = RandomAgent::new();
+//! let agent_two = RandomAgent::new();
 //!
-//!     let mut game = Game::new(Box::new(agent_one), Box::new(agent_two));
+//! let mut game = Game::new(Box::new(agent_one), Box::new(agent_two));
 //!
-//!     game.play();
-//! }
+//! game.play();
+//! ```
 
 pub mod agent;
 pub mod bitboard;
@@ -32,6 +31,7 @@ pub mod custom_heuristic;
 pub mod game;
 pub mod game_result;
 pub mod heuristic;
+pub mod human_agent;
 pub mod minimax_agent;
 pub mod player;
 pub mod random_agent;
