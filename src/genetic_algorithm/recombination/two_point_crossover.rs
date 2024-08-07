@@ -1,4 +1,3 @@
-use itertools::Itertools;
 use rand::distributions::Uniform;
 use rand::Rng;
 use crate::genetic_algorithm::gene::Gene;

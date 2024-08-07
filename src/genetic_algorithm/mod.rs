@@ -71,7 +71,6 @@ mod tests {
     use super::*;
     use crate::genetic_algorithm::gene::Gene;
     use crate::genetic_algorithm::mutation::normal_distribution_mutation::NormalDistributionMutation;
-    use crate::genetic_algorithm::recombination::one_point_crossover::OnePointCrossover;
     use crate::genetic_algorithm::recombination::two_point_crossover::TwoPointCrossover;
     use crate::genetic_algorithm::selection::roulette_wheel_selection::RouletteWheelSelection;
     use crate::heuristic::parameterized_heuristic::NUM_FEATURES;

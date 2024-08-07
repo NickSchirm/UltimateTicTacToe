@@ -2,8 +2,6 @@
 //! The Player enum represents the two players of the game.
 //! The enum can be used to determine the opponent of a player.
 
-use crate::game::game_result::GameResult;
-
 /// Enum representing the two players
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum Player {
