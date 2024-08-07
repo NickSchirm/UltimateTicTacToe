@@ -13,8 +13,8 @@ use colored::{Colorize, CustomColor};
 use itertools::Itertools;
 use once_cell::sync::Lazy;
 
-use crate::agent::Agent;
 use crate::agent::minimax_agent::MiniMaxAgent;
+use crate::agent::{Agent, AgentInfo};
 use crate::game::board::BoardSymbol;
 use crate::game::game_result::GameResult;
 use crate::game::player::Player;
@@ -37,7 +37,10 @@ static O_COLOR: Lazy<CustomColor> = Lazy::new(|| CustomColor::new(18, 128, 106))
 ///
 /// You can start a game with a human player by calling the [start_game_with_human] function.
 #[derive(Default)]
-pub struct HumanAgent {}
+pub struct HumanAgent {
+    player: Player,
+    turn: u32,
+}
 
 impl HumanAgent {
     fn print_board(board: UltimateBoard, highlighted_board: Option<u8>) {
@@ -160,7 +163,10 @@ impl HumanAgent {
 }
 
 impl Agent for HumanAgent {
-    fn act(&mut self, board: UltimateBoard) -> Option<u8> {
+    fn act(&mut self, board: UltimateBoard, player: Player, turn: u32) -> Option<u8> {
+        self.player = player;
+        self.turn = turn;
+
         print!("{esc}[2J{esc}[1;1H", esc = 27 as char);
         HumanAgent::print_board(board, board.get_next_board_index());
 
@@ -311,6 +317,10 @@ impl Agent for HumanAgent {
 
             res
         }
+    }
+
+    fn get_info(&self) -> AgentInfo {
+        AgentInfo::new("Human".to_string(), self.player, self.turn, "".to_string())
     }
 }
 

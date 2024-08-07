@@ -4,8 +4,9 @@
 //!
 //! For more information see the [MiniMaxAgent] struct.
 
-use crate::agent::Agent;
+use crate::agent::{Agent, AgentInfo};
 use crate::game::game_result::GameResult::Continue;
+use crate::game::player::Player;
 use crate::game::ultimate_board::UltimateBoard;
 use crate::heuristic::Heuristic;
 use std::collections::HashMap;
@@ -28,6 +29,8 @@ pub struct MiniMaxAgent<H> {
     quiescence_search_depth: u32,
     /// The heuristic used to evaluate the board state
     heuristic: H,
+    player: Player,
+    turn: u32,
 }
 
 impl<H: Heuristic> MiniMaxAgent<H> {
@@ -36,6 +39,8 @@ impl<H: Heuristic> MiniMaxAgent<H> {
             depth,
             quiescence_search_depth,
             heuristic,
+            player: Player::default(),
+            turn: 0,
         }
     }
 
@@ -243,7 +248,18 @@ impl<H: Heuristic> MiniMaxAgent<H> {
 }
 
 impl<H: Heuristic> Agent for MiniMaxAgent<H> {
-    fn act(&mut self, board: UltimateBoard) -> Option<u8> {
+    fn act(&mut self, board: UltimateBoard, player: Player, turn: u32) -> Option<u8> {
+        self.player = player;
+        self.turn = turn;
         self.get_best_move(board, self.depth)
+    }
+
+    fn get_info(&self) -> AgentInfo {
+        AgentInfo::new(
+            format!("MiniMax({})", self.heuristic.get_name()),
+            self.player,
+            self.turn,
+            format!("{}+{}", self.depth, self.quiescence_search_depth),
+        )
     }
 }

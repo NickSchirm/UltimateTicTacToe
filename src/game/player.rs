@@ -2,9 +2,12 @@
 //! The Player enum represents the two players of the game.
 //! The enum can be used to determine the opponent of a player.
 
+use serde::{Deserialize, Serialize};
+
 /// Enum representing the two players
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Deserialize, Serialize, Default)]
 pub enum Player {
+    #[default]
     One = 0,
     Two = 1,
 }

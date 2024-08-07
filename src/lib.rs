@@ -41,3 +41,4 @@ pub mod agent;
 pub mod game;
 pub mod genetic_algorithm;
 pub mod heuristic;
+pub mod runtime_test;

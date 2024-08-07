@@ -1,10 +1,7 @@
 #![allow(unused_imports)]
-use std::sync::atomic::{AtomicUsize, Ordering};
-use std::time::Instant;
 
-use rayon::iter::ParallelIterator;
-use rayon::prelude::IntoParallelRefMutIterator;
-
+use csv::Writer;
+use hausarbeit::agent::benched::BenchedAgent;
 use hausarbeit::agent::minimax_agent::MiniMaxAgent;
 use hausarbeit::game::game_result::GameResult;
 use hausarbeit::game::player::Player::{One, Two};
@@ -18,9 +15,18 @@ use hausarbeit::genetic_algorithm::selection::roulette_wheel_selection::Roulette
 use hausarbeit::genetic_algorithm::GeneticAlgorithm;
 use hausarbeit::heuristic::custom_heuristic::CustomHeuristic;
 use hausarbeit::heuristic::parameterized_heuristic::{ParameterizedHeuristic, NUM_FEATURES};
+use hausarbeit::runtime_test;
+use rayon::iter::ParallelIterator;
+use rayon::prelude::IntoParallelRefMutIterator;
+use std::cell::RefCell;
+use std::fs::{File, OpenOptions};
+use std::path::Path;
+use std::sync::atomic::{AtomicUsize, Ordering};
+use std::sync::{Arc, Mutex};
+use std::time::Instant;
 
 const NUM_GAMES: u32 = 100;
-const DEPTH: u32 = 4;
+const DEPTH: u32 = 7;
 const QUIESCENCE_SEARCH_DEPTH: u32 = 3;
 
 fn main() {
@@ -31,35 +37,35 @@ fn main() {
         .build_global()
         .unwrap();
 
-    let mut genes = vec![];
+    runtime_test::run();
 
-    for _ in 0..10 {
-        genes.push(Gene::new(NUM_FEATURES));
-    }
-
-    let mut genetic_algorithm = GeneticAlgorithm::new(
-        10,
-        genes,
-        Box::new(FullOrderingFitness::new(4,1)),
-        Box::new(RouletteWheelSelection {}),
-        Box::new(NormalDistributionMutation::new(0.1)),
-        Box::new(OnePointCrossover {}),
-    );
-
-    genetic_algorithm.run();
+    // let mut genes = vec![];
     //
+    // for _ in 0..10 {
+    //     genes.push(Gene::new(NUM_FEATURES));
+    // }
+    //
+    // let mut genetic_algorithm = GeneticAlgorithm::new(
+    //     10,
+    //     genes,
+    //     Box::new(FullOrderingFitness::new(4, 1)),
+    //     Box::new(RouletteWheelSelection {}),
+    //     Box::new(NormalDistributionMutation::new(0.1)),
+    //     Box::new(OnePointCrossover {}),
+    // );
+    //
+    // genetic_algorithm.run();
+
     // let mut wins = [0, 0, 0];
     // let mut games = vec![];
     //
+    // let writer = Arc::new(Mutex::new(Writer::from_path("res.csv").expect("Could not create CSV writer")));
+    //
     // for _ in 0..NUM_GAMES {
     //     let agent1 = MiniMaxAgent::new(DEPTH, QUIESCENCE_SEARCH_DEPTH, CustomHeuristic::new(One));
-    //     let agent2 = MiniMaxAgent::new(
-    //         DEPTH,
-    //         QUIESCENCE_SEARCH_DEPTH,
-    //         ParameterizedHeuristic::new(Two, Gene::new(NUM_FEATURES).get_values()),
-    //     );
+    //     let agent2 = MiniMaxAgent::new(DEPTH, QUIESCENCE_SEARCH_DEPTH, CustomHeuristic::new(Two));
     //
-    //     games.push(Game::new(Box::new(agent1), Box::new(agent2)));
+    //     games.push(Game::new(Box::new(BenchedAgent::new(writer.clone(), agent1)), Box::new(BenchedAgent::new(writer.clone(), agent2))));
     // }
     //
     // let counter = AtomicUsize::new(0);

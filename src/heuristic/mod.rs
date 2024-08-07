@@ -17,17 +17,17 @@ use std::collections::HashMap;
 
 /// The minimum value a heuristic can return
 pub static MIN_VALUE: Lazy<f64> = Lazy::new(|| {
-	f64::from_be_bytes([
-		0b11111111, 0b11101111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111,
-		0b11111110,
-	])
+    f64::from_be_bytes([
+        0b11111111, 0b11101111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111,
+        0b11111110,
+    ])
 });
 /// The maximum value a heuristic can return
 pub static MAX_VALUE: Lazy<f64> = Lazy::new(|| {
-	f64::from_be_bytes([
-		0b01111111, 0b11101111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111,
-		0b11111110,
-	])
+    f64::from_be_bytes([
+        0b01111111, 0b11101111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111,
+        0b11111110,
+    ])
 });
 
 /// # Trait representing a heuristic
@@ -38,14 +38,15 @@ pub static MAX_VALUE: Lazy<f64> = Lazy::new(|| {
 /// The heuristic should return a value between these two values.
 /// <p>Implementations may provide customization options.</p>
 pub trait Heuristic: Clone + Send + Sync {
-	/// Evaluate the given board state
-	///
-	/// The heuristic should return a value that represents how good the board state is.
-	/// # Arguments
-	/// * `board` - The board state to evaluate
-	/// # Returns
-	/// The value of the board state, always between [MIN_VALUE] and [MAX_VALUE]
-	fn evaluate(&self, board: UltimateBoard) -> f64;
+    /// Evaluate the given board state
+    ///
+    /// The heuristic should return a value that represents how good the board state is.
+    /// # Arguments
+    /// * `board` - The board state to evaluate
+    /// # Returns
+    /// The value of the board state, always between [MIN_VALUE] and [MAX_VALUE]
+    fn evaluate(&self, board: UltimateBoard) -> f64;
+    fn get_name(&self) -> String;
 }
 
 /// The number of possible legal small board states
@@ -65,39 +66,39 @@ pub const NUM_SMALL_BOARD_STATES: usize = usize::pow(3, 9);
 ///
 /// Implementations may provide customization options.
 pub trait MiniBoardHeuristic: Send + Sync {
-	/// Evaluate the given small board state
-	///
-	/// The result of this function is saved in the cache and is available in [Heuristic::evaluate].
-	///
-	/// <div class="warning">
-	///
-	/// The return value must be calculated from the perspective of [Player::One](crate::game::player::Player::One).
-	///
-	/// </div>
-	///
-	/// # Arguments
-	/// * `board` - The small board state to evaluate
-	/// # Returns
-	/// The value of the small board state, always between [MIN_VALUE] and [MAX_VALUE]
-	fn evaluate(&self, board: Board) -> f64;
+    /// Evaluate the given small board state
+    ///
+    /// The result of this function is saved in the cache and is available in [Heuristic::evaluate].
+    ///
+    /// <div class="warning">
+    ///
+    /// The return value must be calculated from the perspective of [Player::One](crate::game::player::Player::One).
+    ///
+    /// </div>
+    ///
+    /// # Arguments
+    /// * `board` - The small board state to evaluate
+    /// # Returns
+    /// The value of the small board state, always between [MIN_VALUE] and [MAX_VALUE]
+    fn evaluate(&self, board: Board) -> f64;
 
-	/// Initialize the cache for the heuristic
-	///
-	/// The cache is a lookup table that contains the evaluation of all possible small board states.
-	/// The cache is used to speed up the evaluation of the heuristic.
-	/// # Returns
-	/// The cache for the heuristic
-	fn initialize(&self) -> HashMap<u32, f64> {
-		let mut cache = HashMap::with_capacity(NUM_SMALL_BOARD_STATES);
+    /// Initialize the cache for the heuristic
+    ///
+    /// The cache is a lookup table that contains the evaluation of all possible small board states.
+    /// The cache is used to speed up the evaluation of the heuristic.
+    /// # Returns
+    /// The cache for the heuristic
+    fn initialize(&self) -> HashMap<u32, f64> {
+        let mut cache = HashMap::with_capacity(NUM_SMALL_BOARD_STATES);
 
-		for (first, second) in LegalBoardIterator::default() {
-			let board = Board::from_bitboards([BitBoard::new(first), BitBoard::new(second)], 0);
+        for (first, second) in LegalBoardIterator::default() {
+            let board = Board::from_bitboards([BitBoard::new(first), BitBoard::new(second)], 0);
 
-			let index = first as u32 | (second as u32) << 9;
+            let index = first as u32 | (second as u32) << 9;
 
-			cache.insert(index, self.evaluate(board));
-		}
+            cache.insert(index, self.evaluate(board));
+        }
 
-		cache
-	}
+        cache
+    }
 }

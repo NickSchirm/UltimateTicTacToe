@@ -109,4 +109,7 @@ impl Heuristic for MonteCarloGameSearchHeuristic {
 
         (wins - losses) as f64
     }
+    fn get_name(&self) -> String {
+        "MonteCarloGameSearchHeuristic".to_string()
+    }
 }

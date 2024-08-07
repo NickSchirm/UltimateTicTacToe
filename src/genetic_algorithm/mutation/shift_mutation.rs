@@ -8,7 +8,7 @@ use rand::{thread_rng, Rng};
 ///
 /// This mutation shifts the values of a gene by a given amount.
 /// The amount is randomly chosen.
-/// 
+///
 /// Warning: This mutation is not suitable for all types of genes.
 pub struct ShiftMutation {}
 

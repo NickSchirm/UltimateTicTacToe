@@ -1,6 +1,6 @@
 //! # Contains the [Game] struct
 //! The Game struct represents a game of Ultimate Tic Tac Toe.
-//! The game is played by two [agent](Agent).
+//! The game is played by two [agents](Agent).
 
 use crate::agent::Agent;
 use game_result::GameResult;
@@ -15,7 +15,7 @@ pub mod ultimate_board;
 
 /// Struct representing a game of Ultimate Tic Tac Toe
 ///
-/// The game is played by two [agent](Agent).
+/// The game is played by two [agents](Agent).
 pub struct Game {
     agents: Vec<Box<dyn Agent>>,
     board: UltimateBoard,
@@ -42,17 +42,22 @@ impl Game {
         let mut game_result = self.board.get_game_status();
         let mut active_agent = Player::One;
 
+        let mut turn = 0;
+
         while game_result == GameResult::Continue {
-            let current_move = self.agents[active_agent as usize].act(self.board);
+            let current_move =
+                self.agents[active_agent as usize].act(self.board, active_agent, turn);
 
             if current_move.is_none() {
                 eprintln!("Agent {:?} returned None instead of a move", active_agent);
                 eprintln!("{}", self.board);
                 eprintln!("{:?}", self.board);
                 eprintln!("{:?}", self.board.get_possible_moves().collect::<Vec<u8>>());
-                self.agents[active_agent as usize].act(self.board);
+                self.agents[active_agent as usize].act(self.board, active_agent, turn);
                 panic!();
             }
+
+            turn += 1;
 
             self.board.make_move(current_move.unwrap());
 

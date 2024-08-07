@@ -2,24 +2,24 @@
 //!
 //! The genetic algorithm is used to optimize the weights of [ParameterizedHeuristic](crate::heuristic::parameterized_heuristic::ParameterizedHeuristic).
 
-use std::time::Instant;
-use itertools::Itertools;
 use crate::genetic_algorithm::fitness::FitnessFunction;
 use crate::genetic_algorithm::mutation::Mutation;
 use crate::genetic_algorithm::recombination::Recombination;
 use crate::genetic_algorithm::selection::Selection;
+use itertools::Itertools;
+use std::time::Instant;
 
+pub mod fitness;
 pub mod gene;
 pub mod mutation;
 pub mod recombination;
 pub mod selection;
-pub mod fitness;
 
 /// # Struct representing a genetic algorithm
 ///
 /// The genetic algorithm is used to optimize the weights of a heuristic.
-/// 
-/// The fitness, selection, mutation and recombination operators can be set. 
+///
+/// The fitness, selection, mutation and recombination operators can be set.
 /// Multiple implementations are available.
 pub struct GeneticAlgorithm {
     generations: usize,
@@ -64,7 +64,11 @@ impl GeneticAlgorithm {
 
             self.genes = self.recombination.recombine_all(mutated_genes);
 
-            println!("Generation {} done in {} seconds", i, pre_gen.elapsed().as_secs_f32());
+            println!(
+                "Generation {} done in {} seconds",
+                i,
+                pre_gen.elapsed().as_secs_f32()
+            );
             pre_gen = Instant::now();
         }
         println!();
@@ -72,7 +76,8 @@ impl GeneticAlgorithm {
         println!();
 
         println!("Calculating best gene");
-        let best = self.fitness
+        let best = self
+            .fitness
             .calculate_fitness(self.genes.clone())
             .into_iter()
             .sorted_by(|(_, a), (_, b)| b.partial_cmp(a).unwrap())
@@ -83,8 +88,8 @@ impl GeneticAlgorithm {
 
 #[cfg(test)]
 mod tests {
-    use crate::genetic_algorithm::fitness::full_ordering_fitness::FullOrderingFitness;
     use super::*;
+    use crate::genetic_algorithm::fitness::full_ordering_fitness::FullOrderingFitness;
     use crate::genetic_algorithm::gene::Gene;
     use crate::genetic_algorithm::mutation::normal_distribution_mutation::NormalDistributionMutation;
     use crate::genetic_algorithm::recombination::two_point_crossover::TwoPointCrossover;

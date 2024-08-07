@@ -1,12 +1,11 @@
 //! # Contains the [ParameterizedHeuristic] and [ParameterizedMiniBoardHeuristic] struct
-//! The [ParameterizedHeuristic] struct represents a [Heuristic] that weights for the features to evaluate the best move.
+//! The [ParameterizedHeuristic] struct represents a [Heuristic] that uses weights for the features to evaluate the best move.
 //!
-//! The weights may be optimized using a genetic algorithm.
+//! The weights may be optimized using [GeneticAlgorithm](crate::genetic_algorithm::GeneticAlgorithm).
 //!
 //! The features of the heuristic are described in the [ParameterizedHeuristic::values] field.
 //!
 //! The heuristic uses a [ParameterizedMiniBoardHeuristic] to evaluate small boards.
-//! The evaluation of the small boards is saved in a lookup table.
 //!
 //! The [ParameterizedMiniBoardHeuristic] struct represents a [MiniBoardHeuristic] that uses weights for the features to evaluate small boards.
 
@@ -15,20 +14,18 @@ use crate::game::game_result::GameResult;
 use crate::game::player::Player;
 use crate::game::ultimate_board::{UltimateBoard, CENTER_INDEX, CORNER_INDICES, EDGE_INDICES};
 use crate::heuristic::{Heuristic, MiniBoardHeuristic, MAX_VALUE, MIN_VALUE};
-use std::collections::HashMap;
 
 /// The number of features the heuristic uses
 pub const NUM_FEATURES: usize = 13;
 
 #[allow(rustdoc::private_intra_doc_links)]
-/// # Struct representing a [Heuristic] that weights for the features to evaluate the best move
+/// # Struct representing a [Heuristic] that uses weights for the features to evaluate the best move
 ///
-/// The weights may be optimized using a genetic algorithm.
+/// The weights may be optimized using [GeneticAlgorithm](crate::genetic_algorithm::GeneticAlgorithm).
 ///
 /// The features of the heuristic are described in the [ParameterizedHeuristic::values] field.
 ///
 /// The heuristic uses a [ParameterizedMiniBoardHeuristic] to evaluate small boards.
-/// The evaluation of the small boards is saved in a lookup table.
 #[derive(Clone, Debug)]
 pub struct ParameterizedHeuristic {
     /// The [player](Player) for which the heuristic should evaluate the best move
@@ -74,7 +71,7 @@ impl Heuristic for ParameterizedHeuristic {
         if board.get_game_status() == GameResult::Win(self.player.get_opponent()) {
             return *MIN_VALUE;
         }
-        
+
         let mini_heuristic = ParameterizedMiniBoardHeuristic::new(self.values.clone());
 
         for small_board in board.get_boards() {
@@ -100,14 +97,14 @@ impl Heuristic for ParameterizedHeuristic {
         }
 
         value += if board.get_board_status()[CENTER_INDEX] == GameResult::Win(self.player) {
-            self.values[9]
+            self.values[8]
         } else {
             -self.values[8]
         };
 
         for corner_index in CORNER_INDICES.iter() {
             value += if board.get_board_status()[*corner_index] == GameResult::Win(self.player) {
-                self.values[10]
+                self.values[9]
             } else {
                 -self.values[9]
             };
@@ -115,7 +112,7 @@ impl Heuristic for ParameterizedHeuristic {
 
         for edge_index in EDGE_INDICES.iter() {
             value += if board.get_board_status()[*edge_index] == GameResult::Win(self.player) {
-                self.values[11]
+                self.values[10]
             } else {
                 -self.values[10]
             };
@@ -130,6 +127,9 @@ impl Heuristic for ParameterizedHeuristic {
         };
 
         value
+    }
+    fn get_name(&self) -> String {
+        "ParameterizedHeuristic".to_string()
     }
 }
 

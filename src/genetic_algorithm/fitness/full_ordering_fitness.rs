@@ -5,14 +5,10 @@ use std::collections::HashMap;
 use itertools::Itertools;
 use rayon::iter::{IntoParallelIterator, ParallelIterator};
 
-use crate::agent::minimax_agent::MiniMaxAgent;
-use crate::game::game_result::GameResult;
 use crate::game::game_result::GameResult::Win;
 use crate::game::player::Player::{One, Two};
-use crate::game::Game;
 use crate::genetic_algorithm::fitness::FitnessFunction;
 use crate::genetic_algorithm::gene::Gene;
-use crate::heuristic::parameterized_heuristic::ParameterizedHeuristic;
 
 /// # Struct representing a full ordering fitness function
 ///
@@ -50,7 +46,12 @@ impl FitnessFunction for FullOrderingFitness {
                 let mut lhs_fitness = 0.;
                 let mut rhs_fitness = 0.;
 
-                match self.play_game_with(lhs.clone(), rhs.clone(), self.depth, self.quiescence_depth) {
+                match self.play_game_with(
+                    lhs.clone(),
+                    rhs.clone(),
+                    self.depth,
+                    self.quiescence_depth,
+                ) {
                     Win(One) => {
                         lhs_fitness += 1.;
                         rhs_fitness -= 1.;
@@ -62,7 +63,12 @@ impl FitnessFunction for FullOrderingFitness {
                     _ => (),
                 }
 
-                match self.play_game_with(rhs.clone(), lhs.clone(), self.depth, self.quiescence_depth) {
+                match self.play_game_with(
+                    rhs.clone(),
+                    lhs.clone(),
+                    self.depth,
+                    self.quiescence_depth,
+                ) {
                     Win(One) => {
                         lhs_fitness -= 1.;
                         rhs_fitness += 1.;

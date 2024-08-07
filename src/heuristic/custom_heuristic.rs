@@ -69,6 +69,9 @@ impl Heuristic for CustomHeuristic {
 
         value
     }
+    fn get_name(&self) -> String {
+        "CustomHeuristic".to_string()
+    }
 }
 
 /// A [MiniBoardHeuristic] that uses a custom evaluation function to evaluate [boards](Board).
