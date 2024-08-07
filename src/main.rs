@@ -4,18 +4,18 @@ use std::time::Instant;
 use rayon::iter::ParallelIterator;
 use rayon::prelude::IntoParallelRefMutIterator;
 
-use hausarbeit::agents::minimax_agent::MiniMaxAgent;
+use hausarbeit::agent::minimax_agent::MiniMaxAgent;
 use hausarbeit::game::game_result::GameResult;
 use hausarbeit::game::player::Player::{One, Two};
 use hausarbeit::game::Game;
 use hausarbeit::genetic_algorithm::gene::Gene;
-use hausarbeit::genetic_algorithm::mutations::normal_distribution_mutation::NormalDistributionMutation;
-use hausarbeit::genetic_algorithm::mutations::shift_mutation::ShiftMutation;
-use hausarbeit::genetic_algorithm::recombinations::one_point_crossover::OnePointCrossover;
-use hausarbeit::genetic_algorithm::selections::roulette_wheel_selection::RouletteWheelSelection;
+use hausarbeit::genetic_algorithm::mutation::normal_distribution_mutation::NormalDistributionMutation;
+use hausarbeit::genetic_algorithm::mutation::shift_mutation::ShiftMutation;
+use hausarbeit::genetic_algorithm::recombination::one_point_crossover::OnePointCrossover;
+use hausarbeit::genetic_algorithm::selection::roulette_wheel_selection::RouletteWheelSelection;
 use hausarbeit::genetic_algorithm::GeneticAlgorithm;
-use hausarbeit::heuristics::custom_heuristic::CustomHeuristic;
-use hausarbeit::heuristics::parameterized_heuristic::{ParameterizedHeuristic, NUM_FEATURES};
+use hausarbeit::heuristic::custom_heuristic::CustomHeuristic;
+use hausarbeit::heuristic::parameterized_heuristic::{ParameterizedHeuristic, NUM_FEATURES};
 
 const NUM_GAMES: u32 = 100;
 const DEPTH: u32 = 4;

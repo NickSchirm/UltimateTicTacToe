@@ -1,17 +1,14 @@
-//! # Contains the [MiniMaxAgent] and [Number] struct
+//! # Contains the [MiniMaxAgent] struct
 //! The MiniMaxAgent struct represents an [Agent] that uses the minimax algorithm to determine the best move.
 //! The agent uses the provided [Heuristic] to evaluate the board state.
 //!
-//! The Number struct is used to allow for easy switching between f64 and i32.
-//!
-//! For more information see the [MiniMaxAgent](MiniMaxAgent) struct.
+//! For more information see the [MiniMaxAgent] struct.
 
 use crate::agent::Agent;
 use crate::game::game_result::GameResult::Continue;
 use crate::game::ultimate_board::UltimateBoard;
 use crate::heuristic::Heuristic;
 use std::collections::HashMap;
-use std::ops::{Add, AddAssign, Deref, Div, DivAssign, Mul, MulAssign, Sub, SubAssign};
 
 #[allow(rustdoc::private_intra_doc_links)]
 /// An Ultimate Tic Tac Toe agent that uses the minimax algorithm to determine the best move.
@@ -62,8 +59,8 @@ impl<H: Heuristic> MiniMaxAgent<H> {
 
         let mut best_move = None;
 
-        let mut alpha = Number::MIN;
-        let beta = Number::MAX;
+        let mut alpha = f64::MIN;
+        let beta = f64::MAX;
 
         // Iterate over all possible moves
         // Maximizing
@@ -110,10 +107,10 @@ impl<H: Heuristic> MiniMaxAgent<H> {
         board: UltimateBoard,
         depth: u32,
         maximizing: bool,
-        mut alpha: Number,
-        mut beta: Number,
-        transposition_table: &mut HashMap<u64, Number>,
-    ) -> Number {
+        mut alpha: f64,
+        mut beta: f64,
+        transposition_table: &mut HashMap<u64, f64>,
+    ) -> f64 {
         if depth == 0 {
             return self.quiescence_search(
                 board,
@@ -143,7 +140,7 @@ impl<H: Heuristic> MiniMaxAgent<H> {
             for current_move in possible_moves {
                 let mut new_board = board;
                 new_board.make_move(current_move);
-                alpha = Number::max(
+                alpha = f64::max(
                     alpha,
                     self.minimax(
                         new_board,
@@ -165,7 +162,7 @@ impl<H: Heuristic> MiniMaxAgent<H> {
             for current_move in possible_moves {
                 let mut new_board = board;
                 new_board.make_move(current_move);
-                beta = Number::min(
+                beta = f64::min(
                     beta,
                     self.minimax(new_board, depth - 1, true, alpha, beta, transposition_table),
                 );
@@ -200,9 +197,9 @@ impl<H: Heuristic> MiniMaxAgent<H> {
         board: UltimateBoard,
         depth: u32,
         maximizing: bool,
-        mut alpha: Number,
-        mut beta: Number,
-    ) -> Number {
+        mut alpha: f64,
+        mut beta: f64,
+    ) -> f64 {
         if depth == 0 {
             return self.heuristic.evaluate(board);
         }
@@ -225,7 +222,7 @@ impl<H: Heuristic> MiniMaxAgent<H> {
             for current_move in possible_moves {
                 let mut new_board = board;
                 new_board.make_move(current_move);
-                alpha = Number::max(
+                alpha = f64::max(
                     alpha,
                     self.quiescence_search(new_board, depth - 1, false, alpha, beta),
                 );
@@ -239,7 +236,7 @@ impl<H: Heuristic> MiniMaxAgent<H> {
             for current_move in possible_moves {
                 let mut new_board = board;
                 new_board.make_move(current_move);
-                beta = Number::min(
+                beta = f64::min(
                     beta,
                     self.quiescence_search(new_board, depth - 1, true, alpha, beta),
                 );
@@ -256,218 +253,5 @@ impl<H: Heuristic> MiniMaxAgent<H> {
 impl<H: Heuristic> Agent for MiniMaxAgent<H> {
     fn act(&mut self, board: UltimateBoard) -> Option<u8> {
         self.get_best_move(board, self.depth)
-    }
-}
-
-/// A number type that implements the basic arithmetic operations.
-///
-/// This type is used to allow for easy switching between f64 and i32.
-#[derive(Clone, Debug, PartialEq, PartialOrd, Copy)]
-pub struct Number(pub f64);
-
-impl Number {
-    pub fn get_value(&self) -> f64 {
-        self.0
-    }
-
-    pub const MIN: Number = Number(f64::MIN);
-    pub const MAX: Number = Number(f64::MAX);
-
-    pub fn min(lhs: Number, rhs: Number) -> Number {
-        Number(f64::min(lhs.0, rhs.0))
-    }
-
-    pub fn max(lhs: Number, rhs: Number) -> Number {
-        Number(f64::max(lhs.0, rhs.0))
-    }
-
-    pub const ZERO: Number = Number(0.0);
-}
-
-impl Deref for Number {
-    type Target = f64;
-
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-
-impl Add for Number {
-    type Output = Self;
-
-    fn add(self, rhs: Self) -> Self::Output {
-        Number(self.0 + rhs.0)
-    }
-}
-
-impl Add<f64> for Number {
-    type Output = Self;
-
-    fn add(self, rhs: f64) -> Self::Output {
-        Number(self.0 + rhs)
-    }
-}
-
-impl Add<i32> for Number {
-    type Output = Self;
-
-    fn add(self, rhs: i32) -> Self::Output {
-        Number(self.0 + rhs as f64)
-    }
-}
-
-impl AddAssign for Number {
-    fn add_assign(&mut self, rhs: Self) {
-        self.0 += rhs.0;
-    }
-}
-
-impl AddAssign<f64> for Number {
-    fn add_assign(&mut self, rhs: f64) {
-        self.0 += rhs;
-    }
-}
-
-impl AddAssign<i32> for Number {
-    fn add_assign(&mut self, rhs: i32) {
-        self.0 += rhs as f64;
-    }
-}
-
-impl Sub for Number {
-    type Output = Self;
-
-    fn sub(self, rhs: Self) -> Self::Output {
-        Number(self.0 - rhs.0)
-    }
-}
-
-impl Sub<f64> for Number {
-    type Output = Self;
-
-    fn sub(self, rhs: f64) -> Self::Output {
-        Number(self.0 - rhs)
-    }
-}
-
-impl Sub<i32> for Number {
-    type Output = Self;
-
-    fn sub(self, rhs: i32) -> Self::Output {
-        Number(self.0 - rhs as f64)
-    }
-}
-
-impl SubAssign for Number {
-    fn sub_assign(&mut self, rhs: Self) {
-        self.0 -= rhs.0;
-    }
-}
-
-impl SubAssign<f64> for Number {
-    fn sub_assign(&mut self, rhs: f64) {
-        self.0 -= rhs;
-    }
-}
-
-impl SubAssign<i32> for Number {
-    fn sub_assign(&mut self, rhs: i32) {
-        self.0 -= rhs as f64;
-    }
-}
-
-impl Mul for Number {
-    type Output = Self;
-
-    fn mul(self, rhs: Self) -> Self::Output {
-        Number(self.0 * rhs.0)
-    }
-}
-
-impl Mul<f64> for Number {
-    type Output = Self;
-
-    fn mul(self, rhs: f64) -> Self::Output {
-        Number(self.0 * rhs)
-    }
-}
-
-impl Mul<i32> for Number {
-    type Output = Self;
-
-    fn mul(self, rhs: i32) -> Self::Output {
-        Number(self.0 * rhs as f64)
-    }
-}
-
-impl MulAssign for Number {
-    fn mul_assign(&mut self, rhs: Self) {
-        self.0 *= rhs.0;
-    }
-}
-
-impl MulAssign<f64> for Number {
-    fn mul_assign(&mut self, rhs: f64) {
-        self.0 *= rhs;
-    }
-}
-
-impl MulAssign<i32> for Number {
-    fn mul_assign(&mut self, rhs: i32) {
-        self.0 *= rhs as f64;
-    }
-}
-
-impl Div for Number {
-    type Output = Self;
-
-    fn div(self, rhs: Self) -> Self::Output {
-        Number(self.0 / rhs.0)
-    }
-}
-
-impl Div<f64> for Number {
-    type Output = Self;
-
-    fn div(self, rhs: f64) -> Self::Output {
-        Number(self.0 / rhs)
-    }
-}
-
-impl Div<i32> for Number {
-    type Output = Self;
-
-    fn div(self, rhs: i32) -> Self::Output {
-        Number(self.0 / rhs as f64)
-    }
-}
-
-impl DivAssign for Number {
-    fn div_assign(&mut self, rhs: Self) {
-        self.0 /= rhs.0;
-    }
-}
-
-impl DivAssign<f64> for Number {
-    fn div_assign(&mut self, rhs: f64) {
-        self.0 /= rhs;
-    }
-}
-
-impl DivAssign<i32> for Number {
-    fn div_assign(&mut self, rhs: i32) {
-        self.0 /= rhs as f64;
-    }
-}
-
-impl From<f64> for Number {
-    fn from(value: f64) -> Self {
-        Number(value)
-    }
-}
-
-impl From<i32> for Number {
-    fn from(value: i32) -> Self {
-        Number(value as f64)
     }
 }

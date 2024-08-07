@@ -5,13 +5,13 @@ use std::collections::HashMap;
 use itertools::Itertools;
 use rayon::iter::{IntoParallelIterator, ParallelIterator};
 
-use crate::agents::minimax_agent::MiniMaxAgent;
+use crate::agent::minimax_agent::MiniMaxAgent;
 use crate::game::game_result::GameResult;
 use crate::game::game_result::GameResult::Win;
 use crate::game::player::Player::{One, Two};
 use crate::game::Game;
 use crate::genetic_algorithm::gene::Gene;
-use crate::heuristics::parameterized_heuristic::ParameterizedHeuristic;
+use crate::heuristic::parameterized_heuristic::ParameterizedHeuristic;
 
 /// # Struct representing a fitness function
 ///

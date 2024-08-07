@@ -1,6 +1,6 @@
 //! # Contains the [Game] struct
 //! The Game struct represents a game of Ultimate Tic Tac Toe.
-//! The game is played by two [agents](Agent).
+//! The game is played by two [agent](Agent).
 
 use crate::agent::Agent;
 use game_result::GameResult;
@@ -15,14 +15,14 @@ pub mod ultimate_board;
 
 /// Struct representing a game of Ultimate Tic Tac Toe
 ///
-/// The game is played by two [agents](Agent).
+/// The game is played by two [agent](Agent).
 pub struct Game {
     agents: Vec<Box<dyn Agent>>,
     board: UltimateBoard,
 }
 
 impl Game {
-    /// Creates a new game with the provided agents.
+    /// Creates a new game with the provided agent.
     /// # Arguments
     /// * `agent_one` - The agent of [Player::One]
     /// * `agent_two` - The agent of [Player::Two]

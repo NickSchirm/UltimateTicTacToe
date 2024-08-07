@@ -1,6 +1,6 @@
 //! # Contains various modules for the genetic algorithm
 //!
-//! The genetic algorithm is used to optimize the weights of [ParametrizedHeuristic](crate::parameterized_heuristic::ParameterizedHeuristic).
+//! The genetic algorithm is used to optimize the weights of [ParameterizedHeuristic](crate::heuristic::parameterized_heuristic::ParameterizedHeuristic).
 
 use crate::genetic_algorithm::fitness_function::FitnessFunction;
 use itertools::Itertools;
@@ -8,11 +8,8 @@ use itertools::Itertools;
 pub mod fitness_function;
 pub mod gene;
 pub mod mutation;
-pub mod mutations;
 pub mod recombination;
-pub mod recombinations;
 pub mod selection;
-pub mod selections;
 
 /// # Struct representing a genetic algorithm
 ///
@@ -77,10 +74,10 @@ impl GeneticAlgorithm {
 mod tests {
     use super::*;
     use crate::genetic_algorithm::gene::Gene;
-    use crate::genetic_algorithm::mutations::normal_distribution_mutation::NormalDistributionMutation;
-    use crate::genetic_algorithm::recombinations::one_point_crossover::OnePointCrossover;
-    use crate::genetic_algorithm::selections::roulette_wheel_selection::RouletteWheelSelection;
-    use crate::heuristics::parameterized_heuristic::NUM_FEATURES;
+    use crate::genetic_algorithm::mutation::normal_distribution_mutation::NormalDistributionMutation;
+    use crate::genetic_algorithm::recombination::one_point_crossover::OnePointCrossover;
+    use crate::genetic_algorithm::selection::roulette_wheel_selection::RouletteWheelSelection;
+    use crate::heuristic::parameterized_heuristic::NUM_FEATURES;
 
     #[test]
     fn test_genetic_algorithm() {

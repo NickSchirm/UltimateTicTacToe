@@ -2,7 +2,6 @@
 //! The MonteCarloGameSearchHeuristic struct represents a [Heuristic] that uses Monte Carlo Tree Search to evaluate the best move.
 //! The heuristic uses random games to evaluate the best move.
 
-use crate::agents::minimax_agent::Number;
 use crate::game::game_result::GameResult;
 use crate::game::player::Player;
 use crate::game::ultimate_board::UltimateBoard;
@@ -20,7 +19,7 @@ use rand::prelude::SliceRandom;
 /// Note:
 /// * The heuristic is not deterministic.
 /// * The heuristic is not guaranteed to find the best move.
-/// * The heuristic is really slow compared to [CustomHeuristic](crate::custom_heuristic::CustomHeuristic) while providing worse results.
+/// * The heuristic is really slow compared to [CustomHeuristic](crate::heuristic::custom_heuristic::CustomHeuristic) while providing worse results.
 #[derive(Clone)]
 pub struct MonteCarloGameSearchHeuristic {
     player: Player,
@@ -54,7 +53,7 @@ impl MonteCarloGameSearchHeuristic {
 }
 
 impl Heuristic for MonteCarloGameSearchHeuristic {
-    fn evaluate(&self, board: UltimateBoard) -> Number {
+    fn evaluate(&self, board: UltimateBoard) -> f64 {
         let possible_moves = board.get_possible_moves();
         let mut results = vec![];
 
@@ -103,11 +102,11 @@ impl Heuristic for MonteCarloGameSearchHeuristic {
         }
 
         if best_move.is_none() {
-            return Number::ZERO;
+            return 0.;
         }
 
         let (_, wins, losses, _) = best_move.unwrap();
 
-        Number::from(wins - losses)
+        (wins - losses) as f64
     }
 }

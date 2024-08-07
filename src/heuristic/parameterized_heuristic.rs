@@ -10,7 +10,6 @@
 //!
 //! The [ParameterizedMiniBoardHeuristic] struct represents a [MiniBoardHeuristic] that uses weights for the features to evaluate small boards.
 
-use crate::agents::minimax_agent::Number;
 use crate::game::board::Board;
 use crate::game::game_result::GameResult;
 use crate::game::player::Player;
@@ -51,7 +50,7 @@ pub struct ParameterizedHeuristic {
     /// 12. Number of partial wins difference on the entire board
     /// 13. Whether the current player can freely choose a small board
     pub values: Vec<f64>,
-    small_board_lookup_table: HashMap<u32, Number>,
+    small_board_lookup_table: HashMap<u32, f64>,
 }
 
 impl ParameterizedHeuristic {
@@ -65,8 +64,8 @@ impl ParameterizedHeuristic {
 }
 
 impl Heuristic for ParameterizedHeuristic {
-    fn evaluate(&self, board: UltimateBoard) -> Number {
-        let mut value = Number::ZERO;
+    fn evaluate(&self, board: UltimateBoard) -> f64 {
+        let mut value = 0.;
 
         if board.get_game_status() == GameResult::Win(self.player) {
             return *MAX_VALUE;
@@ -145,8 +144,8 @@ impl ParameterizedMiniBoardHeuristic {
 }
 
 impl MiniBoardHeuristic for ParameterizedMiniBoardHeuristic {
-    fn evaluate(&self, board: Board) -> Number {
-        let mut value = Number::ZERO;
+    fn evaluate(&self, board: Board) -> f64 {
+        let mut value = 0.;
 
         let positions_set_difference = board.get_positions_set_difference(Player::One) as f64;
         if positions_set_difference > 0. {
