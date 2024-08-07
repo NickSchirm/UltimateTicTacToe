@@ -10,6 +10,7 @@ fn main() {
     println!("1. Single Depth");
     println!("2. Multiple Depths");
     println!("3. Turnier");
+    println!("4. Turnier All");
 
     let mut input = String::new();
     std::io::stdin()
@@ -20,7 +21,11 @@ fn main() {
     match num {
         1 => single_depth::process(),
         2 => multiple_depths::process(),
-        3 => turnier::process(),
+        3 => {
+            let (input_path, output_path, name_of_first_player) = turnier::read_from_console();
+            turnier::process(input_path, output_path, name_of_first_player);
+        }
+        4 => turnier::multi_process(),
         _ => println!("Invalid input"),
     }
 }
