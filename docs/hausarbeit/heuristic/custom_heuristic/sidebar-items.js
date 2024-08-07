@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"static":["SMALL_BOARD_LOOKUP_TABLE"],"struct":["CustomHeuristic","CustomMiniBoardHeuristic"]};

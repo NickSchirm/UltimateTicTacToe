@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["bitboard","board","game_result","player","ultimate_board"],"struct":["Game"]};

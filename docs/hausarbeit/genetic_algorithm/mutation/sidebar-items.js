@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["normal_distribution_mutation","shift_mutation"],"trait":["Mutation"]};

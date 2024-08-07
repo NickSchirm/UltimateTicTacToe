@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["run"],"mod":["fitness","gene","mutation","recombination","selection"],"struct":["GeneticAlgorithm"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["agent","game","genetic_algorithm","heuristic","quality_test","runtime_test"]};

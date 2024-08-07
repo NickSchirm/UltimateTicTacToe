@@ -1,0 +1,3 @@
+(function() {var implementors = {
+"hausarbeit":[["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/1.79.0/core/fmt/trait.Display.html\" title=\"trait core::fmt::Display\">Display</a> for <a class=\"struct\" href=\"hausarbeit/game/board/struct.Board.html\" title=\"struct hausarbeit::game::board::Board\">Board</a>"],["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/1.79.0/core/fmt/trait.Display.html\" title=\"trait core::fmt::Display\">Display</a> for <a class=\"struct\" href=\"hausarbeit/game/ultimate_board/struct.UltimateBoard.html\" title=\"struct hausarbeit::game::ultimate_board::UltimateBoard\">UltimateBoard</a>"]]
+};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

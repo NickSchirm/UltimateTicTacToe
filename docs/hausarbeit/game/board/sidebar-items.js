@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["PARTIAL_WIN_POSITIONS","ROWS","WIN_POSITIONS"],"enum":["BoardSymbol"],"struct":["Board","LegalBoardIterator"]};
