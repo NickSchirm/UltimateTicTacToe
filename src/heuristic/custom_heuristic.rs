@@ -38,11 +38,11 @@ impl Heuristic for CustomHeuristic {
         let mut value = 0.;
 
         if board.get_game_status() == GameResult::Win(self.player) {
-            return MAX_VALUE-1.;
+            return MAX_VALUE;
         }
 
         if board.get_game_status() == GameResult::Win(self.player.get_opponent()) {
-            return MIN_VALUE+1.;
+            return MIN_VALUE;
         }
 
         // Reward having more positions set on small boards than the opponent
@@ -70,7 +70,7 @@ impl Heuristic for CustomHeuristic {
         value
     }
     fn get_name(&self) -> String {
-        "CustomHeuristic".to_string()
+        "SH".to_string()
     }
 }
 

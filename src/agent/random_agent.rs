@@ -39,6 +39,6 @@ impl Agent for RandomAgent {
     }
 
     fn get_info(&self) -> AgentInfo {
-        AgentInfo::new("Random".to_string(), self.player, self.turn, "".to_string())
+        AgentInfo::new("RAND".to_string(), self.player, self.turn, "".to_string())
     }
 }

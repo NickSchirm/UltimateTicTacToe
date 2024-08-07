@@ -4,6 +4,9 @@ use csv::Writer;
 use hausarbeit::agent::benched::BenchedAgent;
 use hausarbeit::agent::minimax_agent::MiniMaxAgent;
 use hausarbeit::agent::monte_carlo_tree_agent::MonteCarloTreeAgent;
+use hausarbeit::agent::random_agent::RandomAgent;
+use hausarbeit::agent::random_start::RandomStartAgent;
+use hausarbeit::agent::Agent;
 use hausarbeit::game::game_result::GameResult;
 use hausarbeit::game::player::Player::{One, Two};
 use hausarbeit::game::Game;
@@ -15,6 +18,7 @@ use hausarbeit::genetic_algorithm::recombination::one_point_crossover::OnePointC
 use hausarbeit::genetic_algorithm::selection::roulette_wheel_selection::RouletteWheelSelection;
 use hausarbeit::genetic_algorithm::GeneticAlgorithm;
 use hausarbeit::heuristic::custom_heuristic::CustomHeuristic;
+use hausarbeit::heuristic::monte_carlo_game_search_heuristic::MonteCarloGameSearchHeuristic;
 use hausarbeit::heuristic::parameterized_heuristic::{ParameterizedHeuristic, NUM_FEATURES};
 use hausarbeit::{agent, genetic_algorithm, runtime_test};
 use rayon::iter::ParallelIterator;
@@ -25,9 +29,6 @@ use std::path::Path;
 use std::sync::atomic::{AtomicUsize, Ordering};
 use std::sync::{Arc, Mutex};
 use std::time::Instant;
-use hausarbeit::agent::random_agent::RandomAgent;
-use hausarbeit::agent::random_start::RandomStartAgent;
-use hausarbeit::heuristic::monte_carlo_game_search_heuristic::MonteCarloGameSearchHeuristic;
 
 const NUM_GAMES: u32 = 100;
 const DEPTH: u32 = 7;
@@ -55,12 +56,16 @@ fn run() {
     let mut games = vec![];
 
     let writer = Arc::new(Mutex::new(
-        Writer::from_path("sh vs mcts.csv").expect("Could not create CSV writer"),
+        Writer::from_path("rand vs mcts.csv").expect("Could not create CSV writer"),
     ));
 
     for _ in 0..NUM_GAMES {
-        let agent1 = RandomStartAgent::new(2, BenchedAgent::new(writer.clone(), MiniMaxAgent::new(DEPTH, QUIESCENCE_SEARCH_DEPTH, ParameterizedHeuristic::new(One, vec![-0.9011298820760223, -0.9047473011303433, -1.9878186210206341, -0.940735228598089, 1.3140632491937836, 0.5190040302978252, 0.7128491119909083, 1.2756963483965846, 2.264309782234436, 0.14115748887705593, 1.2441779567914344, 2.0944754371556287]))));
-        let agent2 = RandomStartAgent::new(2, BenchedAgent::new(writer.clone(), RandomAgent::new()));
+        let agent1 =
+            RandomStartAgent::new(2, BenchedAgent::new(writer.clone(), RandomAgent::new()));
+        let agent2 = RandomStartAgent::new(
+            2,
+            BenchedAgent::new(writer.clone(), MonteCarloTreeAgent::new(1000)),
+        );
 
         games.push(Game::new(Box::new(agent1), Box::new(agent2)));
     }

@@ -1,0 +1,3935 @@
+name,player,turn_num,config,duration
+MCTS,One,2,max_nodes: 1000,149137
+RAND,Two,3,,0
+MCTS,One,2,max_nodes: 1000,159810
+RAND,Two,3,,0
+MCTS,One,2,max_nodes: 1000,163442
+RAND,Two,3,,0
+MCTS,One,2,max_nodes: 1000,168701
+RAND,Two,3,,0
+MCTS,One,2,max_nodes: 1000,170740
+RAND,Two,3,,0
+MCTS,One,2,max_nodes: 1000,171257
+RAND,Two,3,,0
+MCTS,One,2,max_nodes: 1000,176958
+RAND,Two,3,,0
+MCTS,One,4,max_nodes: 1000,172189
+RAND,Two,5,,0
+MCTS,One,4,max_nodes: 1000,177772
+RAND,Two,5,,0
+MCTS,One,4,max_nodes: 1000,174864
+RAND,Two,5,,0
+MCTS,One,4,max_nodes: 1000,169998
+RAND,Two,5,,1
+MCTS,One,4,max_nodes: 1000,168579
+RAND,Two,5,,0
+MCTS,One,4,max_nodes: 1000,178475
+RAND,Two,5,,1
+MCTS,One,4,max_nodes: 1000,189105
+RAND,Two,5,,0
+MCTS,One,6,max_nodes: 1000,141314
+RAND,Two,7,,1
+MCTS,One,6,max_nodes: 1000,142278
+RAND,Two,7,,0
+MCTS,One,6,max_nodes: 1000,160071
+RAND,Two,7,,0
+MCTS,One,6,max_nodes: 1000,145826
+RAND,Two,7,,0
+MCTS,One,6,max_nodes: 1000,161240
+RAND,Two,7,,0
+MCTS,One,6,max_nodes: 1000,170035
+RAND,Two,7,,0
+MCTS,One,6,max_nodes: 1000,158787
+RAND,Two,7,,0
+MCTS,One,8,max_nodes: 1000,132656
+RAND,Two,9,,0
+MCTS,One,8,max_nodes: 1000,140548
+RAND,Two,9,,0
+MCTS,One,8,max_nodes: 1000,145423
+RAND,Two,9,,0
+MCTS,One,8,max_nodes: 1000,141658
+RAND,Two,9,,0
+MCTS,One,8,max_nodes: 1000,146302
+RAND,Two,9,,0
+MCTS,One,8,max_nodes: 1000,137592
+RAND,Two,9,,0
+MCTS,One,10,max_nodes: 1000,122428
+RAND,Two,11,,0
+MCTS,One,8,max_nodes: 1000,222026
+RAND,Two,9,,0
+MCTS,One,10,max_nodes: 1000,129446
+MCTS,One,10,max_nodes: 1000,129176
+RAND,Two,11,,0
+RAND,Two,11,,1
+MCTS,One,10,max_nodes: 1000,146878
+RAND,Two,11,,0
+MCTS,One,10,max_nodes: 1000,143347
+RAND,Two,11,,0
+MCTS,One,10,max_nodes: 1000,129511
+RAND,Two,11,,0
+MCTS,One,12,max_nodes: 1000,125347
+RAND,Two,13,,1
+MCTS,One,12,max_nodes: 1000,136328
+RAND,Two,13,,0
+MCTS,One,12,max_nodes: 1000,137382
+RAND,Two,13,,0
+MCTS,One,12,max_nodes: 1000,129027
+RAND,Two,13,,0
+MCTS,One,12,max_nodes: 1000,134971
+RAND,Two,13,,0
+MCTS,One,12,max_nodes: 1000,195755
+RAND,Two,13,,0
+MCTS,One,14,max_nodes: 1000,118716
+MCTS,One,14,max_nodes: 1000,133766
+RAND,Two,15,,1
+RAND,Two,15,,0
+MCTS,One,14,max_nodes: 1000,128287
+MCTS,One,14,max_nodes: 1000,157222
+RAND,Two,15,,1
+RAND,Two,15,,1
+MCTS,One,14,max_nodes: 1000,134253
+RAND,Two,15,,0
+MCTS,One,10,max_nodes: 1000,327465
+RAND,Two,11,,0
+MCTS,One,14,max_nodes: 1000,252063
+MCTS,One,16,max_nodes: 1000,165105
+RAND,Two,15,,0
+MCTS,One,16,max_nodes: 1000,154760
+RAND,Two,17,,1
+MCTS,One,16,max_nodes: 1000,157975
+RAND,Two,17,,0
+RAND,Two,17,,0
+MCTS,One,16,max_nodes: 1000,219657
+MCTS,One,16,max_nodes: 1000,201869
+RAND,Two,17,,0
+RAND,Two,17,,0
+MCTS,One,18,max_nodes: 1000,124929
+RAND,Two,19,,0
+MCTS,One,18,max_nodes: 1000,138611
+MCTS,One,18,max_nodes: 1000,183984
+RAND,Two,19,,0
+RAND,Two,19,,0
+MCTS,One,18,max_nodes: 1000,214811
+RAND,Two,19,,0
+MCTS,One,12,max_nodes: 1000,374505
+RAND,Two,13,,0
+MCTS,One,20,max_nodes: 1000,181175
+RAND,Two,21,,0
+MCTS,One,18,max_nodes: 1000,305821
+RAND,Two,19,,1
+MCTS,One,20,max_nodes: 1000,191482
+RAND,Two,21,,2
+MCTS,One,20,max_nodes: 1000,260032
+RAND,Two,21,,1
+MCTS,One,16,max_nodes: 1000,471267
+RAND,Two,17,,1
+MCTS,One,20,max_nodes: 1000,252852
+RAND,Two,21,,0
+MCTS,One,22,max_nodes: 1000,202128
+RAND,Two,23,,0
+MCTS,One,14,max_nodes: 1000,288262
+RAND,Two,15,,0
+MCTS,One,20,max_nodes: 1000,212033
+RAND,Two,21,,0
+MCTS,One,22,max_nodes: 1000,239455
+RAND,Two,23,,0
+MCTS,One,22,max_nodes: 1000,188657
+RAND,Two,23,,0
+MCTS,One,22,max_nodes: 1000,224789
+RAND,Two,23,,0
+MCTS,One,24,max_nodes: 1000,179362
+RAND,Two,25,,0
+MCTS,One,22,max_nodes: 1000,184750
+RAND,Two,23,,0
+MCTS,One,16,max_nodes: 1000,223366
+RAND,Two,17,,0
+MCTS,One,18,max_nodes: 1000,330550
+RAND,Two,19,,0
+MCTS,One,26,max_nodes: 1000,118229
+RAND,Two,27,,0
+MCTS,One,24,max_nodes: 1000,84900
+RAND,Two,25,,0
+MCTS,One,24,max_nodes: 1000,173196
+RAND,Two,25,,0
+MCTS,One,24,max_nodes: 1000,233054
+RAND,Two,25,,0
+MCTS,One,24,max_nodes: 1000,222316
+RAND,Two,25,,0
+MCTS,One,26,max_nodes: 1000,74975
+RAND,Two,27,,0
+MCTS,One,28,max_nodes: 1000,6642
+RAND,Two,29,,0
+MCTS,One,30,max_nodes: 1000,17568
+RAND,Two,31,,1
+MCTS,One,32,max_nodes: 1000,9657
+RAND,Two,33,,0
+MCTS,One,34,max_nodes: 1000,8175
+RAND,Two,35,,0
+MCTS,One,18,max_nodes: 1000,233837
+RAND,Two,19,,1
+MCTS,One,26,max_nodes: 1000,179468
+MCTS,One,28,max_nodes: 1000,198064
+RAND,Two,29,,0
+RAND,Two,27,,0
+MCTS,One,36,max_nodes: 1000,58173
+RAND,Two,37,,4
+MCTS,One,38,max_nodes: 1000,15917
+RAND,Two,39,,3
+MCTS,One,40,max_nodes: 1000,4393
+RAND,Two,41,,0
+MCTS,One,42,max_nodes: 1000,12069
+MCTS,One,20,max_nodes: 1000,267773
+RAND,Two,21,,0
+MCTS,One,26,max_nodes: 1000,220311
+RAND,Two,27,,0
+MCTS,One,30,max_nodes: 1000,66999
+RAND,Two,31,,0
+MCTS,One,26,max_nodes: 1000,206201
+RAND,Two,27,,0
+MCTS,One,32,max_nodes: 1000,16676
+RAND,Two,33,,0
+MCTS,One,34,max_nodes: 1000,2096
+MCTS,One,28,max_nodes: 1000,140011
+RAND,Two,29,,1
+MCTS,One,22,max_nodes: 1000,148711
+RAND,Two,23,,0
+MCTS,One,20,max_nodes: 1000,233544
+RAND,Two,21,,4
+MCTS,One,2,max_nodes: 1000,189071
+RAND,Two,3,,0
+MCTS,One,2,max_nodes: 1000,187625
+RAND,Two,3,,0
+MCTS,One,28,max_nodes: 1000,221182
+RAND,Two,29,,4
+MCTS,One,24,max_nodes: 1000,134860
+RAND,Two,25,,0
+MCTS,One,30,max_nodes: 1000,214584
+RAND,Two,31,,3
+MCTS,One,28,max_nodes: 1000,310822
+RAND,Two,29,,2
+MCTS,One,30,max_nodes: 1000,85981
+RAND,Two,31,,0
+MCTS,One,22,max_nodes: 1000,171977
+RAND,Two,23,,0
+MCTS,One,32,max_nodes: 1000,42507
+RAND,Two,33,,0
+MCTS,One,4,max_nodes: 1000,181899
+MCTS,One,34,max_nodes: 1000,8639
+RAND,Two,5,,0
+RAND,Two,35,,0
+MCTS,One,36,max_nodes: 1000,14861
+RAND,Two,37,,4
+MCTS,One,38,max_nodes: 1000,927
+MCTS,One,26,max_nodes: 1000,88226
+RAND,Two,27,,1
+MCTS,One,32,max_nodes: 1000,74140
+RAND,Two,33,,0
+MCTS,One,34,max_nodes: 1000,9319
+RAND,Two,35,,0
+MCTS,One,4,max_nodes: 1000,204804
+RAND,Two,5,,0
+MCTS,One,36,max_nodes: 1000,8594
+RAND,Two,37,,1
+MCTS,One,24,max_nodes: 1000,91478
+RAND,Two,25,,0
+MCTS,One,38,max_nodes: 1000,2984
+RAND,Two,39,,0
+MCTS,One,40,max_nodes: 1000,2728
+RAND,Two,41,,0
+MCTS,One,42,max_nodes: 1000,3465
+RAND,Two,43,,0
+MCTS,One,30,max_nodes: 1000,127926
+RAND,Two,31,,1
+MCTS,One,44,max_nodes: 1000,2097
+RAND,Two,45,,0
+MCTS,One,46,max_nodes: 1000,222
+MCTS,One,32,max_nodes: 1000,6216
+RAND,Two,33,,0
+MCTS,One,34,max_nodes: 1000,157
+RAND,Two,35,,0
+MCTS,One,36,max_nodes: 1000,4031
+RAND,Two,37,,0
+MCTS,One,38,max_nodes: 1000,3554
+RAND,Two,39,,0
+MCTS,One,40,max_nodes: 1000,2133
+RAND,Two,41,,0
+MCTS,One,42,max_nodes: 1000,13183
+RAND,Two,43,,1
+MCTS,One,44,max_nodes: 1000,2082
+RAND,Two,45,,0
+MCTS,One,46,max_nodes: 1000,7470
+RAND,Two,47,,0
+MCTS,One,48,max_nodes: 1000,1725
+RAND,Two,49,,0
+MCTS,One,50,max_nodes: 1000,1437
+RAND,Two,51,,0
+MCTS,One,28,max_nodes: 1000,91544
+RAND,Two,29,,0
+MCTS,One,52,max_nodes: 1000,6608
+RAND,Two,53,,0
+MCTS,One,54,max_nodes: 1000,1183
+RAND,Two,55,,0
+MCTS,One,56,max_nodes: 1000,1407
+RAND,Two,57,,0
+MCTS,One,58,max_nodes: 1000,1167
+RAND,Two,59,,0
+MCTS,One,60,max_nodes: 1000,92
+MCTS,One,26,max_nodes: 1000,68208
+RAND,Two,27,,0
+MCTS,One,28,max_nodes: 1000,11509
+RAND,Two,29,,0
+MCTS,One,30,max_nodes: 1000,26153
+RAND,Two,31,,0
+MCTS,One,30,max_nodes: 1000,7585
+RAND,Two,31,,0
+MCTS,One,32,max_nodes: 1000,115
+MCTS,One,6,max_nodes: 1000,172146
+RAND,Two,7,,0
+MCTS,One,32,max_nodes: 1000,21816
+RAND,Two,33,,0
+MCTS,One,34,max_nodes: 1000,24719
+RAND,Two,35,,0
+MCTS,One,2,max_nodes: 1000,193889
+RAND,Two,3,,1
+MCTS,One,36,max_nodes: 1000,23353
+RAND,Two,37,,2
+MCTS,One,38,max_nodes: 1000,12095
+RAND,Two,39,,0
+MCTS,One,6,max_nodes: 1000,169490
+RAND,Two,7,,0
+MCTS,One,40,max_nodes: 1000,1632
+RAND,Two,41,,0
+MCTS,One,42,max_nodes: 1000,78
+MCTS,One,2,max_nodes: 1000,178784
+RAND,Two,3,,0
+MCTS,One,2,max_nodes: 1000,171399
+RAND,Two,3,,0
+MCTS,One,8,max_nodes: 1000,139253
+RAND,Two,9,,0
+MCTS,One,2,max_nodes: 1000,169859
+RAND,Two,3,,0
+MCTS,One,4,max_nodes: 1000,154739
+RAND,Two,5,,0
+MCTS,One,8,max_nodes: 1000,141767
+RAND,Two,9,,1
+MCTS,One,2,max_nodes: 1000,170162
+RAND,Two,3,,1
+MCTS,One,4,max_nodes: 1000,155719
+RAND,Two,5,,0
+MCTS,One,10,max_nodes: 1000,133920
+RAND,Two,11,,0
+MCTS,One,4,max_nodes: 1000,153130
+RAND,Two,5,,1
+MCTS,One,4,max_nodes: 1000,172360
+RAND,Two,5,,0
+MCTS,One,10,max_nodes: 1000,123951
+RAND,Two,11,,0
+MCTS,One,6,max_nodes: 1000,148677
+RAND,Two,7,,0
+MCTS,One,12,max_nodes: 1000,153574
+MCTS,One,6,max_nodes: 1000,193248
+RAND,Two,13,,1
+RAND,Two,7,,1
+MCTS,One,4,max_nodes: 1000,334518
+MCTS,One,12,max_nodes: 1000,253465
+RAND,Two,5,,0
+RAND,Two,13,,0
+MCTS,One,6,max_nodes: 1000,311787
+RAND,Two,7,,1
+MCTS,One,6,max_nodes: 1000,296654
+RAND,Two,7,,0
+MCTS,One,8,max_nodes: 1000,321514
+RAND,Two,9,,0
+MCTS,One,14,max_nodes: 1000,154988
+RAND,Two,15,,0
+MCTS,One,8,max_nodes: 1000,157610
+RAND,Two,9,,0
+MCTS,One,6,max_nodes: 1000,187039
+MCTS,One,8,max_nodes: 1000,162758
+MCTS,One,14,max_nodes: 1000,200527
+RAND,Two,15,,1
+RAND,Two,9,,1
+RAND,Two,7,,0
+MCTS,One,8,max_nodes: 1000,171118
+RAND,Two,9,,0
+MCTS,One,16,max_nodes: 1000,129104
+RAND,Two,17,,0
+MCTS,One,10,max_nodes: 1000,151041
+RAND,Two,11,,0
+MCTS,One,10,max_nodes: 1000,142322
+MCTS,One,10,max_nodes: 1000,282742
+RAND,Two,11,,0
+RAND,Two,11,,1
+MCTS,One,8,max_nodes: 1000,162979
+RAND,Two,9,,0
+MCTS,One,10,max_nodes: 1000,163937
+RAND,Two,11,,0
+MCTS,One,16,max_nodes: 1000,226608
+MCTS,One,18,max_nodes: 1000,122762
+RAND,Two,17,,0
+RAND,Two,19,,0
+MCTS,One,12,max_nodes: 1000,175863
+MCTS,One,12,max_nodes: 1000,158937
+RAND,Two,13,,0
+RAND,Two,13,,0
+MCTS,One,10,max_nodes: 1000,165850
+MCTS,One,12,max_nodes: 1000,143234
+RAND,Two,11,,1
+RAND,Two,13,,1
+MCTS,One,20,max_nodes: 1000,179312
+RAND,Two,21,,0
+MCTS,One,12,max_nodes: 1000,274816
+RAND,Two,13,,0
+MCTS,One,14,max_nodes: 1000,124172
+RAND,Two,15,,0
+MCTS,One,14,max_nodes: 1000,134309
+RAND,Two,15,,0
+MCTS,One,14,max_nodes: 1000,125057
+RAND,Two,15,,0
+MCTS,One,12,max_nodes: 1000,134953
+RAND,Two,13,,0
+MCTS,One,16,max_nodes: 1000,117162
+RAND,Two,17,,0
+MCTS,One,16,max_nodes: 1000,132489
+RAND,Two,17,,0
+MCTS,One,22,max_nodes: 1000,203783
+RAND,Two,23,,16
+MCTS,One,14,max_nodes: 1000,176500
+RAND,Two,15,,0
+MCTS,One,18,max_nodes: 1000,432938
+RAND,Two,19,,0
+MCTS,One,16,max_nodes: 1000,228355
+RAND,Two,17,,0
+MCTS,One,18,max_nodes: 1000,140680
+RAND,Two,19,,0
+MCTS,One,14,max_nodes: 1000,310975
+RAND,Two,15,,0
+MCTS,One,18,max_nodes: 1000,180372
+RAND,Two,19,,0
+MCTS,One,16,max_nodes: 1000,155735
+RAND,Two,17,,1
+MCTS,One,20,max_nodes: 1000,150922
+RAND,Two,21,,0
+MCTS,One,24,max_nodes: 1000,216393
+RAND,Two,25,,2
+MCTS,One,20,max_nodes: 1000,124243
+RAND,Two,21,,0
+MCTS,One,18,max_nodes: 1000,111289
+RAND,Two,19,,0
+MCTS,One,22,max_nodes: 1000,113510
+RAND,Two,23,,1
+MCTS,One,26,max_nodes: 1000,145713
+RAND,Two,27,,1
+MCTS,One,18,max_nodes: 1000,326450
+RAND,Two,19,,0
+MCTS,One,22,max_nodes: 1000,101443
+RAND,Two,23,,0
+MCTS,One,24,max_nodes: 1000,90428
+RAND,Two,25,,0
+MCTS,One,20,max_nodes: 1000,125756
+RAND,Two,21,,0
+MCTS,One,20,max_nodes: 1000,412602
+RAND,Two,21,,0
+MCTS,One,16,max_nodes: 1000,379946
+RAND,Two,17,,0
+MCTS,One,28,max_nodes: 1000,129009
+RAND,Two,29,,0
+MCTS,One,24,max_nodes: 1000,133896
+RAND,Two,25,,0
+MCTS,One,22,max_nodes: 1000,104400
+RAND,Two,23,,0
+MCTS,One,26,max_nodes: 1000,143229
+RAND,Two,27,,0
+MCTS,One,30,max_nodes: 1000,90240
+RAND,Two,31,,0
+MCTS,One,20,max_nodes: 1000,268811
+RAND,Two,21,,0
+MCTS,One,32,max_nodes: 1000,57990
+RAND,Two,33,,0
+MCTS,One,34,max_nodes: 1000,6267
+RAND,Two,35,,0
+MCTS,One,26,max_nodes: 1000,137252
+RAND,Two,27,,0
+MCTS,One,24,max_nodes: 1000,134950
+RAND,Two,25,,0
+MCTS,One,36,max_nodes: 1000,14671
+RAND,Two,37,,0
+MCTS,One,38,max_nodes: 1000,12463
+RAND,Two,39,,2
+MCTS,One,40,max_nodes: 1000,188
+MCTS,One,28,max_nodes: 1000,89696
+RAND,Two,29,,0
+MCTS,One,28,max_nodes: 1000,196442
+RAND,Two,29,,0
+MCTS,One,18,max_nodes: 1000,320532
+RAND,Two,19,,0
+MCTS,One,26,max_nodes: 1000,149637
+RAND,Two,27,,0
+MCTS,One,22,max_nodes: 1000,385177
+RAND,Two,23,,0
+MCTS,One,2,max_nodes: 1000,156958
+RAND,Two,3,,0
+MCTS,One,22,max_nodes: 1000,202672
+RAND,Two,23,,0
+MCTS,One,30,max_nodes: 1000,112645
+RAND,Two,31,,0
+MCTS,One,30,max_nodes: 1000,199298
+RAND,Two,31,,3
+MCTS,One,28,max_nodes: 1000,152060
+RAND,Two,29,,0
+MCTS,One,32,max_nodes: 1000,113821
+RAND,Two,33,,0
+MCTS,One,32,max_nodes: 1000,26683
+RAND,Two,33,,3
+MCTS,One,4,max_nodes: 1000,143199
+RAND,Two,5,,0
+MCTS,One,30,max_nodes: 1000,23620
+RAND,Two,31,,0
+MCTS,One,34,max_nodes: 1000,6791
+RAND,Two,35,,0
+MCTS,One,34,max_nodes: 1000,15355
+RAND,Two,35,,0
+MCTS,One,36,max_nodes: 1000,6202
+RAND,Two,37,,0
+MCTS,One,36,max_nodes: 1000,5277
+RAND,Two,37,,0
+MCTS,One,38,max_nodes: 1000,242
+MCTS,One,38,max_nodes: 1000,1281
+MCTS,One,32,max_nodes: 1000,13167
+RAND,Two,33,,19
+MCTS,One,34,max_nodes: 1000,12896
+RAND,Two,35,,0
+MCTS,One,36,max_nodes: 1000,11442
+RAND,Two,37,,0
+MCTS,One,38,max_nodes: 1000,327
+MCTS,One,20,max_nodes: 1000,235971
+RAND,Two,21,,0
+MCTS,One,24,max_nodes: 1000,214283
+RAND,Two,25,,0
+MCTS,One,24,max_nodes: 1000,299520
+RAND,Two,25,,3
+MCTS,One,6,max_nodes: 1000,147731
+RAND,Two,7,,1
+MCTS,One,2,max_nodes: 1000,165537
+RAND,Two,3,,0
+MCTS,One,2,max_nodes: 1000,170613
+RAND,Two,3,,0
+MCTS,One,2,max_nodes: 1000,157542
+RAND,Two,3,,0
+MCTS,One,26,max_nodes: 1000,181526
+RAND,Two,27,,0
+MCTS,One,22,max_nodes: 1000,238031
+RAND,Two,23,,0
+MCTS,One,8,max_nodes: 1000,144488
+RAND,Two,9,,0
+MCTS,One,28,max_nodes: 1000,62393
+RAND,Two,29,,0
+MCTS,One,4,max_nodes: 1000,150712
+RAND,Two,5,,0
+MCTS,One,4,max_nodes: 1000,156139
+RAND,Two,5,,0
+MCTS,One,24,max_nodes: 1000,50712
+RAND,Two,25,,2
+MCTS,One,30,max_nodes: 1000,26142
+RAND,Two,31,,0
+MCTS,One,26,max_nodes: 1000,212408
+RAND,Two,27,,3
+MCTS,One,4,max_nodes: 1000,155730
+RAND,Two,5,,0
+MCTS,One,32,max_nodes: 1000,13924
+RAND,Two,33,,0
+MCTS,One,34,max_nodes: 1000,8613
+RAND,Two,35,,0
+MCTS,One,26,max_nodes: 1000,47669
+RAND,Two,27,,0
+MCTS,One,28,max_nodes: 1000,8848
+RAND,Two,29,,0
+MCTS,One,30,max_nodes: 1000,17586
+RAND,Two,31,,0
+MCTS,One,36,max_nodes: 1000,53437
+RAND,Two,37,,2
+MCTS,One,32,max_nodes: 1000,11578
+RAND,Two,33,,0
+MCTS,One,10,max_nodes: 1000,142534
+MCTS,One,34,max_nodes: 1000,8957
+RAND,Two,11,,0
+RAND,Two,35,,0
+MCTS,One,36,max_nodes: 1000,861
+RAND,Two,37,,0
+MCTS,One,38,max_nodes: 1000,16474
+RAND,Two,39,,0
+MCTS,One,6,max_nodes: 1000,153293
+RAND,Two,7,,0
+MCTS,One,40,max_nodes: 1000,27655
+RAND,Two,41,,2
+MCTS,One,6,max_nodes: 1000,154078
+RAND,Two,7,,0
+MCTS,One,42,max_nodes: 1000,3791
+RAND,Two,43,,0
+MCTS,One,6,max_nodes: 1000,143933
+RAND,Two,7,,0
+MCTS,One,44,max_nodes: 1000,12182
+RAND,Two,45,,0
+MCTS,One,38,max_nodes: 1000,81684
+MCTS,One,46,max_nodes: 1000,3502
+RAND,Two,39,,3
+MCTS,One,40,max_nodes: 1000,6501
+RAND,Two,41,,0
+MCTS,One,42,max_nodes: 1000,787
+MCTS,One,28,max_nodes: 1000,201738
+RAND,Two,29,,3
+MCTS,One,12,max_nodes: 1000,137254
+RAND,Two,13,,0
+MCTS,One,8,max_nodes: 1000,132583
+RAND,Two,9,,0
+MCTS,One,8,max_nodes: 1000,146086
+RAND,Two,9,,0
+MCTS,One,8,max_nodes: 1000,142841
+RAND,Two,9,,0
+MCTS,One,30,max_nodes: 1000,103423
+RAND,Two,31,,0
+MCTS,One,32,max_nodes: 1000,11385
+RAND,Two,33,,2
+MCTS,One,2,max_nodes: 1000,155255
+RAND,Two,3,,0
+MCTS,One,34,max_nodes: 1000,6819
+RAND,Two,35,,0
+MCTS,One,2,max_nodes: 1000,171685
+RAND,Two,3,,0
+MCTS,One,36,max_nodes: 1000,4371
+RAND,Two,37,,0
+MCTS,One,38,max_nodes: 1000,445
+RAND,Two,39,,0
+MCTS,One,40,max_nodes: 1000,515
+RAND,Two,41,,0
+MCTS,One,42,max_nodes: 1000,1072
+RAND,Two,43,,3
+MCTS,One,44,max_nodes: 1000,54
+MCTS,One,14,max_nodes: 1000,119530
+RAND,Two,15,,0
+MCTS,One,10,max_nodes: 1000,134102
+RAND,Two,11,,0
+MCTS,One,10,max_nodes: 1000,130597
+RAND,Two,11,,0
+MCTS,One,10,max_nodes: 1000,148397
+RAND,Two,11,,0
+MCTS,One,4,max_nodes: 1000,148487
+RAND,Two,5,,0
+MCTS,One,4,max_nodes: 1000,153316
+RAND,Two,5,,0
+MCTS,One,16,max_nodes: 1000,147469
+RAND,Two,17,,3
+MCTS,One,2,max_nodes: 1000,163899
+RAND,Two,3,,0
+MCTS,One,12,max_nodes: 1000,121801
+RAND,Two,13,,0
+MCTS,One,12,max_nodes: 1000,137554
+RAND,Two,13,,0
+MCTS,One,12,max_nodes: 1000,158387
+RAND,Two,13,,0
+MCTS,One,6,max_nodes: 1000,138950
+RAND,Two,7,,0
+MCTS,One,6,max_nodes: 1000,144734
+RAND,Two,7,,0
+MCTS,One,4,max_nodes: 1000,143272
+RAND,Two,5,,0
+MCTS,One,14,max_nodes: 1000,123098
+RAND,Two,15,,0
+MCTS,One,14,max_nodes: 1000,129672
+RAND,Two,15,,0
+MCTS,One,18,max_nodes: 1000,191386
+RAND,Two,19,,0
+MCTS,One,8,max_nodes: 1000,130686
+RAND,Two,9,,0
+MCTS,One,8,max_nodes: 1000,140808
+RAND,Two,9,,0
+MCTS,One,16,max_nodes: 1000,111106
+RAND,Two,17,,0
+MCTS,One,6,max_nodes: 1000,149278
+RAND,Two,7,,0
+MCTS,One,16,max_nodes: 1000,119687
+RAND,Two,17,,0
+MCTS,One,14,max_nodes: 1000,201644
+RAND,Two,15,,0
+MCTS,One,20,max_nodes: 1000,175333
+RAND,Two,21,,0
+MCTS,One,10,max_nodes: 1000,125211
+RAND,Two,11,,0
+MCTS,One,18,max_nodes: 1000,113726
+RAND,Two,19,,0
+MCTS,One,10,max_nodes: 1000,130153
+RAND,Two,11,,0
+MCTS,One,18,max_nodes: 1000,106587
+RAND,Two,19,,0
+MCTS,One,8,max_nodes: 1000,129292
+RAND,Two,9,,0
+MCTS,One,12,max_nodes: 1000,111701
+RAND,Two,13,,0
+MCTS,One,20,max_nodes: 1000,102073
+RAND,Two,21,,0
+MCTS,One,16,max_nodes: 1000,190296
+RAND,Two,17,,0
+MCTS,One,20,max_nodes: 1000,103152
+RAND,Two,21,,0
+MCTS,One,12,max_nodes: 1000,120191
+RAND,Two,13,,0
+MCTS,One,22,max_nodes: 1000,160514
+RAND,Two,23,,0
+MCTS,One,10,max_nodes: 1000,134701
+RAND,Two,11,,0
+MCTS,One,22,max_nodes: 1000,103528
+RAND,Two,23,,0
+MCTS,One,14,max_nodes: 1000,122042
+RAND,Two,15,,0
+MCTS,One,22,max_nodes: 1000,129307
+RAND,Two,23,,1
+MCTS,One,14,max_nodes: 1000,126488
+RAND,Two,15,,0
+MCTS,One,18,max_nodes: 1000,165729
+RAND,Two,19,,0
+MCTS,One,24,max_nodes: 1000,79847
+RAND,Two,25,,23
+MCTS,One,12,max_nodes: 1000,116806
+RAND,Two,13,,0
+MCTS,One,24,max_nodes: 1000,154893
+RAND,Two,25,,0
+MCTS,One,16,max_nodes: 1000,104193
+RAND,Two,17,,0
+MCTS,One,26,max_nodes: 1000,37063
+RAND,Two,27,,0
+MCTS,One,24,max_nodes: 1000,108312
+RAND,Two,25,,0
+MCTS,One,16,max_nodes: 1000,109287
+RAND,Two,17,,0
+MCTS,One,26,max_nodes: 1000,80453
+RAND,Two,27,,0
+MCTS,One,14,max_nodes: 1000,115396
+RAND,Two,15,,0
+MCTS,One,28,max_nodes: 1000,87228
+RAND,Two,29,,0
+MCTS,One,18,max_nodes: 1000,102176
+RAND,Two,19,,0
+MCTS,One,30,max_nodes: 1000,16175
+RAND,Two,31,,0
+MCTS,One,32,max_nodes: 1000,631
+MCTS,One,26,max_nodes: 1000,79748
+RAND,Two,27,,0
+MCTS,One,28,max_nodes: 1000,85595
+RAND,Two,29,,0
+MCTS,One,20,max_nodes: 1000,194777
+RAND,Two,21,,0
+MCTS,One,30,max_nodes: 1000,22401
+RAND,Two,31,,0
+MCTS,One,32,max_nodes: 1000,9761
+RAND,Two,33,,3
+MCTS,One,16,max_nodes: 1000,98888
+RAND,Two,17,,0
+MCTS,One,34,max_nodes: 1000,12132
+RAND,Two,35,,0
+MCTS,One,36,max_nodes: 1000,3390
+RAND,Two,37,,0
+MCTS,One,38,max_nodes: 1000,95
+MCTS,One,18,max_nodes: 1000,180032
+RAND,Two,19,,0
+MCTS,One,2,max_nodes: 1000,163773
+RAND,Two,3,,0
+MCTS,One,18,max_nodes: 1000,95517
+RAND,Two,19,,0
+MCTS,One,28,max_nodes: 1000,184650
+RAND,Two,29,,0
+MCTS,One,2,max_nodes: 1000,159776
+RAND,Two,3,,0
+MCTS,One,20,max_nodes: 1000,96194
+RAND,Two,21,,0
+MCTS,One,20,max_nodes: 1000,276275
+RAND,Two,21,,0
+MCTS,One,4,max_nodes: 1000,152525
+RAND,Two,5,,0
+MCTS,One,22,max_nodes: 1000,277166
+RAND,Two,23,,0
+MCTS,One,20,max_nodes: 1000,198232
+RAND,Two,21,,0
+MCTS,One,22,max_nodes: 1000,75091
+RAND,Two,23,,0
+MCTS,One,30,max_nodes: 1000,178622
+RAND,Two,31,,2
+MCTS,One,4,max_nodes: 1000,155333
+RAND,Two,5,,0
+MCTS,One,32,max_nodes: 1000,52121
+RAND,Two,33,,0
+MCTS,One,6,max_nodes: 1000,140537
+RAND,Two,7,,0
+MCTS,One,34,max_nodes: 1000,54814
+RAND,Two,35,,0
+MCTS,One,24,max_nodes: 1000,161621
+RAND,Two,25,,0
+MCTS,One,26,max_nodes: 1000,13382
+RAND,Two,27,,0
+MCTS,One,28,max_nodes: 1000,3175
+RAND,Two,29,,0
+MCTS,One,30,max_nodes: 1000,7466
+RAND,Two,31,,0
+MCTS,One,36,max_nodes: 1000,43151
+RAND,Two,37,,0
+MCTS,One,38,max_nodes: 1000,5545
+RAND,Two,39,,1
+MCTS,One,32,max_nodes: 1000,20410
+MCTS,One,40,max_nodes: 1000,729
+RAND,Two,33,,0
+RAND,Two,41,,0
+MCTS,One,42,max_nodes: 1000,2645
+RAND,Two,43,,1
+MCTS,One,44,max_nodes: 1000,290
+MCTS,One,34,max_nodes: 1000,6220
+RAND,Two,35,,0
+MCTS,One,36,max_nodes: 1000,2976
+RAND,Two,37,,0
+MCTS,One,22,max_nodes: 1000,218142
+RAND,Two,23,,0
+MCTS,One,6,max_nodes: 1000,145276
+RAND,Two,7,,0
+MCTS,One,22,max_nodes: 1000,296360
+RAND,Two,23,,0
+MCTS,One,38,max_nodes: 1000,31658
+RAND,Two,39,,2
+MCTS,One,40,max_nodes: 1000,23923
+RAND,Two,41,,2
+MCTS,One,42,max_nodes: 1000,2720
+RAND,Two,43,,0
+MCTS,One,44,max_nodes: 1000,226
+MCTS,One,24,max_nodes: 1000,306617
+RAND,Two,25,,2
+MCTS,One,8,max_nodes: 1000,216180
+RAND,Two,9,,1
+MCTS,One,8,max_nodes: 1000,135371
+RAND,Two,9,,0
+MCTS,One,2,max_nodes: 1000,201321
+RAND,Two,3,,0
+MCTS,One,24,max_nodes: 1000,232873
+RAND,Two,25,,0
+MCTS,One,2,max_nodes: 1000,176424
+RAND,Two,3,,0
+MCTS,One,24,max_nodes: 1000,244932
+RAND,Two,25,,2
+MCTS,One,10,max_nodes: 1000,143018
+RAND,Two,11,,0
+MCTS,One,26,max_nodes: 1000,74200
+RAND,Two,27,,0
+MCTS,One,10,max_nodes: 1000,198357
+RAND,Two,11,,0
+MCTS,One,4,max_nodes: 1000,148397
+RAND,Two,5,,0
+MCTS,One,26,max_nodes: 1000,230520
+RAND,Two,27,,0
+MCTS,One,4,max_nodes: 1000,158471
+RAND,Two,5,,0
+MCTS,One,12,max_nodes: 1000,127705
+RAND,Two,13,,0
+MCTS,One,28,max_nodes: 1000,134515
+RAND,Two,29,,0
+MCTS,One,28,max_nodes: 1000,91887
+RAND,Two,29,,0
+MCTS,One,6,max_nodes: 1000,144950
+RAND,Two,7,,0
+MCTS,One,30,max_nodes: 1000,40506
+RAND,Two,31,,0
+MCTS,One,26,max_nodes: 1000,227091
+RAND,Two,27,,21
+MCTS,One,30,max_nodes: 1000,63994
+RAND,Two,31,,0
+MCTS,One,12,max_nodes: 1000,178225
+RAND,Two,13,,0
+MCTS,One,32,max_nodes: 1000,17418
+RAND,Two,33,,0
+MCTS,One,34,max_nodes: 1000,8867
+RAND,Two,35,,0
+MCTS,One,36,max_nodes: 1000,5444
+RAND,Two,37,,0
+MCTS,One,6,max_nodes: 1000,150289
+RAND,Two,7,,0
+MCTS,One,32,max_nodes: 1000,47151
+RAND,Two,33,,3
+MCTS,One,38,max_nodes: 1000,12862
+RAND,Two,39,,0
+MCTS,One,34,max_nodes: 1000,7598
+RAND,Two,35,,0
+MCTS,One,36,max_nodes: 1000,106
+MCTS,One,40,max_nodes: 1000,1971
+RAND,Two,41,,0
+MCTS,One,42,max_nodes: 1000,363
+MCTS,One,14,max_nodes: 1000,162142
+RAND,Two,15,,0
+MCTS,One,28,max_nodes: 1000,122361
+RAND,Two,29,,0
+MCTS,One,8,max_nodes: 1000,142506
+RAND,Two,9,,25
+MCTS,One,14,max_nodes: 1000,166630
+RAND,Two,15,,0
+MCTS,One,8,max_nodes: 1000,137511
+RAND,Two,9,,0
+MCTS,One,2,max_nodes: 1000,148786
+RAND,Two,3,,0
+MCTS,One,30,max_nodes: 1000,81743
+RAND,Two,31,,0
+MCTS,One,2,max_nodes: 1000,158304
+RAND,Two,3,,0
+MCTS,One,32,max_nodes: 1000,16241
+RAND,Two,33,,0
+MCTS,One,34,max_nodes: 1000,243
+RAND,Two,35,,0
+MCTS,One,16,max_nodes: 1000,145715
+RAND,Two,17,,0
+MCTS,One,36,max_nodes: 1000,4186
+RAND,Two,37,,0
+MCTS,One,38,max_nodes: 1000,161
+RAND,Two,39,,0
+MCTS,One,40,max_nodes: 1000,3415
+RAND,Two,41,,0
+MCTS,One,42,max_nodes: 1000,3919
+RAND,Two,43,,0
+MCTS,One,44,max_nodes: 1000,1730
+RAND,Two,45,,1
+MCTS,One,46,max_nodes: 1000,1695
+RAND,Two,47,,0
+MCTS,One,48,max_nodes: 1000,20
+MCTS,One,10,max_nodes: 1000,132783
+RAND,Two,11,,0
+MCTS,One,10,max_nodes: 1000,134068
+RAND,Two,11,,0
+MCTS,One,16,max_nodes: 1000,166048
+RAND,Two,17,,1
+MCTS,One,4,max_nodes: 1000,145036
+RAND,Two,5,,0
+MCTS,One,4,max_nodes: 1000,159158
+RAND,Two,5,,0
+MCTS,One,18,max_nodes: 1000,148478
+RAND,Two,19,,0
+MCTS,One,2,max_nodes: 1000,163714
+RAND,Two,3,,1
+MCTS,One,12,max_nodes: 1000,128499
+RAND,Two,13,,0
+MCTS,One,12,max_nodes: 1000,185877
+RAND,Two,13,,0
+MCTS,One,20,max_nodes: 1000,93395
+RAND,Two,21,,0
+MCTS,One,6,max_nodes: 1000,145298
+RAND,Two,7,,0
+MCTS,One,18,max_nodes: 1000,160011
+RAND,Two,19,,0
+MCTS,One,6,max_nodes: 1000,154447
+RAND,Two,7,,1
+MCTS,One,22,max_nodes: 1000,53235
+RAND,Two,23,,1
+MCTS,One,14,max_nodes: 1000,108322
+RAND,Two,15,,0
+MCTS,One,4,max_nodes: 1000,156813
+RAND,Two,5,,0
+MCTS,One,24,max_nodes: 1000,78557
+RAND,Two,25,,2
+MCTS,One,26,max_nodes: 1000,34694
+RAND,Two,27,,0
+MCTS,One,28,max_nodes: 1000,534
+MCTS,One,20,max_nodes: 1000,133483
+RAND,Two,21,,0
+MCTS,One,8,max_nodes: 1000,130356
+RAND,Two,9,,0
+MCTS,One,8,max_nodes: 1000,145978
+RAND,Two,9,,0
+MCTS,One,14,max_nodes: 1000,207265
+RAND,Two,15,,0
+MCTS,One,16,max_nodes: 1000,107022
+RAND,Two,17,,0
+MCTS,One,22,max_nodes: 1000,20709
+RAND,Two,23,,0
+MCTS,One,24,max_nodes: 1000,21250
+RAND,Two,25,,0
+MCTS,One,6,max_nodes: 1000,144496
+RAND,Two,7,,0
+MCTS,One,26,max_nodes: 1000,25779
+RAND,Two,27,,2
+MCTS,One,28,max_nodes: 1000,6443
+RAND,Two,29,,0
+MCTS,One,30,max_nodes: 1000,11068
+RAND,Two,31,,0
+MCTS,One,32,max_nodes: 1000,10797
+RAND,Two,33,,3
+MCTS,One,34,max_nodes: 1000,10823
+RAND,Two,35,,0
+MCTS,One,36,max_nodes: 1000,3208
+MCTS,One,10,max_nodes: 1000,128347
+RAND,Two,11,,0
+MCTS,One,10,max_nodes: 1000,132340
+RAND,Two,11,,0
+MCTS,One,18,max_nodes: 1000,126608
+RAND,Two,19,,0
+MCTS,One,2,max_nodes: 1000,157961
+RAND,Two,3,,0
+MCTS,One,8,max_nodes: 1000,136423
+RAND,Two,9,,0
+MCTS,One,16,max_nodes: 1000,199272
+RAND,Two,17,,0
+MCTS,One,12,max_nodes: 1000,110077
+RAND,Two,13,,0
+MCTS,One,12,max_nodes: 1000,122542
+RAND,Two,13,,0
+MCTS,One,2,max_nodes: 1000,162581
+RAND,Two,3,,0
+MCTS,One,4,max_nodes: 1000,143328
+RAND,Two,5,,0
+MCTS,One,20,max_nodes: 1000,159746
+RAND,Two,21,,0
+MCTS,One,10,max_nodes: 1000,139974
+RAND,Two,11,,0
+MCTS,One,14,max_nodes: 1000,127177
+RAND,Two,15,,0
+MCTS,One,14,max_nodes: 1000,122187
+RAND,Two,15,,0
+MCTS,One,18,max_nodes: 1000,191948
+RAND,Two,19,,0
+MCTS,One,4,max_nodes: 1000,146217
+RAND,Two,5,,0
+MCTS,One,6,max_nodes: 1000,144196
+RAND,Two,7,,0
+MCTS,One,12,max_nodes: 1000,123952
+RAND,Two,13,,0
+MCTS,One,22,max_nodes: 1000,161101
+RAND,Two,23,,0
+MCTS,One,16,max_nodes: 1000,122781
+RAND,Two,17,,0
+MCTS,One,6,max_nodes: 1000,142442
+RAND,Two,7,,0
+MCTS,One,20,max_nodes: 1000,162660
+RAND,Two,21,,0
+MCTS,One,16,max_nodes: 1000,201635
+RAND,Two,17,,0
+MCTS,One,14,max_nodes: 1000,114285
+RAND,Two,15,,0
+MCTS,One,8,max_nodes: 1000,155498
+RAND,Two,9,,0
+MCTS,One,24,max_nodes: 1000,150899
+RAND,Two,25,,0
+MCTS,One,18,max_nodes: 1000,151131
+RAND,Two,19,,0
+MCTS,One,8,max_nodes: 1000,126562
+RAND,Two,9,,0
+MCTS,One,16,max_nodes: 1000,117227
+RAND,Two,17,,0
+MCTS,One,10,max_nodes: 1000,135412
+RAND,Two,11,,0
+MCTS,One,22,max_nodes: 1000,174344
+RAND,Two,23,,0
+MCTS,One,18,max_nodes: 1000,181531
+RAND,Two,19,,0
+MCTS,One,20,max_nodes: 1000,109492
+RAND,Two,21,,0
+MCTS,One,18,max_nodes: 1000,109691
+RAND,Two,19,,0
+MCTS,One,10,max_nodes: 1000,131430
+RAND,Two,11,,0
+MCTS,One,12,max_nodes: 1000,131752
+RAND,Two,13,,0
+MCTS,One,26,max_nodes: 1000,248269
+RAND,Two,27,,0
+MCTS,One,24,max_nodes: 1000,154422
+RAND,Two,25,,0
+MCTS,One,20,max_nodes: 1000,96117
+RAND,Two,21,,0
+MCTS,One,12,max_nodes: 1000,114344
+RAND,Two,13,,0
+MCTS,One,22,max_nodes: 1000,199476
+RAND,Two,23,,2
+MCTS,One,14,max_nodes: 1000,115533
+RAND,Two,15,,0
+MCTS,One,20,max_nodes: 1000,269666
+RAND,Two,21,,0
+MCTS,One,14,max_nodes: 1000,108452
+RAND,Two,15,,1
+MCTS,One,26,max_nodes: 1000,147907
+RAND,Two,27,,0
+MCTS,One,22,max_nodes: 1000,155436
+RAND,Two,23,,0
+MCTS,One,16,max_nodes: 1000,110441
+RAND,Two,17,,0
+MCTS,One,28,max_nodes: 1000,256483
+RAND,Two,29,,3
+MCTS,One,24,max_nodes: 1000,152691
+RAND,Two,25,,2
+MCTS,One,30,max_nodes: 1000,19081
+RAND,Two,31,,0
+MCTS,One,24,max_nodes: 1000,90711
+RAND,Two,25,,0
+MCTS,One,32,max_nodes: 1000,5823
+RAND,Two,33,,0
+MCTS,One,28,max_nodes: 1000,134261
+RAND,Two,29,,0
+MCTS,One,16,max_nodes: 1000,149788
+RAND,Two,17,,0
+MCTS,One,34,max_nodes: 1000,47018
+RAND,Two,35,,0
+MCTS,One,36,max_nodes: 1000,13388
+MCTS,One,18,max_nodes: 1000,30251
+RAND,Two,19,,2
+MCTS,One,26,max_nodes: 1000,118200
+RAND,Two,27,,0
+MCTS,One,20,max_nodes: 1000,18496
+RAND,Two,21,,0
+MCTS,One,18,max_nodes: 1000,159568
+RAND,Two,19,,2
+MCTS,One,22,max_nodes: 1000,12333
+RAND,Two,23,,0
+MCTS,One,24,max_nodes: 1000,2527
+MCTS,One,22,max_nodes: 1000,254687
+RAND,Two,23,,0
+MCTS,One,26,max_nodes: 1000,144243
+RAND,Two,27,,0
+MCTS,One,28,max_nodes: 1000,57863
+RAND,Two,29,,0
+MCTS,One,30,max_nodes: 1000,12433
+RAND,Two,31,,0
+MCTS,One,32,max_nodes: 1000,4881
+RAND,Two,33,,0
+MCTS,One,34,max_nodes: 1000,7315
+RAND,Two,35,,0
+MCTS,One,30,max_nodes: 1000,146812
+RAND,Two,31,,0
+MCTS,One,36,max_nodes: 1000,8485
+RAND,Two,37,,0
+MCTS,One,38,max_nodes: 1000,8230
+RAND,Two,39,,20
+MCTS,One,28,max_nodes: 1000,58560
+RAND,Two,29,,0
+MCTS,One,40,max_nodes: 1000,10469
+RAND,Two,41,,3
+MCTS,One,42,max_nodes: 1000,831
+RAND,Two,43,,0
+MCTS,One,44,max_nodes: 1000,57
+MCTS,One,2,max_nodes: 1000,161629
+RAND,Two,3,,0
+MCTS,One,2,max_nodes: 1000,159004
+RAND,Two,3,,0
+MCTS,One,20,max_nodes: 1000,176723
+RAND,Two,21,,0
+MCTS,One,30,max_nodes: 1000,74544
+RAND,Two,31,,0
+MCTS,One,32,max_nodes: 1000,100755
+RAND,Two,33,,0
+MCTS,One,2,max_nodes: 1000,154631
+RAND,Two,3,,0
+MCTS,One,4,max_nodes: 1000,151859
+RAND,Two,5,,1
+MCTS,One,24,max_nodes: 1000,257059
+RAND,Two,25,,0
+MCTS,One,4,max_nodes: 1000,149027
+RAND,Two,5,,0
+MCTS,One,32,max_nodes: 1000,178226
+RAND,Two,33,,0
+MCTS,One,34,max_nodes: 1000,177178
+RAND,Two,35,,0
+MCTS,One,36,max_nodes: 1000,7864
+RAND,Two,37,,0
+MCTS,One,22,max_nodes: 1000,196489
+RAND,Two,23,,0
+MCTS,One,38,max_nodes: 1000,6234
+RAND,Two,39,,0
+MCTS,One,40,max_nodes: 1000,12240
+RAND,Two,41,,0
+MCTS,One,42,max_nodes: 1000,5905
+RAND,Two,43,,0
+MCTS,One,44,max_nodes: 1000,318
+MCTS,One,6,max_nodes: 1000,128683
+RAND,Two,7,,0
+MCTS,One,34,max_nodes: 1000,52713
+RAND,Two,35,,0
+MCTS,One,4,max_nodes: 1000,151190
+RAND,Two,5,,1
+MCTS,One,36,max_nodes: 1000,10909
+RAND,Two,37,,2
+MCTS,One,38,max_nodes: 1000,90
+RAND,Two,39,,0
+MCTS,One,40,max_nodes: 1000,1585
+RAND,Two,41,,0
+MCTS,One,42,max_nodes: 1000,47
+MCTS,One,6,max_nodes: 1000,136415
+RAND,Two,7,,0
+MCTS,One,26,max_nodes: 1000,167577
+RAND,Two,27,,0
+MCTS,One,8,max_nodes: 1000,140322
+RAND,Two,9,,0
+MCTS,One,2,max_nodes: 1000,159479
+RAND,Two,3,,1
+MCTS,One,24,max_nodes: 1000,188233
+RAND,Two,25,,0
+MCTS,One,6,max_nodes: 1000,145919
+RAND,Two,7,,0
+MCTS,One,2,max_nodes: 1000,161681
+RAND,Two,3,,0
+MCTS,One,8,max_nodes: 1000,140579
+RAND,Two,9,,0
+MCTS,One,10,max_nodes: 1000,139769
+RAND,Two,11,,0
+MCTS,One,8,max_nodes: 1000,130188
+RAND,Two,9,,0
+MCTS,One,4,max_nodes: 1000,144646
+RAND,Two,5,,0
+MCTS,One,26,max_nodes: 1000,162007
+RAND,Two,27,,0
+MCTS,One,10,max_nodes: 1000,129729
+RAND,Two,11,,0
+MCTS,One,28,max_nodes: 1000,270744
+RAND,Two,29,,0
+MCTS,One,4,max_nodes: 1000,152081
+RAND,Two,5,,0
+MCTS,One,12,max_nodes: 1000,111864
+RAND,Two,13,,0
+MCTS,One,30,max_nodes: 1000,89531
+RAND,Two,31,,0
+MCTS,One,10,max_nodes: 1000,125914
+RAND,Two,11,,0
+MCTS,One,32,max_nodes: 1000,6268
+RAND,Two,33,,0
+MCTS,One,34,max_nodes: 1000,7502
+RAND,Two,35,,0
+MCTS,One,36,max_nodes: 1000,9743
+RAND,Two,37,,0
+MCTS,One,6,max_nodes: 1000,146000
+RAND,Two,7,,0
+MCTS,One,12,max_nodes: 1000,119516
+RAND,Two,13,,0
+MCTS,One,38,max_nodes: 1000,6736
+RAND,Two,39,,1
+MCTS,One,40,max_nodes: 1000,802
+RAND,Two,41,,0
+MCTS,One,42,max_nodes: 1000,72
+MCTS,One,6,max_nodes: 1000,145827
+RAND,Two,7,,0
+MCTS,One,14,max_nodes: 1000,126330
+RAND,Two,15,,0
+MCTS,One,28,max_nodes: 1000,209072
+RAND,Two,29,,2
+MCTS,One,12,max_nodes: 1000,123402
+RAND,Two,13,,0
+MCTS,One,14,max_nodes: 1000,115103
+RAND,Two,15,,0
+MCTS,One,8,max_nodes: 1000,134819
+RAND,Two,9,,0
+MCTS,One,2,max_nodes: 1000,160387
+RAND,Two,3,,0
+MCTS,One,8,max_nodes: 1000,133753
+RAND,Two,9,,0
+MCTS,One,30,max_nodes: 1000,96959
+RAND,Two,31,,0
+MCTS,One,32,max_nodes: 1000,1071
+RAND,Two,33,,0
+MCTS,One,34,max_nodes: 1000,3040
+RAND,Two,35,,0
+MCTS,One,36,max_nodes: 1000,63
+MCTS,One,16,max_nodes: 1000,119618
+RAND,Two,17,,0
+MCTS,One,16,max_nodes: 1000,97542
+RAND,Two,17,,0
+MCTS,One,10,max_nodes: 1000,133778
+RAND,Two,11,,0
+MCTS,One,14,max_nodes: 1000,194339
+RAND,Two,15,,3
+MCTS,One,10,max_nodes: 1000,127250
+RAND,Two,11,,0
+MCTS,One,4,max_nodes: 1000,138850
+RAND,Two,5,,0
+MCTS,One,18,max_nodes: 1000,100637
+RAND,Two,19,,0
+MCTS,One,2,max_nodes: 1000,160566
+RAND,Two,3,,0
+MCTS,One,18,max_nodes: 1000,174409
+RAND,Two,19,,2
+MCTS,One,12,max_nodes: 1000,133422
+RAND,Two,13,,0
+MCTS,One,20,max_nodes: 1000,93894
+RAND,Two,21,,0
+MCTS,One,12,max_nodes: 1000,119985
+RAND,Two,13,,0
+MCTS,One,6,max_nodes: 1000,142970
+RAND,Two,7,,0
+MCTS,One,22,max_nodes: 1000,82827
+RAND,Two,23,,0
+MCTS,One,4,max_nodes: 1000,155926
+RAND,Two,5,,0
+MCTS,One,16,max_nodes: 1000,225218
+RAND,Two,17,,0
+MCTS,One,14,max_nodes: 1000,126028
+RAND,Two,15,,0
+MCTS,One,14,max_nodes: 1000,121901
+RAND,Two,15,,0
+MCTS,One,20,max_nodes: 1000,169619
+RAND,Two,21,,0
+MCTS,One,24,max_nodes: 1000,77943
+RAND,Two,25,,0
+MCTS,One,8,max_nodes: 1000,127083
+RAND,Two,9,,0
+MCTS,One,16,max_nodes: 1000,113027
+RAND,Two,17,,0
+MCTS,One,6,max_nodes: 1000,141365
+RAND,Two,7,,0
+MCTS,One,26,max_nodes: 1000,85678
+RAND,Two,27,,0
+MCTS,One,16,max_nodes: 1000,117724
+RAND,Two,17,,0
+MCTS,One,22,max_nodes: 1000,135284
+RAND,Two,23,,3
+MCTS,One,24,max_nodes: 1000,196
+RAND,Two,25,,22
+MCTS,One,26,max_nodes: 1000,5899
+RAND,Two,27,,20
+MCTS,One,28,max_nodes: 1000,4906
+RAND,Two,29,,0
+MCTS,One,30,max_nodes: 1000,10171
+RAND,Two,31,,2
+MCTS,One,32,max_nodes: 1000,3597
+RAND,Two,33,,0
+MCTS,One,10,max_nodes: 1000,133311
+MCTS,One,34,max_nodes: 1000,2039
+RAND,Two,11,,0
+RAND,Two,35,,1
+MCTS,One,36,max_nodes: 1000,5117
+RAND,Two,37,,3
+MCTS,One,38,max_nodes: 1000,1012
+RAND,Two,39,,0
+MCTS,One,40,max_nodes: 1000,630
+RAND,Two,41,,0
+MCTS,One,42,max_nodes: 1000,2937
+RAND,Two,43,,3
+MCTS,One,44,max_nodes: 1000,75
+MCTS,One,28,max_nodes: 1000,77083
+RAND,Two,29,,0
+MCTS,One,18,max_nodes: 1000,217696
+RAND,Two,19,,0
+MCTS,One,8,max_nodes: 1000,137789
+RAND,Two,9,,0
+MCTS,One,18,max_nodes: 1000,148935
+RAND,Two,19,,0
+MCTS,One,30,max_nodes: 1000,71182
+RAND,Two,31,,0
+MCTS,One,18,max_nodes: 1000,151503
+RAND,Two,19,,0
+MCTS,One,12,max_nodes: 1000,123282
+RAND,Two,13,,0
+MCTS,One,2,max_nodes: 1000,161753
+RAND,Two,3,,0
+MCTS,One,20,max_nodes: 1000,101125
+RAND,Two,21,,0
+MCTS,One,10,max_nodes: 1000,104606
+RAND,Two,11,,0
+MCTS,One,32,max_nodes: 1000,89273
+RAND,Two,33,,0
+MCTS,One,22,max_nodes: 1000,8996
+RAND,Two,23,,0
+MCTS,One,24,max_nodes: 1000,1008
+RAND,Two,25,,0
+MCTS,One,26,max_nodes: 1000,7852
+RAND,Two,27,,0
+MCTS,One,28,max_nodes: 1000,14900
+RAND,Two,29,,0
+MCTS,One,30,max_nodes: 1000,8220
+RAND,Two,31,,1
+MCTS,One,32,max_nodes: 1000,4503
+RAND,Two,33,,1
+MCTS,One,34,max_nodes: 1000,1488
+RAND,Two,35,,0
+MCTS,One,36,max_nodes: 1000,1346
+MCTS,One,34,max_nodes: 1000,49998
+RAND,Two,35,,0
+MCTS,One,14,max_nodes: 1000,114524
+RAND,Two,15,,0
+MCTS,One,20,max_nodes: 1000,225666
+RAND,Two,21,,0
+MCTS,One,36,max_nodes: 1000,27893
+RAND,Two,37,,0
+MCTS,One,38,max_nodes: 1000,10142
+RAND,Two,39,,0
+MCTS,One,20,max_nodes: 1000,172245
+RAND,Two,21,,0
+MCTS,One,40,max_nodes: 1000,11466
+RAND,Two,41,,2
+MCTS,One,42,max_nodes: 1000,4019
+RAND,Two,43,,0
+MCTS,One,44,max_nodes: 1000,5173
+RAND,Two,45,,3
+MCTS,One,46,max_nodes: 1000,2683
+RAND,Two,47,,0
+MCTS,One,48,max_nodes: 1000,312
+MCTS,One,12,max_nodes: 1000,122867
+RAND,Two,13,,0
+MCTS,One,4,max_nodes: 1000,149631
+RAND,Two,5,,0
+MCTS,One,16,max_nodes: 1000,99411
+RAND,Two,17,,0
+MCTS,One,2,max_nodes: 1000,168469
+RAND,Two,3,,0
+MCTS,One,14,max_nodes: 1000,126648
+RAND,Two,15,,0
+MCTS,One,18,max_nodes: 1000,96465
+RAND,Two,19,,0
+MCTS,One,2,max_nodes: 1000,147936
+RAND,Two,3,,0
+MCTS,One,22,max_nodes: 1000,179847
+RAND,Two,23,,0
+MCTS,One,6,max_nodes: 1000,140382
+RAND,Two,7,,0
+MCTS,One,22,max_nodes: 1000,238806
+RAND,Two,23,,0
+MCTS,One,20,max_nodes: 1000,85816
+RAND,Two,21,,0
+MCTS,One,16,max_nodes: 1000,108324
+RAND,Two,17,,0
+MCTS,One,4,max_nodes: 1000,157133
+RAND,Two,5,,0
+MCTS,One,4,max_nodes: 1000,154705
+RAND,Two,5,,0
+MCTS,One,8,max_nodes: 1000,139248
+RAND,Two,9,,0
+MCTS,One,24,max_nodes: 1000,162575
+RAND,Two,25,,0
+MCTS,One,22,max_nodes: 1000,119901
+RAND,Two,23,,3
+MCTS,One,6,max_nodes: 1000,140674
+RAND,Two,7,,0
+MCTS,One,18,max_nodes: 1000,162668
+RAND,Two,19,,0
+MCTS,One,10,max_nodes: 1000,124900
+RAND,Two,11,,0
+MCTS,One,6,max_nodes: 1000,138938
+RAND,Two,7,,0
+MCTS,One,24,max_nodes: 1000,251974
+RAND,Two,25,,0
+MCTS,One,24,max_nodes: 1000,107689
+RAND,Two,25,,0
+MCTS,One,26,max_nodes: 1000,155055
+RAND,Two,27,,0
+MCTS,One,26,max_nodes: 1000,60320
+RAND,Two,27,,0
+MCTS,One,8,max_nodes: 1000,131830
+RAND,Two,9,,0
+MCTS,One,12,max_nodes: 1000,113042
+RAND,Two,13,,0
+MCTS,One,28,max_nodes: 1000,45231
+RAND,Two,29,,0
+MCTS,One,8,max_nodes: 1000,141695
+RAND,Two,9,,0
+MCTS,One,30,max_nodes: 1000,37950
+RAND,Two,31,,0
+MCTS,One,20,max_nodes: 1000,207580
+RAND,Two,21,,0
+MCTS,One,26,max_nodes: 1000,185272
+RAND,Two,27,,0
+MCTS,One,14,max_nodes: 1000,106017
+MCTS,One,10,max_nodes: 1000,117112
+RAND,Two,15,,1
+RAND,Two,11,,0
+MCTS,One,32,max_nodes: 1000,60062
+RAND,Two,33,,0
+MCTS,One,34,max_nodes: 1000,10497
+RAND,Two,35,,0
+MCTS,One,28,max_nodes: 1000,36189
+RAND,Two,29,,0
+MCTS,One,36,max_nodes: 1000,594
+RAND,Two,37,,0
+MCTS,One,38,max_nodes: 1000,1504
+RAND,Two,39,,3
+MCTS,One,40,max_nodes: 1000,81
+MCTS,One,28,max_nodes: 1000,192060
+RAND,Two,29,,22
+MCTS,One,30,max_nodes: 1000,19021
+RAND,Two,31,,0
+MCTS,One,32,max_nodes: 1000,6413
+RAND,Two,33,,0
+MCTS,One,10,max_nodes: 1000,134745
+RAND,Two,11,,0
+MCTS,One,34,max_nodes: 1000,26200
+RAND,Two,35,,0
+MCTS,One,36,max_nodes: 1000,7508
+RAND,Two,37,,0
+MCTS,One,38,max_nodes: 1000,3733
+RAND,Two,39,,0
+MCTS,One,40,max_nodes: 1000,1331
+RAND,Two,41,,0
+MCTS,One,42,max_nodes: 1000,2392
+RAND,Two,43,,0
+MCTS,One,44,max_nodes: 1000,3268
+RAND,Two,45,,0
+MCTS,One,46,max_nodes: 1000,468
+RAND,Two,47,,1
+MCTS,One,48,max_nodes: 1000,49
+MCTS,One,30,max_nodes: 1000,73248
+RAND,Two,31,,0
+MCTS,One,16,max_nodes: 1000,104647
+RAND,Two,17,,0
+MCTS,One,12,max_nodes: 1000,120501
+RAND,Two,13,,0
+MCTS,One,32,max_nodes: 1000,64493
+RAND,Two,33,,2
+MCTS,One,22,max_nodes: 1000,200832
+RAND,Two,23,,0
+MCTS,One,34,max_nodes: 1000,6910
+RAND,Two,35,,2
+MCTS,One,36,max_nodes: 1000,7326
+RAND,Two,37,,0
+MCTS,One,38,max_nodes: 1000,2881
+RAND,Two,39,,0
+MCTS,One,40,max_nodes: 1000,2588
+RAND,Two,41,,0
+MCTS,One,42,max_nodes: 1000,406
+MCTS,One,2,max_nodes: 1000,164026
+RAND,Two,3,,0
+MCTS,One,12,max_nodes: 1000,117894
+RAND,Two,13,,0
+MCTS,One,14,max_nodes: 1000,107272
+RAND,Two,15,,0
+MCTS,One,18,max_nodes: 1000,131163
+RAND,Two,19,,0
+MCTS,One,2,max_nodes: 1000,173159
+RAND,Two,3,,0
+MCTS,One,14,max_nodes: 1000,112688
+RAND,Two,15,,0
+MCTS,One,16,max_nodes: 1000,101108
+RAND,Two,17,,0
+MCTS,One,2,max_nodes: 1000,157421
+RAND,Two,3,,0
+MCTS,One,4,max_nodes: 1000,158301
+RAND,Two,5,,0
+MCTS,One,24,max_nodes: 1000,188289
+RAND,Two,25,,0
+MCTS,One,20,max_nodes: 1000,175530
+RAND,Two,21,,0
+MCTS,One,16,max_nodes: 1000,113758
+RAND,Two,17,,1
+MCTS,One,4,max_nodes: 1000,153803
+RAND,Two,5,,0
+MCTS,One,18,max_nodes: 1000,92903
+RAND,Two,19,,0
+MCTS,One,26,max_nodes: 1000,108557
+RAND,Two,27,,0
+MCTS,One,4,max_nodes: 1000,143942
+RAND,Two,5,,0
+MCTS,One,6,max_nodes: 1000,145595
+RAND,Two,7,,0
+MCTS,One,28,max_nodes: 1000,49642
+RAND,Two,29,,0
+MCTS,One,18,max_nodes: 1000,104835
+RAND,Two,19,,0
+MCTS,One,20,max_nodes: 1000,100907
+RAND,Two,21,,0
+MCTS,One,6,max_nodes: 1000,143494
+RAND,Two,7,,1
+MCTS,One,30,max_nodes: 1000,78899
+RAND,Two,31,,0
+MCTS,One,22,max_nodes: 1000,184711
+RAND,Two,23,,0
+MCTS,One,8,max_nodes: 1000,129148
+RAND,Two,9,,0
+MCTS,One,20,max_nodes: 1000,102763
+RAND,Two,21,,0
+MCTS,One,6,max_nodes: 1000,147413
+RAND,Two,7,,0
+MCTS,One,32,max_nodes: 1000,105412
+RAND,Two,33,,0
+MCTS,One,8,max_nodes: 1000,137581
+RAND,Two,9,,0
+MCTS,One,22,max_nodes: 1000,190647
+RAND,Two,23,,1
+MCTS,One,22,max_nodes: 1000,104391
+RAND,Two,23,,0
+MCTS,One,10,max_nodes: 1000,117178
+RAND,Two,11,,0
+MCTS,One,8,max_nodes: 1000,136402
+RAND,Two,9,,0
+MCTS,One,24,max_nodes: 1000,198688
+RAND,Two,25,,0
+MCTS,One,24,max_nodes: 1000,80281
+RAND,Two,25,,0
+MCTS,One,10,max_nodes: 1000,138465
+RAND,Two,11,,0
+MCTS,One,12,max_nodes: 1000,122786
+RAND,Two,13,,0
+MCTS,One,26,max_nodes: 1000,75556
+RAND,Two,27,,0
+MCTS,One,34,max_nodes: 1000,187971
+RAND,Two,35,,3
+MCTS,One,10,max_nodes: 1000,122203
+RAND,Two,11,,0
+MCTS,One,36,max_nodes: 1000,24596
+RAND,Two,37,,0
+MCTS,One,38,max_nodes: 1000,1109
+RAND,Two,39,,0
+MCTS,One,40,max_nodes: 1000,467
+MCTS,One,26,max_nodes: 1000,123875
+RAND,Two,27,,0
+MCTS,One,14,max_nodes: 1000,133570
+RAND,Two,15,,1
+MCTS,One,28,max_nodes: 1000,117534
+RAND,Two,29,,0
+MCTS,One,12,max_nodes: 1000,116095
+RAND,Two,13,,0
+MCTS,One,24,max_nodes: 1000,298611
+RAND,Two,25,,0
+MCTS,One,12,max_nodes: 1000,199456
+RAND,Two,13,,3
+MCTS,One,2,max_nodes: 1000,161141
+RAND,Two,3,,0
+MCTS,One,28,max_nodes: 1000,175039
+RAND,Two,29,,0
+MCTS,One,30,max_nodes: 1000,6571
+RAND,Two,31,,0
+MCTS,One,32,max_nodes: 1000,8368
+RAND,Two,33,,1
+MCTS,One,34,max_nodes: 1000,202
+RAND,Two,35,,0
+MCTS,One,36,max_nodes: 1000,3543
+RAND,Two,37,,2
+MCTS,One,30,max_nodes: 1000,115573
+RAND,Two,31,,0
+MCTS,One,38,max_nodes: 1000,3261
+RAND,Two,39,,0
+MCTS,One,40,max_nodes: 1000,95
+MCTS,One,14,max_nodes: 1000,118220
+RAND,Two,15,,0
+MCTS,One,32,max_nodes: 1000,60362
+RAND,Two,33,,0
+MCTS,One,34,max_nodes: 1000,10572
+RAND,Two,35,,0
+MCTS,One,36,max_nodes: 1000,5345
+RAND,Two,37,,4
+MCTS,One,38,max_nodes: 1000,3527
+RAND,Two,39,,0
+MCTS,One,40,max_nodes: 1000,87
+MCTS,One,4,max_nodes: 1000,131464
+RAND,Two,5,,0
+MCTS,One,14,max_nodes: 1000,176983
+RAND,Two,15,,4
+MCTS,One,16,max_nodes: 1000,225175
+RAND,Two,17,,0
+MCTS,One,16,max_nodes: 1000,102225
+RAND,Two,17,,0
+MCTS,One,2,max_nodes: 1000,163083
+RAND,Two,3,,0
+MCTS,One,6,max_nodes: 1000,141456
+RAND,Two,7,,0
+MCTS,One,2,max_nodes: 1000,159935
+RAND,Two,3,,0
+MCTS,One,26,max_nodes: 1000,360733
+RAND,Two,27,,2
+MCTS,One,16,max_nodes: 1000,171357
+RAND,Two,17,,0
+MCTS,One,18,max_nodes: 1000,189976
+RAND,Two,19,,3
+MCTS,One,18,max_nodes: 1000,191227
+RAND,Two,19,,2
+MCTS,One,4,max_nodes: 1000,147234
+RAND,Two,5,,0
+MCTS,One,8,max_nodes: 1000,123482
+RAND,Two,9,,0
+MCTS,One,4,max_nodes: 1000,153327
+RAND,Two,5,,0
+MCTS,One,18,max_nodes: 1000,156777
+RAND,Two,19,,0
+MCTS,One,20,max_nodes: 1000,145748
+RAND,Two,21,,0
+MCTS,One,6,max_nodes: 1000,136836
+RAND,Two,7,,0
+MCTS,One,10,max_nodes: 1000,120907
+RAND,Two,11,,0
+MCTS,One,20,max_nodes: 1000,176434
+RAND,Two,21,,0
+MCTS,One,6,max_nodes: 1000,144350
+RAND,Two,7,,0
+MCTS,One,20,max_nodes: 1000,142320
+RAND,Two,21,,0
+MCTS,One,8,max_nodes: 1000,122950
+RAND,Two,9,,0
+MCTS,One,28,max_nodes: 1000,325370
+RAND,Two,29,,1
+MCTS,One,12,max_nodes: 1000,132121
+RAND,Two,13,,0
+MCTS,One,22,max_nodes: 1000,154091
+RAND,Two,23,,0
+MCTS,One,22,max_nodes: 1000,198754
+RAND,Two,23,,0
+MCTS,One,8,max_nodes: 1000,132465
+RAND,Two,9,,0
+MCTS,One,24,max_nodes: 1000,49734
+RAND,Two,25,,0
+MCTS,One,30,max_nodes: 1000,109008
+RAND,Two,31,,1
+MCTS,One,10,max_nodes: 1000,120702
+RAND,Two,11,,0
+MCTS,One,32,max_nodes: 1000,10167
+RAND,Two,33,,0
+MCTS,One,34,max_nodes: 1000,7819
+RAND,Two,35,,0
+MCTS,One,26,max_nodes: 1000,30289
+RAND,Two,27,,19
+MCTS,One,14,max_nodes: 1000,109163
+RAND,Two,15,,0
+MCTS,One,36,max_nodes: 1000,10487
+MCTS,One,28,max_nodes: 1000,18856
+RAND,Two,29,,0
+MCTS,One,30,max_nodes: 1000,1309
+MCTS,One,22,max_nodes: 1000,171290
+RAND,Two,23,,0
+MCTS,One,24,max_nodes: 1000,159785
+RAND,Two,25,,0
+MCTS,One,12,max_nodes: 1000,103578
+RAND,Two,13,,0
+MCTS,One,10,max_nodes: 1000,129052
+RAND,Two,11,,1
+MCTS,One,16,max_nodes: 1000,103704
+RAND,Two,17,,0
+MCTS,One,2,max_nodes: 1000,169813
+RAND,Two,3,,0
+MCTS,One,2,max_nodes: 1000,163560
+RAND,Two,3,,0
+MCTS,One,14,max_nodes: 1000,102756
+RAND,Two,15,,0
+MCTS,One,18,max_nodes: 1000,99497
+RAND,Two,19,,0
+MCTS,One,26,max_nodes: 1000,129651
+RAND,Two,27,,0
+MCTS,One,12,max_nodes: 1000,127610
+RAND,Two,13,,0
+MCTS,One,28,max_nodes: 1000,18086
+RAND,Two,29,,2
+MCTS,One,24,max_nodes: 1000,218520
+RAND,Two,25,,0
+MCTS,One,30,max_nodes: 1000,50999
+RAND,Two,31,,0
+MCTS,One,16,max_nodes: 1000,107575
+RAND,Two,17,,0
+MCTS,One,20,max_nodes: 1000,90829
+RAND,Two,21,,0
+MCTS,One,4,max_nodes: 1000,147597
+RAND,Two,5,,1
+MCTS,One,14,max_nodes: 1000,111372
+RAND,Two,15,,0
+MCTS,One,32,max_nodes: 1000,52924
+RAND,Two,33,,0
+MCTS,One,4,max_nodes: 1000,154144
+RAND,Two,5,,0
+MCTS,One,34,max_nodes: 1000,47743
+RAND,Two,35,,0
+MCTS,One,36,max_nodes: 1000,7629
+RAND,Two,37,,1
+MCTS,One,22,max_nodes: 1000,91354
+RAND,Two,23,,0
+MCTS,One,38,max_nodes: 1000,9013
+RAND,Two,39,,2
+MCTS,One,40,max_nodes: 1000,214
+MCTS,One,18,max_nodes: 1000,111349
+RAND,Two,19,,0
+MCTS,One,16,max_nodes: 1000,105889
+RAND,Two,17,,0
+MCTS,One,26,max_nodes: 1000,194830
+RAND,Two,27,,0
+MCTS,One,6,max_nodes: 1000,150032
+RAND,Two,7,,0
+MCTS,One,6,max_nodes: 1000,138511
+RAND,Two,7,,0
+MCTS,One,24,max_nodes: 1000,130942
+RAND,Two,25,,0
+MCTS,One,18,max_nodes: 1000,106318
+RAND,Two,19,,0
+MCTS,One,2,max_nodes: 1000,155693
+RAND,Two,3,,0
+MCTS,One,8,max_nodes: 1000,131223
+RAND,Two,9,,0
+MCTS,One,8,max_nodes: 1000,132796
+RAND,Two,9,,0
+MCTS,One,26,max_nodes: 1000,99999
+RAND,Two,27,,0
+MCTS,One,20,max_nodes: 1000,224530
+RAND,Two,21,,0
+MCTS,One,20,max_nodes: 1000,98580
+RAND,Two,21,,0
+MCTS,One,28,max_nodes: 1000,200089
+RAND,Two,29,,2
+MCTS,One,28,max_nodes: 1000,63282
+RAND,Two,29,,0
+MCTS,One,4,max_nodes: 1000,140414
+RAND,Two,5,,0
+MCTS,One,10,max_nodes: 1000,125929
+RAND,Two,11,,0
+MCTS,One,10,max_nodes: 1000,126774
+RAND,Two,11,,0
+MCTS,One,30,max_nodes: 1000,129183
+RAND,Two,31,,3
+MCTS,One,30,max_nodes: 1000,90021
+RAND,Two,31,,0
+MCTS,One,22,max_nodes: 1000,135549
+RAND,Two,23,,0
+MCTS,One,32,max_nodes: 1000,13885
+RAND,Two,33,,0
+MCTS,One,34,max_nodes: 1000,2398
+MCTS,One,22,max_nodes: 1000,178380
+RAND,Two,23,,0
+MCTS,One,32,max_nodes: 1000,43592
+RAND,Two,33,,0
+MCTS,One,6,max_nodes: 1000,141805
+RAND,Two,7,,0
+MCTS,One,12,max_nodes: 1000,120958
+RAND,Two,13,,0
+MCTS,One,12,max_nodes: 1000,118758
+RAND,Two,13,,0
+MCTS,One,34,max_nodes: 1000,59248
+RAND,Two,35,,3
+MCTS,One,36,max_nodes: 1000,3275
+RAND,Two,37,,3
+MCTS,One,38,max_nodes: 1000,2733
+RAND,Two,39,,0
+MCTS,One,40,max_nodes: 1000,3369
+RAND,Two,41,,0
+MCTS,One,42,max_nodes: 1000,2272
+RAND,Two,43,,0
+MCTS,One,44,max_nodes: 1000,1229
+RAND,Two,45,,0
+MCTS,One,46,max_nodes: 1000,451
+RAND,Two,47,,1
+MCTS,One,48,max_nodes: 1000,296
+RAND,Two,49,,0
+MCTS,One,50,max_nodes: 1000,252
+RAND,Two,51,,0
+MCTS,One,52,max_nodes: 1000,534
+RAND,Two,53,,1
+MCTS,One,54,max_nodes: 1000,50
+MCTS,One,2,max_nodes: 1000,153582
+RAND,Two,3,,0
+MCTS,One,24,max_nodes: 1000,138728
+RAND,Two,25,,0
+MCTS,One,26,max_nodes: 1000,10435
+RAND,Two,27,,0
+MCTS,One,28,max_nodes: 1000,645
+MCTS,One,8,max_nodes: 1000,131363
+RAND,Two,9,,0
+MCTS,One,24,max_nodes: 1000,193026
+RAND,Two,25,,0
+MCTS,One,14,max_nodes: 1000,114804
+RAND,Two,15,,0
+MCTS,One,14,max_nodes: 1000,133511
+RAND,Two,15,,0
+MCTS,One,2,max_nodes: 1000,166921
+RAND,Two,3,,0
+MCTS,One,10,max_nodes: 1000,114295
+RAND,Two,11,,0
+MCTS,One,16,max_nodes: 1000,107743
+RAND,Two,17,,0
+MCTS,One,4,max_nodes: 1000,151832
+RAND,Two,5,,0
+MCTS,One,16,max_nodes: 1000,118166
+RAND,Two,17,,0
+MCTS,One,2,max_nodes: 1000,151324
+RAND,Two,3,,1
+MCTS,One,26,max_nodes: 1000,197547
+RAND,Two,27,,0
+MCTS,One,18,max_nodes: 1000,110891
+RAND,Two,19,,0
+MCTS,One,4,max_nodes: 1000,139509
+RAND,Two,5,,0
+MCTS,One,12,max_nodes: 1000,124610
+RAND,Two,13,,21
+MCTS,One,6,max_nodes: 1000,141048
+RAND,Two,7,,0
+MCTS,One,18,max_nodes: 1000,131782
+RAND,Two,19,,0
+MCTS,One,4,max_nodes: 1000,162099
+RAND,Two,5,,0
+MCTS,One,20,max_nodes: 1000,93779
+RAND,Two,21,,0
+MCTS,One,14,max_nodes: 1000,112961
+RAND,Two,15,,0
+MCTS,One,22,max_nodes: 1000,51479
+RAND,Two,23,,0
+MCTS,One,6,max_nodes: 1000,139202
+RAND,Two,7,,0
+MCTS,One,24,max_nodes: 1000,10900
+RAND,Two,25,,0
+MCTS,One,26,max_nodes: 1000,8753
+RAND,Two,27,,0
+MCTS,One,8,max_nodes: 1000,135882
+RAND,Two,9,,0
+MCTS,One,28,max_nodes: 1000,13310
+RAND,Two,29,,22
+MCTS,One,28,max_nodes: 1000,208608
+RAND,Two,29,,0
+MCTS,One,30,max_nodes: 1000,6245
+RAND,Two,31,,0
+MCTS,One,32,max_nodes: 1000,14724
+RAND,Two,33,,0
+MCTS,One,34,max_nodes: 1000,15424
+RAND,Two,35,,2
+MCTS,One,6,max_nodes: 1000,139024
+RAND,Two,7,,0
+MCTS,One,36,max_nodes: 1000,5246
+RAND,Two,37,,0
+MCTS,One,20,max_nodes: 1000,187060
+RAND,Two,21,,0
+MCTS,One,16,max_nodes: 1000,113697
+RAND,Two,17,,0
+MCTS,One,38,max_nodes: 1000,15029
+RAND,Two,39,,3
+MCTS,One,40,max_nodes: 1000,4196
+RAND,Two,41,,0
+MCTS,One,42,max_nodes: 1000,392
+RAND,Two,43,,0
+MCTS,One,44,max_nodes: 1000,2229
+RAND,Two,45,,0
+MCTS,One,46,max_nodes: 1000,2270
+RAND,Two,47,,0
+MCTS,One,48,max_nodes: 1000,46
+MCTS,One,8,max_nodes: 1000,140726
+RAND,Two,9,,0
+MCTS,One,10,max_nodes: 1000,139227
+RAND,Two,11,,0
+MCTS,One,18,max_nodes: 1000,121957
+RAND,Two,19,,0
+MCTS,One,8,max_nodes: 1000,141683
+RAND,Two,9,,0
+MCTS,One,30,max_nodes: 1000,187499
+RAND,Two,31,,2
+MCTS,One,32,max_nodes: 1000,26943
+RAND,Two,33,,0
+MCTS,One,34,max_nodes: 1000,6143
+RAND,Two,35,,0
+MCTS,One,36,max_nodes: 1000,976
+RAND,Two,37,,0
+MCTS,One,22,max_nodes: 1000,174788
+MCTS,One,38,max_nodes: 1000,6579
+RAND,Two,23,,0
+RAND,Two,39,,0
+MCTS,One,40,max_nodes: 1000,2434
+RAND,Two,41,,0
+MCTS,One,42,max_nodes: 1000,74
+MCTS,One,10,max_nodes: 1000,127602
+RAND,Two,11,,0
+MCTS,One,2,max_nodes: 1000,164127
+RAND,Two,3,,0
+MCTS,One,12,max_nodes: 1000,123190
+RAND,Two,13,,0
+MCTS,One,20,max_nodes: 1000,109180
+RAND,Two,21,,0
+MCTS,One,10,max_nodes: 1000,115911
+RAND,Two,11,,0
+MCTS,One,12,max_nodes: 1000,117088
+RAND,Two,13,,0
+MCTS,One,14,max_nodes: 1000,117968
+RAND,Two,15,,0
+MCTS,One,24,max_nodes: 1000,155436
+RAND,Two,25,,0
+MCTS,One,22,max_nodes: 1000,96349
+RAND,Two,23,,0
+MCTS,One,4,max_nodes: 1000,156127
+RAND,Two,5,,0
+MCTS,One,2,max_nodes: 1000,169345
+RAND,Two,3,,1
+MCTS,One,12,max_nodes: 1000,134557
+RAND,Two,13,,0
+MCTS,One,24,max_nodes: 1000,64922
+RAND,Two,25,,0
+MCTS,One,14,max_nodes: 1000,112276
+RAND,Two,15,,0
+MCTS,One,16,max_nodes: 1000,106752
+RAND,Two,17,,0
+MCTS,One,6,max_nodes: 1000,144851
+RAND,Two,7,,0
+MCTS,One,26,max_nodes: 1000,157647
+RAND,Two,27,,0
+MCTS,One,26,max_nodes: 1000,97721
+RAND,Two,27,,0
+MCTS,One,4,max_nodes: 1000,158209
+RAND,Two,5,,0
+MCTS,One,16,max_nodes: 1000,112436
+RAND,Two,17,,0
+MCTS,One,18,max_nodes: 1000,102911
+RAND,Two,19,,0
+MCTS,One,28,max_nodes: 1000,74044
+RAND,Two,29,,0
+MCTS,One,28,max_nodes: 1000,127228
+RAND,Two,29,,0
+MCTS,One,14,max_nodes: 1000,238991
+RAND,Two,15,,0
+MCTS,One,8,max_nodes: 1000,132733
+RAND,Two,9,,0
+MCTS,One,18,max_nodes: 1000,96772
+RAND,Two,19,,0
+MCTS,One,20,max_nodes: 1000,89768
+RAND,Two,21,,20
+MCTS,One,6,max_nodes: 1000,151432
+RAND,Two,7,,0
+MCTS,One,22,max_nodes: 1000,77262
+RAND,Two,23,,0
+MCTS,One,30,max_nodes: 1000,152807
+RAND,Two,31,,3
+MCTS,One,20,max_nodes: 1000,101296
+RAND,Two,21,,0
+MCTS,One,10,max_nodes: 1000,143276
+RAND,Two,11,,0
+MCTS,One,30,max_nodes: 1000,152493
+RAND,Two,31,,2
+MCTS,One,24,max_nodes: 1000,86980
+RAND,Two,25,,0
+MCTS,One,8,max_nodes: 1000,137184
+RAND,Two,9,,0
+MCTS,One,22,max_nodes: 1000,94684
+RAND,Two,23,,0
+MCTS,One,32,max_nodes: 1000,60545
+RAND,Two,33,,0
+MCTS,One,34,max_nodes: 1000,9310
+RAND,Two,35,,2
+MCTS,One,36,max_nodes: 1000,216
+RAND,Two,37,,0
+MCTS,One,32,max_nodes: 1000,119388
+RAND,Two,33,,2
+MCTS,One,38,max_nodes: 1000,6855
+RAND,Two,39,,1
+MCTS,One,34,max_nodes: 1000,6061
+RAND,Two,35,,2
+MCTS,One,40,max_nodes: 1000,2886
+RAND,Two,41,,0
+MCTS,One,42,max_nodes: 1000,111
+RAND,Two,43,,0
+MCTS,One,36,max_nodes: 1000,3227
+RAND,Two,37,,0
+MCTS,One,44,max_nodes: 1000,1848
+RAND,Two,45,,0
+MCTS,One,16,max_nodes: 1000,235714
+RAND,Two,17,,0
+MCTS,One,46,max_nodes: 1000,1235
+RAND,Two,47,,0
+MCTS,One,48,max_nodes: 1000,1398
+RAND,Two,49,,0
+MCTS,One,38,max_nodes: 1000,4834
+RAND,Two,39,,0
+MCTS,One,50,max_nodes: 1000,1009
+RAND,Two,51,,0
+MCTS,One,52,max_nodes: 1000,738
+RAND,Two,53,,0
+MCTS,One,54,max_nodes: 1000,182
+MCTS,One,40,max_nodes: 1000,4456
+RAND,Two,41,,0
+MCTS,One,42,max_nodes: 1000,1013
+RAND,Two,43,,0
+MCTS,One,44,max_nodes: 1000,1514
+RAND,Two,45,,0
+MCTS,One,46,max_nodes: 1000,1105
+RAND,Two,47,,3
+MCTS,One,48,max_nodes: 1000,70
+RAND,Two,49,,0
+MCTS,One,50,max_nodes: 1000,467
+RAND,Two,51,,0
+MCTS,One,52,max_nodes: 1000,423
+RAND,Two,53,,0
+MCTS,One,54,max_nodes: 1000,417
+MCTS,One,24,max_nodes: 1000,72044
+RAND,Two,25,,0
+MCTS,One,12,max_nodes: 1000,132165
+RAND,Two,13,,0
+MCTS,One,10,max_nodes: 1000,125427
+RAND,Two,11,,0
+MCTS,One,26,max_nodes: 1000,71834
+RAND,Two,27,,0
+MCTS,One,28,max_nodes: 1000,33017
+RAND,Two,29,,0
+MCTS,One,26,max_nodes: 1000,216241
+RAND,Two,27,,0
+MCTS,One,30,max_nodes: 1000,13580
+RAND,Two,31,,0
+MCTS,One,2,max_nodes: 1000,171375
+RAND,Two,3,,0
+MCTS,One,2,max_nodes: 1000,164667
+RAND,Two,3,,0
+MCTS,One,32,max_nodes: 1000,24771
+RAND,Two,33,,0
+MCTS,One,34,max_nodes: 1000,1502
+RAND,Two,35,,0
+MCTS,One,14,max_nodes: 1000,145847
+RAND,Two,15,,0
+MCTS,One,12,max_nodes: 1000,127705
+RAND,Two,13,,0
+MCTS,One,36,max_nodes: 1000,16095
+RAND,Two,37,,0
+MCTS,One,38,max_nodes: 1000,534
+MCTS,One,18,max_nodes: 1000,221050
+RAND,Two,19,,0
+MCTS,One,14,max_nodes: 1000,111331
+RAND,Two,15,,0
+MCTS,One,4,max_nodes: 1000,149774
+RAND,Two,5,,0
+MCTS,One,4,max_nodes: 1000,155441
+RAND,Two,5,,0
+MCTS,One,2,max_nodes: 1000,162198
+RAND,Two,3,,0
+MCTS,One,28,max_nodes: 1000,217947
+RAND,Two,29,,0
+MCTS,One,16,max_nodes: 1000,197004
+RAND,Two,17,,0
+MCTS,One,20,max_nodes: 1000,201078
+RAND,Two,21,,0
+MCTS,One,16,max_nodes: 1000,140143
+RAND,Two,17,,0
+MCTS,One,30,max_nodes: 1000,101649
+RAND,Two,31,,0
+MCTS,One,32,max_nodes: 1000,560
+MCTS,One,6,max_nodes: 1000,144565
+RAND,Two,7,,0
+MCTS,One,6,max_nodes: 1000,155893
+RAND,Two,7,,0
+MCTS,One,4,max_nodes: 1000,142132
+RAND,Two,5,,0
+MCTS,One,18,max_nodes: 1000,196133
+RAND,Two,19,,0
+MCTS,One,8,max_nodes: 1000,127108
+RAND,Two,9,,0
+MCTS,One,22,max_nodes: 1000,183308
+RAND,Two,23,,0
+MCTS,One,8,max_nodes: 1000,139124
+RAND,Two,9,,0
+MCTS,One,18,max_nodes: 1000,184236
+RAND,Two,19,,0
+MCTS,One,2,max_nodes: 1000,169806
+RAND,Two,3,,0
+MCTS,One,6,max_nodes: 1000,143691
+RAND,Two,7,,0
+MCTS,One,10,max_nodes: 1000,128014
+RAND,Two,11,,0
+MCTS,One,10,max_nodes: 1000,125397
+RAND,Two,11,,0
+MCTS,One,20,max_nodes: 1000,176463
+RAND,Two,21,,0
+MCTS,One,8,max_nodes: 1000,138025
+RAND,Two,9,,0
+MCTS,One,24,max_nodes: 1000,191860
+RAND,Two,25,,0
+MCTS,One,20,max_nodes: 1000,174321
+RAND,Two,21,,0
+MCTS,One,4,max_nodes: 1000,160568
+RAND,Two,5,,1
+MCTS,One,12,max_nodes: 1000,116644
+RAND,Two,13,,0
+MCTS,One,12,max_nodes: 1000,112160
+RAND,Two,13,,1
+MCTS,One,22,max_nodes: 1000,148525
+RAND,Two,23,,0
+MCTS,One,10,max_nodes: 1000,127231
+RAND,Two,11,,0
+MCTS,One,14,max_nodes: 1000,105666
+RAND,Two,15,,0
+MCTS,One,6,max_nodes: 1000,151997
+RAND,Two,7,,0
+MCTS,One,22,max_nodes: 1000,164174
+RAND,Two,23,,0
+MCTS,One,14,max_nodes: 1000,117003
+RAND,Two,15,,0
+MCTS,One,26,max_nodes: 1000,189691
+RAND,Two,27,,0
+MCTS,One,24,max_nodes: 1000,87133
+RAND,Two,25,,0
+MCTS,One,12,max_nodes: 1000,113715
+RAND,Two,13,,0
+MCTS,One,16,max_nodes: 1000,113927
+RAND,Two,17,,0
+MCTS,One,26,max_nodes: 1000,77306
+RAND,Two,27,,0
+MCTS,One,16,max_nodes: 1000,99809
+RAND,Two,17,,0
+MCTS,One,8,max_nodes: 1000,129602
+RAND,Two,9,,0
+MCTS,One,24,max_nodes: 1000,142410
+RAND,Two,25,,0
+MCTS,One,14,max_nodes: 1000,109998
+RAND,Two,15,,0
+MCTS,One,28,max_nodes: 1000,98400
+RAND,Two,29,,0
+MCTS,One,28,max_nodes: 1000,180556
+RAND,Two,29,,0
+MCTS,One,18,max_nodes: 1000,111656
+RAND,Two,19,,0
+MCTS,One,18,max_nodes: 1000,131020
+RAND,Two,19,,0
+MCTS,One,10,max_nodes: 1000,136972
+RAND,Two,11,,0
+MCTS,One,16,max_nodes: 1000,108717
+RAND,Two,17,,0
+MCTS,One,26,max_nodes: 1000,140427
+RAND,Two,27,,0
+MCTS,One,30,max_nodes: 1000,86208
+RAND,Two,31,,0
+MCTS,One,28,max_nodes: 1000,36839
+RAND,Two,29,,0
+MCTS,One,20,max_nodes: 1000,100196
+RAND,Two,21,,0
+MCTS,One,32,max_nodes: 1000,35073
+RAND,Two,33,,0
+MCTS,One,20,max_nodes: 1000,105891
+RAND,Two,21,,0
+MCTS,One,30,max_nodes: 1000,149720
+RAND,Two,31,,0
+MCTS,One,30,max_nodes: 1000,46937
+RAND,Two,31,,0
+MCTS,One,34,max_nodes: 1000,50849
+RAND,Two,35,,0
+MCTS,One,12,max_nodes: 1000,119750
+RAND,Two,13,,0
+MCTS,One,32,max_nodes: 1000,19601
+RAND,Two,33,,0
+MCTS,One,18,max_nodes: 1000,109417
+RAND,Two,19,,0
+MCTS,One,34,max_nodes: 1000,18016
+RAND,Two,35,,2
+MCTS,One,36,max_nodes: 1000,59096
+RAND,Two,37,,0
+MCTS,One,22,max_nodes: 1000,111817
+RAND,Two,23,,0
+MCTS,One,22,max_nodes: 1000,126535
+RAND,Two,23,,0
+MCTS,One,38,max_nodes: 1000,65283
+RAND,Two,39,,0
+MCTS,One,40,max_nodes: 1000,5548
+RAND,Two,41,,2
+MCTS,One,42,max_nodes: 1000,752
+RAND,Two,43,,0
+MCTS,One,44,max_nodes: 1000,365
+RAND,Two,45,,0
+MCTS,One,46,max_nodes: 1000,51
+MCTS,One,36,max_nodes: 1000,129933
+RAND,Two,37,,0
+MCTS,One,32,max_nodes: 1000,185939
+RAND,Two,33,,3
+MCTS,One,14,max_nodes: 1000,162677
+RAND,Two,15,,0
+MCTS,One,20,max_nodes: 1000,159352
+RAND,Two,21,,0
+MCTS,One,34,max_nodes: 1000,32030
+RAND,Two,35,,2
+MCTS,One,36,max_nodes: 1000,16899
+RAND,Two,37,,0
+MCTS,One,38,max_nodes: 1000,5571
+RAND,Two,39,,0
+MCTS,One,40,max_nodes: 1000,317
+MCTS,One,24,max_nodes: 1000,131542
+RAND,Two,25,,0
+MCTS,One,38,max_nodes: 1000,113721
+RAND,Two,39,,343
+MCTS,One,24,max_nodes: 1000,216733
+RAND,Two,25,,0
+MCTS,One,40,max_nodes: 1000,6933
+RAND,Two,41,,0
+MCTS,One,42,max_nodes: 1000,8183
+RAND,Two,43,,1
+MCTS,One,2,max_nodes: 1000,159892
+RAND,Two,3,,0
+MCTS,One,44,max_nodes: 1000,6924
+RAND,Two,45,,2
+MCTS,One,46,max_nodes: 1000,337
+RAND,Two,47,,0
+MCTS,One,48,max_nodes: 1000,48
+MCTS,One,26,max_nodes: 1000,115778
+RAND,Two,27,,0
+MCTS,One,22,max_nodes: 1000,196807
+RAND,Two,23,,0
+MCTS,One,2,max_nodes: 1000,155673
+RAND,Two,3,,0
+MCTS,One,16,max_nodes: 1000,225116
+RAND,Two,17,,2
+MCTS,One,4,max_nodes: 1000,147374
+RAND,Two,5,,0
+MCTS,One,2,max_nodes: 1000,158758
+RAND,Two,3,,0
+MCTS,One,26,max_nodes: 1000,183856
+RAND,Two,27,,1
+MCTS,One,28,max_nodes: 1000,127394
+RAND,Two,29,,0
+MCTS,One,24,max_nodes: 1000,132256
+RAND,Two,25,,0
+MCTS,One,4,max_nodes: 1000,148463
+RAND,Two,5,,0
+MCTS,One,30,max_nodes: 1000,112577
+RAND,Two,31,,0
+MCTS,One,6,max_nodes: 1000,139958
+RAND,Two,7,,1
+MCTS,One,18,max_nodes: 1000,212199
+RAND,Two,19,,0
+MCTS,One,4,max_nodes: 1000,159262
+RAND,Two,5,,1
+MCTS,One,28,max_nodes: 1000,182883
+RAND,Two,29,,0
+MCTS,One,6,max_nodes: 1000,148775
+RAND,Two,7,,0
+MCTS,One,32,max_nodes: 1000,105618
+RAND,Two,33,,0
+MCTS,One,8,max_nodes: 1000,134225
+RAND,Two,9,,0
+MCTS,One,26,max_nodes: 1000,234945
+RAND,Two,27,,0
+MCTS,One,6,max_nodes: 1000,142005
+RAND,Two,7,,0
+MCTS,One,34,max_nodes: 1000,91633
+RAND,Two,35,,0
+MCTS,One,20,max_nodes: 1000,184602
+RAND,Two,21,,3
+MCTS,One,8,max_nodes: 1000,136872
+RAND,Two,9,,0
+MCTS,One,10,max_nodes: 1000,130562
+RAND,Two,11,,0
+MCTS,One,36,max_nodes: 1000,118248
+RAND,Two,37,,0
+MCTS,One,30,max_nodes: 1000,266674
+RAND,Two,31,,0
+MCTS,One,8,max_nodes: 1000,152081
+RAND,Two,9,,23
+MCTS,One,38,max_nodes: 1000,21578
+RAND,Two,39,,2
+MCTS,One,10,max_nodes: 1000,125371
+RAND,Two,11,,0
+MCTS,One,40,max_nodes: 1000,36018
+RAND,Two,41,,0
+MCTS,One,42,max_nodes: 1000,8894
+RAND,Two,43,,0
+MCTS,One,12,max_nodes: 1000,117255
+RAND,Two,13,,0
+MCTS,One,44,max_nodes: 1000,5333
+RAND,Two,45,,1
+MCTS,One,46,max_nodes: 1000,313
+RAND,Two,47,,0
+MCTS,One,48,max_nodes: 1000,1910
+RAND,Two,49,,0
+MCTS,One,50,max_nodes: 1000,73
+MCTS,One,32,max_nodes: 1000,82702
+RAND,Two,33,,0
+MCTS,One,22,max_nodes: 1000,208859
+RAND,Two,23,,0
+MCTS,One,28,max_nodes: 1000,257197
+RAND,Two,29,,3
+MCTS,One,10,max_nodes: 1000,116297
+RAND,Two,11,,0
+MCTS,One,12,max_nodes: 1000,112506
+RAND,Two,13,,0
+MCTS,One,14,max_nodes: 1000,116437
+RAND,Two,15,,0
+MCTS,One,34,max_nodes: 1000,93519
+RAND,Two,35,,2
+MCTS,One,36,max_nodes: 1000,13556
+RAND,Two,37,,0
+MCTS,One,38,max_nodes: 1000,566
+RAND,Two,39,,0
+MCTS,One,40,max_nodes: 1000,1118
+MCTS,One,24,max_nodes: 1000,118596
+RAND,Two,25,,0
+MCTS,One,26,max_nodes: 1000,198
+RAND,Two,27,,0
+MCTS,One,2,max_nodes: 1000,160224
+RAND,Two,3,,0
+MCTS,One,28,max_nodes: 1000,14890
+RAND,Two,29,,0
+MCTS,One,30,max_nodes: 1000,5852
+RAND,Two,31,,0
+MCTS,One,12,max_nodes: 1000,117200
+RAND,Two,13,,0
+MCTS,One,32,max_nodes: 1000,12628
+RAND,Two,33,,0
+MCTS,One,34,max_nodes: 1000,5150
+RAND,Two,35,,22
+MCTS,One,36,max_nodes: 1000,277
+RAND,Two,37,,0
+MCTS,One,38,max_nodes: 1000,82
+RAND,Two,39,,0
+MCTS,One,40,max_nodes: 1000,5300
+RAND,Two,41,,0
+MCTS,One,14,max_nodes: 1000,110773
+RAND,Two,15,,0
+MCTS,One,42,max_nodes: 1000,5145
+RAND,Two,43,,0
+MCTS,One,44,max_nodes: 1000,365
+MCTS,One,30,max_nodes: 1000,182478
+RAND,Two,31,,0
+MCTS,One,16,max_nodes: 1000,116147
+RAND,Two,17,,0
+MCTS,One,14,max_nodes: 1000,114542
+RAND,Two,15,,0
+MCTS,One,2,max_nodes: 1000,160372
+RAND,Two,3,,1
+MCTS,One,16,max_nodes: 1000,109346
+RAND,Two,17,,0
+MCTS,One,4,max_nodes: 1000,159954
+RAND,Two,5,,0
+MCTS,One,18,max_nodes: 1000,109331
+RAND,Two,19,,0
+MCTS,One,32,max_nodes: 1000,132985
+RAND,Two,33,,0
+MCTS,One,34,max_nodes: 1000,348
+MCTS,One,2,max_nodes: 1000,165334
+RAND,Two,3,,0
+MCTS,One,16,max_nodes: 1000,105715
+RAND,Two,17,,0
+MCTS,One,18,max_nodes: 1000,107698
+RAND,Two,19,,0
+MCTS,One,4,max_nodes: 1000,152412
+RAND,Two,5,,0
+MCTS,One,6,max_nodes: 1000,150693
+RAND,Two,7,,0
+MCTS,One,18,max_nodes: 1000,99141
+RAND,Two,19,,0
+MCTS,One,2,max_nodes: 1000,155385
+RAND,Two,3,,0
+MCTS,One,20,max_nodes: 1000,175782
+RAND,Two,21,,0
+MCTS,One,4,max_nodes: 1000,159272
+RAND,Two,5,,0
+MCTS,One,20,max_nodes: 1000,168880
+RAND,Two,21,,2
+MCTS,One,6,max_nodes: 1000,148429
+RAND,Two,7,,0
+MCTS,One,20,max_nodes: 1000,110398
+RAND,Two,21,,0
+MCTS,One,8,max_nodes: 1000,152004
+RAND,Two,9,,1
+MCTS,One,4,max_nodes: 1000,139622
+RAND,Two,5,,0
+MCTS,One,6,max_nodes: 1000,147119
+RAND,Two,7,,0
+MCTS,One,22,max_nodes: 1000,162907
+RAND,Two,23,,0
+MCTS,One,22,max_nodes: 1000,95870
+RAND,Two,23,,0
+MCTS,One,8,max_nodes: 1000,134596
+RAND,Two,9,,0
+MCTS,One,10,max_nodes: 1000,126331
+RAND,Two,11,,24
+MCTS,One,22,max_nodes: 1000,200415
+RAND,Two,23,,0
+MCTS,One,24,max_nodes: 1000,81890
+RAND,Two,25,,0
+MCTS,One,6,max_nodes: 1000,148696
+RAND,Two,7,,0
+MCTS,One,8,max_nodes: 1000,141565
+RAND,Two,9,,21
+MCTS,One,24,max_nodes: 1000,149651
+RAND,Two,25,,0
+MCTS,One,10,max_nodes: 1000,127123
+RAND,Two,11,,0
+MCTS,One,26,max_nodes: 1000,101503
+RAND,Two,27,,0
+MCTS,One,8,max_nodes: 1000,134241
+RAND,Two,9,,0
+MCTS,One,10,max_nodes: 1000,136453
+RAND,Two,11,,0
+MCTS,One,26,max_nodes: 1000,123755
+RAND,Two,27,,0
+MCTS,One,12,max_nodes: 1000,211397
+RAND,Two,13,,0
+MCTS,One,24,max_nodes: 1000,182843
+RAND,Two,25,,0
+MCTS,One,12,max_nodes: 1000,119587
+RAND,Two,13,,0
+MCTS,One,28,max_nodes: 1000,130883
+RAND,Two,29,,3
+MCTS,One,10,max_nodes: 1000,124298
+RAND,Two,11,,0
+MCTS,One,28,max_nodes: 1000,119340
+RAND,Two,29,,3
+MCTS,One,12,max_nodes: 1000,122663
+RAND,Two,13,,0
+MCTS,One,14,max_nodes: 1000,105869
+RAND,Two,15,,0
+MCTS,One,30,max_nodes: 1000,96388
+RAND,Two,31,,0
+MCTS,One,26,max_nodes: 1000,179690
+RAND,Two,27,,0
+MCTS,One,30,max_nodes: 1000,76242
+RAND,Two,31,,0
+MCTS,One,12,max_nodes: 1000,115953
+RAND,Two,13,,0
+MCTS,One,32,max_nodes: 1000,60087
+RAND,Two,33,,0
+MCTS,One,14,max_nodes: 1000,223070
+RAND,Two,15,,2
+MCTS,One,16,max_nodes: 1000,107772
+RAND,Two,17,,0
+MCTS,One,14,max_nodes: 1000,120416
+RAND,Two,15,,0
+MCTS,One,32,max_nodes: 1000,84817
+RAND,Two,33,,0
+MCTS,One,28,max_nodes: 1000,92048
+RAND,Two,29,,0
+MCTS,One,30,max_nodes: 1000,10741
+RAND,Two,31,,0
+MCTS,One,32,max_nodes: 1000,1393
+MCTS,One,14,max_nodes: 1000,115231
+RAND,Two,15,,0
+MCTS,One,18,max_nodes: 1000,102739
+RAND,Two,19,,0
+MCTS,One,16,max_nodes: 1000,133158
+RAND,Two,17,,0
+MCTS,One,34,max_nodes: 1000,159518
+RAND,Two,35,,0
+MCTS,One,34,max_nodes: 1000,135405
+RAND,Two,35,,2
+MCTS,One,16,max_nodes: 1000,196809
+RAND,Two,17,,1
+MCTS,One,18,max_nodes: 1000,61549
+RAND,Two,19,,0
+MCTS,One,20,max_nodes: 1000,97357
+RAND,Two,21,,1
+MCTS,One,16,max_nodes: 1000,111220
+RAND,Two,17,,0
+MCTS,One,36,max_nodes: 1000,29168
+RAND,Two,37,,2
+MCTS,One,2,max_nodes: 1000,164600
+RAND,Two,3,,0
+MCTS,One,38,max_nodes: 1000,28483
+RAND,Two,39,,3
+MCTS,One,40,max_nodes: 1000,4525
+MCTS,One,22,max_nodes: 1000,87266
+RAND,Two,23,,0
+MCTS,One,18,max_nodes: 1000,100741
+RAND,Two,19,,0
+MCTS,One,36,max_nodes: 1000,160804
+RAND,Two,37,,22
+MCTS,One,38,max_nodes: 1000,8673
+RAND,Two,39,,0
+MCTS,One,40,max_nodes: 1000,2533
+RAND,Two,41,,0
+MCTS,One,42,max_nodes: 1000,10980
+RAND,Two,43,,0
+MCTS,One,44,max_nodes: 1000,265
+RAND,Two,45,,1
+MCTS,One,46,max_nodes: 1000,1227
+RAND,Two,47,,0
+MCTS,One,48,max_nodes: 1000,258
+MCTS,One,20,max_nodes: 1000,138785
+RAND,Two,21,,0
+MCTS,One,24,max_nodes: 1000,67529
+RAND,Two,25,,0
+MCTS,One,18,max_nodes: 1000,169474
+RAND,Two,19,,2
+MCTS,One,4,max_nodes: 1000,150501
+RAND,Two,5,,0
+MCTS,One,20,max_nodes: 1000,91844
+RAND,Two,21,,0
+MCTS,One,2,max_nodes: 1000,161993
+RAND,Two,3,,0
+MCTS,One,26,max_nodes: 1000,114807
+RAND,Two,27,,0
+MCTS,One,28,max_nodes: 1000,2848
+RAND,Two,29,,1
+MCTS,One,2,max_nodes: 1000,150688
+RAND,Two,3,,0
+MCTS,One,22,max_nodes: 1000,149476
+RAND,Two,23,,1
+MCTS,One,30,max_nodes: 1000,13241
+RAND,Two,31,,0
+MCTS,One,32,max_nodes: 1000,613
+MCTS,One,22,max_nodes: 1000,95968
+RAND,Two,23,,0
+MCTS,One,20,max_nodes: 1000,137622
+RAND,Two,21,,0
+MCTS,One,24,max_nodes: 1000,22870
+RAND,Two,25,,0
+MCTS,One,26,max_nodes: 1000,574
+RAND,Two,27,,1
+MCTS,One,6,max_nodes: 1000,141067
+RAND,Two,7,,0
+MCTS,One,28,max_nodes: 1000,15353
+RAND,Two,29,,1
+MCTS,One,30,max_nodes: 1000,16839
+RAND,Two,31,,0
+MCTS,One,32,max_nodes: 1000,223
+RAND,Two,33,,2
+MCTS,One,34,max_nodes: 1000,1223
+RAND,Two,35,,0
+MCTS,One,4,max_nodes: 1000,142033
+RAND,Two,5,,0
+MCTS,One,36,max_nodes: 1000,1422
+RAND,Two,37,,0
+MCTS,One,38,max_nodes: 1000,52
+MCTS,One,24,max_nodes: 1000,89353
+RAND,Two,25,,0
+MCTS,One,4,max_nodes: 1000,146030
+RAND,Two,5,,1
+MCTS,One,2,max_nodes: 1000,154107
+RAND,Two,3,,0
+MCTS,One,8,max_nodes: 1000,140701
+RAND,Two,9,,0
+MCTS,One,6,max_nodes: 1000,133520
+RAND,Two,7,,0
+MCTS,One,22,max_nodes: 1000,191024
+RAND,Two,23,,0
+MCTS,One,2,max_nodes: 1000,154839
+RAND,Two,3,,0
+MCTS,One,26,max_nodes: 1000,120322
+RAND,Two,27,,2
+MCTS,One,6,max_nodes: 1000,140045
+RAND,Two,7,,0
+MCTS,One,4,max_nodes: 1000,154592
+RAND,Two,5,,0
+MCTS,One,10,max_nodes: 1000,137056
+RAND,Two,11,,0
+MCTS,One,28,max_nodes: 1000,109407
+RAND,Two,29,,0
+MCTS,One,8,max_nodes: 1000,135776
+RAND,Two,9,,0
+MCTS,One,4,max_nodes: 1000,151601
+RAND,Two,5,,0
+MCTS,One,24,max_nodes: 1000,189913
+RAND,Two,25,,1
+MCTS,One,8,max_nodes: 1000,112949
+RAND,Two,9,,19
+MCTS,One,6,max_nodes: 1000,131397
+RAND,Two,7,,0
+MCTS,One,12,max_nodes: 1000,129663
+RAND,Two,13,,20
+MCTS,One,10,max_nodes: 1000,138771
+RAND,Two,11,,0
+MCTS,One,30,max_nodes: 1000,187585
+MCTS,One,6,max_nodes: 1000,150530
+RAND,Two,31,,0
+RAND,Two,7,,0
+MCTS,One,10,max_nodes: 1000,130509
+RAND,Two,11,,0
+MCTS,One,26,max_nodes: 1000,176980
+RAND,Two,27,,1
+MCTS,One,8,max_nodes: 1000,148341
+RAND,Two,9,,0
+MCTS,One,14,max_nodes: 1000,188213
+RAND,Two,15,,2
+MCTS,One,12,max_nodes: 1000,170783
+RAND,Two,13,,0
+MCTS,One,12,max_nodes: 1000,124457
+RAND,Two,13,,0
+MCTS,One,32,max_nodes: 1000,134855
+RAND,Two,33,,0
+MCTS,One,28,max_nodes: 1000,90046
+RAND,Two,29,,0
+MCTS,One,8,max_nodes: 1000,144008
+RAND,Two,9,,0
+MCTS,One,30,max_nodes: 1000,51984
+RAND,Two,31,,0
+MCTS,One,32,max_nodes: 1000,14908
+RAND,Two,33,,0
+MCTS,One,10,max_nodes: 1000,154440
+RAND,Two,11,,0
+MCTS,One,14,max_nodes: 1000,109258
+RAND,Two,15,,0
+MCTS,One,34,max_nodes: 1000,118737
+RAND,Two,35,,0
+MCTS,One,34,max_nodes: 1000,48246
+RAND,Two,35,,0
+MCTS,One,14,max_nodes: 1000,141716
+RAND,Two,15,,0
+MCTS,One,36,max_nodes: 1000,5656
+RAND,Two,37,,0
+MCTS,One,38,max_nodes: 1000,4837
+RAND,Two,39,,0
+MCTS,One,10,max_nodes: 1000,125782
+RAND,Two,11,,0
+MCTS,One,40,max_nodes: 1000,2028
+RAND,Two,41,,0
+MCTS,One,42,max_nodes: 1000,307
+MCTS,One,16,max_nodes: 1000,176103
+RAND,Two,17,,0
+MCTS,One,16,max_nodes: 1000,106357
+RAND,Two,17,,0
+MCTS,One,12,max_nodes: 1000,131752
+RAND,Two,13,,0
+MCTS,One,16,max_nodes: 1000,122518
+RAND,Two,17,,0
+MCTS,One,12,max_nodes: 1000,122748
+RAND,Two,13,,0
+MCTS,One,36,max_nodes: 1000,138362
+RAND,Two,37,,2
+MCTS,One,38,max_nodes: 1000,27865
+RAND,Two,39,,2
+MCTS,One,40,max_nodes: 1000,14108
+RAND,Two,41,,0
+MCTS,One,42,max_nodes: 1000,347
+RAND,Two,43,,1
+MCTS,One,44,max_nodes: 1000,995
+RAND,Two,45,,1
+MCTS,One,46,max_nodes: 1000,1218
+RAND,Two,47,,0
+MCTS,One,48,max_nodes: 1000,72
+MCTS,One,18,max_nodes: 1000,148137
+RAND,Two,19,,0
+MCTS,One,2,max_nodes: 1000,171717
+RAND,Two,3,,1
+MCTS,One,18,max_nodes: 1000,100818
+RAND,Two,19,,0
+MCTS,One,14,max_nodes: 1000,143855
+RAND,Two,15,,0
+MCTS,One,14,max_nodes: 1000,116870
+RAND,Two,15,,1
+MCTS,One,18,max_nodes: 1000,164253
+RAND,Two,19,,0
+MCTS,One,20,max_nodes: 1000,107297
+RAND,Two,21,,0
+MCTS,One,20,max_nodes: 1000,148400
+RAND,Two,21,,0
+MCTS,One,4,max_nodes: 1000,161338
+RAND,Two,5,,0
+MCTS,One,2,max_nodes: 1000,166498
+RAND,Two,3,,0
+MCTS,One,16,max_nodes: 1000,108410
+RAND,Two,17,,0
+MCTS,One,22,max_nodes: 1000,78983
+RAND,Two,23,,0
+MCTS,One,20,max_nodes: 1000,159739
+RAND,Two,21,,0
+MCTS,One,22,max_nodes: 1000,138496
+RAND,Two,23,,0
+MCTS,One,18,max_nodes: 1000,121393
+RAND,Two,19,,0
+MCTS,One,24,max_nodes: 1000,92513
+RAND,Two,25,,0
+MCTS,One,6,max_nodes: 1000,141022
+RAND,Two,7,,1
+MCTS,One,16,max_nodes: 1000,245659
+RAND,Two,17,,0
+MCTS,One,4,max_nodes: 1000,175898
+RAND,Two,5,,0
+MCTS,One,24,max_nodes: 1000,69919
+RAND,Two,25,,0
+MCTS,One,26,max_nodes: 1000,121716
+RAND,Two,27,,0
+MCTS,One,22,max_nodes: 1000,184727
+RAND,Two,23,,0
+MCTS,One,8,max_nodes: 1000,152368
+RAND,Two,9,,0
+MCTS,One,20,max_nodes: 1000,199449
+RAND,Two,21,,4
+MCTS,One,26,max_nodes: 1000,167298
+RAND,Two,27,,4
+MCTS,One,6,max_nodes: 1000,193932
+RAND,Two,7,,1
+MCTS,One,28,max_nodes: 1000,120531
+RAND,Two,29,,0
+MCTS,One,10,max_nodes: 1000,158682
+RAND,Two,11,,0
+MCTS,One,24,max_nodes: 1000,172462
+RAND,Two,25,,0
+MCTS,One,18,max_nodes: 1000,319587
+RAND,Two,19,,0
+MCTS,One,28,max_nodes: 1000,103207
+RAND,Two,29,,0
+MCTS,One,30,max_nodes: 1000,116606
+RAND,Two,31,,0
+MCTS,One,8,max_nodes: 1000,166653
+RAND,Two,9,,0
+MCTS,One,30,max_nodes: 1000,77361
+RAND,Two,31,,0
+MCTS,One,22,max_nodes: 1000,217552
+RAND,Two,23,,0
+MCTS,One,32,max_nodes: 1000,9188
+RAND,Two,33,,2
+MCTS,One,34,max_nodes: 1000,8233
+RAND,Two,35,,0
+MCTS,One,36,max_nodes: 1000,11563
+MCTS,One,12,max_nodes: 1000,158829
+RAND,Two,13,,0
+RAND,Two,37,,0
+MCTS,One,38,max_nodes: 1000,163
+MCTS,One,26,max_nodes: 1000,216576
+RAND,Two,27,,0
+MCTS,One,32,max_nodes: 1000,201987
+RAND,Two,33,,2
+MCTS,One,10,max_nodes: 1000,175005
+RAND,Two,11,,0
+MCTS,One,20,max_nodes: 1000,269878
+MCTS,One,14,max_nodes: 1000,122568
+RAND,Two,21,,0
+RAND,Two,15,,0
+MCTS,One,2,max_nodes: 1000,190838
+RAND,Two,3,,0
+MCTS,One,24,max_nodes: 1000,299840
+RAND,Two,25,,0
+MCTS,One,34,max_nodes: 1000,160154
+RAND,Two,35,,3
+MCTS,One,16,max_nodes: 1000,124609
+RAND,Two,17,,0
+MCTS,One,28,max_nodes: 1000,191462
+RAND,Two,29,,0
+MCTS,One,22,max_nodes: 1000,155622
+RAND,Two,23,,3
+MCTS,One,24,max_nodes: 1000,6863
+RAND,Two,25,,1
+MCTS,One,26,max_nodes: 1000,4575
+RAND,Two,27,,0
+MCTS,One,28,max_nodes: 1000,4802
+RAND,Two,29,,0
+MCTS,One,30,max_nodes: 1000,6902
+RAND,Two,31,,0
+MCTS,One,32,max_nodes: 1000,2286
+RAND,Two,33,,0
+MCTS,One,34,max_nodes: 1000,3816
+RAND,Two,35,,0
+MCTS,One,36,max_nodes: 1000,5948
+RAND,Two,37,,2
+MCTS,One,12,max_nodes: 1000,214524
+RAND,Two,13,,0
+MCTS,One,38,max_nodes: 1000,2769
+RAND,Two,39,,1
+MCTS,One,40,max_nodes: 1000,1345
+RAND,Two,41,,1
+MCTS,One,42,max_nodes: 1000,78
+MCTS,One,30,max_nodes: 1000,81315
+RAND,Two,31,,0
+MCTS,One,18,max_nodes: 1000,111729
+RAND,Two,19,,0
+MCTS,One,36,max_nodes: 1000,117220
+RAND,Two,37,,0
+MCTS,One,4,max_nodes: 1000,192507
+RAND,Two,5,,0
+MCTS,One,38,max_nodes: 1000,58446
+RAND,Two,39,,0
+MCTS,One,20,max_nodes: 1000,87425
+RAND,Two,21,,0
+MCTS,One,40,max_nodes: 1000,34614
+RAND,Two,41,,0
+MCTS,One,42,max_nodes: 1000,379
+RAND,Two,43,,0
+MCTS,One,44,max_nodes: 1000,424
+RAND,Two,45,,0
+MCTS,One,46,max_nodes: 1000,439
+RAND,Two,47,,0
+MCTS,One,48,max_nodes: 1000,206
+MCTS,One,2,max_nodes: 1000,172680
+RAND,Two,3,,0
+MCTS,One,26,max_nodes: 1000,254441
+RAND,Two,27,,3
+MCTS,One,32,max_nodes: 1000,164463
+RAND,Two,33,,2
+MCTS,One,14,max_nodes: 1000,191585
+RAND,Two,15,,0
+MCTS,One,6,max_nodes: 1000,146910
+RAND,Two,7,,0
+MCTS,One,22,max_nodes: 1000,98650
+RAND,Two,23,,0
+MCTS,One,28,max_nodes: 1000,54325
+RAND,Two,29,,4
+MCTS,One,34,max_nodes: 1000,48918
+RAND,Two,35,,0
+MCTS,One,16,max_nodes: 1000,60074
+RAND,Two,17,,0
+MCTS,One,30,max_nodes: 1000,18951
+RAND,Two,31,,2
+MCTS,One,36,max_nodes: 1000,19814
+RAND,Two,37,,3
+MCTS,One,32,max_nodes: 1000,10091
+RAND,Two,33,,0
+MCTS,One,34,max_nodes: 1000,842
+MCTS,One,38,max_nodes: 1000,22087
+RAND,Two,39,,0
+MCTS,One,2,max_nodes: 1000,154592
+RAND,Two,3,,0
+MCTS,One,24,max_nodes: 1000,89813
+RAND,Two,25,,0
+MCTS,One,40,max_nodes: 1000,38165
+RAND,Two,41,,3
+MCTS,One,42,max_nodes: 1000,1212
+RAND,Two,43,,0
+MCTS,One,44,max_nodes: 1000,786
+RAND,Two,45,,0
+MCTS,One,46,max_nodes: 1000,1379
+RAND,Two,47,,0
+MCTS,One,48,max_nodes: 1000,578
+RAND,Two,49,,0
+MCTS,One,50,max_nodes: 1000,803
+RAND,Two,51,,0
+MCTS,One,52,max_nodes: 1000,142
+RAND,Two,53,,0
+MCTS,One,54,max_nodes: 1000,20
+MCTS,One,4,max_nodes: 1000,158230
+RAND,Two,5,,0
+MCTS,One,18,max_nodes: 1000,86289
+RAND,Two,19,,0
+MCTS,One,8,max_nodes: 1000,135763
+RAND,Two,9,,0
+MCTS,One,26,max_nodes: 1000,115484
+RAND,Two,27,,2
+MCTS,One,2,max_nodes: 1000,177176
+RAND,Two,3,,0
+MCTS,One,4,max_nodes: 1000,152984
+RAND,Two,5,,22
+MCTS,One,2,max_nodes: 1000,148693
+RAND,Two,3,,0
+MCTS,One,6,max_nodes: 1000,143748
+RAND,Two,7,,19
+MCTS,One,10,max_nodes: 1000,128089
+RAND,Two,11,,0
+MCTS,One,28,max_nodes: 1000,107767
+RAND,Two,29,,0
+MCTS,One,20,max_nodes: 1000,215964
+RAND,Two,21,,2
+MCTS,One,6,max_nodes: 1000,150362
+RAND,Two,7,,0
+MCTS,One,4,max_nodes: 1000,158522
+RAND,Two,5,,0
+MCTS,One,30,max_nodes: 1000,60259
+RAND,Two,31,,1
+MCTS,One,12,max_nodes: 1000,122229
+RAND,Two,13,,18
+MCTS,One,4,max_nodes: 1000,150942
+MCTS,One,8,max_nodes: 1000,150387
+RAND,Two,5,,0
+RAND,Two,9,,0
+MCTS,One,32,max_nodes: 1000,32069
+RAND,Two,33,,1
+MCTS,One,34,max_nodes: 1000,766
+RAND,Two,35,,0
+MCTS,One,36,max_nodes: 1000,4765
+RAND,Two,37,,0
+MCTS,One,38,max_nodes: 1000,82
+MCTS,One,22,max_nodes: 1000,109189
+RAND,Two,23,,0
+MCTS,One,14,max_nodes: 1000,129741
+RAND,Two,15,,0
+MCTS,One,8,max_nodes: 1000,152450
+RAND,Two,9,,0
+MCTS,One,24,max_nodes: 1000,98240
+RAND,Two,25,,0
+MCTS,One,6,max_nodes: 1000,167778
+RAND,Two,7,,0
+MCTS,One,10,max_nodes: 1000,152384
+RAND,Two,11,,0
+MCTS,One,6,max_nodes: 1000,176359
+RAND,Two,7,,0
+MCTS,One,2,max_nodes: 1000,180738
+RAND,Two,3,,0
+MCTS,One,16,max_nodes: 1000,143735
+RAND,Two,17,,0
+MCTS,One,26,max_nodes: 1000,173624
+RAND,Two,27,,0
+MCTS,One,8,max_nodes: 1000,195616
+RAND,Two,9,,11
+MCTS,One,8,max_nodes: 1000,184041
+RAND,Two,9,,0
+MCTS,One,10,max_nodes: 1000,241191
+RAND,Two,11,,2
+MCTS,One,4,max_nodes: 1000,193434
+RAND,Two,5,,0
+MCTS,One,18,max_nodes: 1000,138579
+RAND,Two,19,,0
+MCTS,One,12,max_nodes: 1000,267296
+RAND,Two,13,,0
+MCTS,One,28,max_nodes: 1000,130265
+RAND,Two,29,,0
+MCTS,One,10,max_nodes: 1000,152864
+RAND,Two,11,,61
+MCTS,One,10,max_nodes: 1000,187619
+RAND,Two,11,,0
+MCTS,One,6,max_nodes: 1000,164370
+RAND,Two,7,,0
+MCTS,One,14,max_nodes: 1000,142513
+RAND,Two,15,,1
+MCTS,One,30,max_nodes: 1000,152678
+RAND,Two,31,,0
+MCTS,One,12,max_nodes: 1000,267788
+RAND,Two,13,,0
+MCTS,One,12,max_nodes: 1000,142242
+RAND,Two,13,,0
+MCTS,One,12,max_nodes: 1000,151073
+RAND,Two,13,,0
+MCTS,One,16,max_nodes: 1000,126879
+RAND,Two,17,,0
+MCTS,One,8,max_nodes: 1000,142650
+RAND,Two,9,,0
+MCTS,One,32,max_nodes: 1000,93531
+RAND,Two,33,,2
+MCTS,One,34,max_nodes: 1000,3293
+RAND,Two,35,,0
+MCTS,One,36,max_nodes: 1000,1962
+RAND,Two,37,,1
+MCTS,One,38,max_nodes: 1000,93
+RAND,Two,39,,0
+MCTS,One,40,max_nodes: 1000,1511
+RAND,Two,41,,0
+MCTS,One,42,max_nodes: 1000,2558
+RAND,Two,43,,0
+MCTS,One,44,max_nodes: 1000,52
+MCTS,One,20,max_nodes: 1000,320107
+RAND,Two,21,,0
+MCTS,One,14,max_nodes: 1000,112725
+RAND,Two,15,,0
+MCTS,One,14,max_nodes: 1000,106760
+RAND,Two,15,,0
+MCTS,One,18,max_nodes: 1000,113116
+RAND,Two,19,,0
+MCTS,One,14,max_nodes: 1000,213282
+RAND,Two,15,,0
+MCTS,One,2,max_nodes: 1000,167835
+RAND,Two,3,,0
+MCTS,One,20,max_nodes: 1000,94267
+RAND,Two,21,,3
+MCTS,One,16,max_nodes: 1000,115608
+RAND,Two,17,,0
+MCTS,One,16,max_nodes: 1000,111598
+RAND,Two,17,,0
+MCTS,One,22,max_nodes: 1000,26554
+RAND,Two,23,,0
+MCTS,One,24,max_nodes: 1000,475
+MCTS,One,10,max_nodes: 1000,238528
+RAND,Two,11,,1
+MCTS,One,22,max_nodes: 1000,227342
+RAND,Two,23,,0
+MCTS,One,18,max_nodes: 1000,97149
+RAND,Two,19,,0
+MCTS,One,18,max_nodes: 1000,109375
+RAND,Two,19,,0
+MCTS,One,4,max_nodes: 1000,145514
+RAND,Two,5,,0
+MCTS,One,16,max_nodes: 1000,185476
+RAND,Two,17,,3
+MCTS,One,2,max_nodes: 1000,164954
+RAND,Two,3,,1
+MCTS,One,20,max_nodes: 1000,95635
+RAND,Two,21,,0
+MCTS,One,20,max_nodes: 1000,105711
+RAND,Two,21,,0
+MCTS,One,24,max_nodes: 1000,210302
+RAND,Two,25,,0
+MCTS,One,6,max_nodes: 1000,150321
+RAND,Two,7,,0
+MCTS,One,18,max_nodes: 1000,165818
+RAND,Two,19,,1
+MCTS,One,22,max_nodes: 1000,129690
+RAND,Two,23,,0
+MCTS,One,22,max_nodes: 1000,106639
+RAND,Two,23,,0
+MCTS,One,12,max_nodes: 1000,292189
+RAND,Two,13,,2
+MCTS,One,4,max_nodes: 1000,158873
+RAND,Two,5,,0
+MCTS,One,24,max_nodes: 1000,87626
+RAND,Two,25,,0
+MCTS,One,8,max_nodes: 1000,137576
+RAND,Two,9,,0
+MCTS,One,26,max_nodes: 1000,206003
+RAND,Two,27,,0
+MCTS,One,24,max_nodes: 1000,158158
+RAND,Two,25,,0
+MCTS,One,6,max_nodes: 1000,148184
+RAND,Two,7,,0
+MCTS,One,10,max_nodes: 1000,129424
+RAND,Two,11,,0
+MCTS,One,26,max_nodes: 1000,156634
+RAND,Two,27,,0
+MCTS,One,20,max_nodes: 1000,272289
+RAND,Two,21,,22
+MCTS,One,14,max_nodes: 1000,255219
+RAND,Two,15,,0
+MCTS,One,26,max_nodes: 1000,113636
+RAND,Two,27,,0
+MCTS,One,8,max_nodes: 1000,143896
+RAND,Two,9,,1
+MCTS,One,28,max_nodes: 1000,68260
+RAND,Two,29,,0
+MCTS,One,12,max_nodes: 1000,122308
+RAND,Two,13,,0
+MCTS,One,28,max_nodes: 1000,211142
+RAND,Two,29,,1
+MCTS,One,28,max_nodes: 1000,138005
+RAND,Two,29,,3
+MCTS,One,30,max_nodes: 1000,63228
+RAND,Two,31,,0
+MCTS,One,30,max_nodes: 1000,52504
+RAND,Two,31,,0
+MCTS,One,32,max_nodes: 1000,8170
+RAND,Two,33,,1
+MCTS,One,34,max_nodes: 1000,3345
+RAND,Two,35,,0
+MCTS,One,10,max_nodes: 1000,127993
+RAND,Two,11,,0
+MCTS,One,36,max_nodes: 1000,3681
+RAND,Two,37,,0
+MCTS,One,38,max_nodes: 1000,112
+RAND,Two,39,,0
+MCTS,One,40,max_nodes: 1000,2622
+RAND,Two,41,,0
+MCTS,One,42,max_nodes: 1000,60
+MCTS,One,14,max_nodes: 1000,110555
+RAND,Two,15,,1
+MCTS,One,32,max_nodes: 1000,71065
+RAND,Two,33,,0
+MCTS,One,22,max_nodes: 1000,237110
+RAND,Two,23,,0
+MCTS,One,34,max_nodes: 1000,21031
+RAND,Two,35,,0
+MCTS,One,36,max_nodes: 1000,16844
+RAND,Two,37,,0
+MCTS,One,38,max_nodes: 1000,1021
+RAND,Two,39,,1
+MCTS,One,40,max_nodes: 1000,1046
+RAND,Two,41,,0
+MCTS,One,42,max_nodes: 1000,875
+RAND,Two,43,,1
+MCTS,One,44,max_nodes: 1000,3994
+RAND,Two,45,,0
+MCTS,One,46,max_nodes: 1000,2721
+RAND,Two,47,,0
+MCTS,One,48,max_nodes: 1000,1507
+RAND,Two,49,,0
+MCTS,One,50,max_nodes: 1000,1182
+RAND,Two,51,,1
+MCTS,One,52,max_nodes: 1000,128
+RAND,Two,53,,0
+MCTS,One,54,max_nodes: 1000,769
+RAND,Two,55,,0
+MCTS,One,56,max_nodes: 1000,313
+MCTS,One,30,max_nodes: 1000,191086
+RAND,Two,31,,3
+MCTS,One,16,max_nodes: 1000,106503
+RAND,Two,17,,0
+MCTS,One,16,max_nodes: 1000,315842
+RAND,Two,17,,0
+MCTS,One,12,max_nodes: 1000,131888
+RAND,Two,13,,1
+MCTS,One,2,max_nodes: 1000,151490
+RAND,Two,3,,0
+MCTS,One,2,max_nodes: 1000,158732
+MCTS,One,24,max_nodes: 1000,204067
+RAND,Two,3,,1
+RAND,Two,25,,0
+MCTS,One,14,max_nodes: 1000,122339
+RAND,Two,15,,0
+MCTS,One,18,max_nodes: 1000,150812
+RAND,Two,19,,0
+MCTS,One,32,max_nodes: 1000,229726
+MCTS,One,4,max_nodes: 1000,170444
+RAND,Two,33,,0
+RAND,Two,5,,0
+MCTS,One,16,max_nodes: 1000,116307
+RAND,Two,17,,0
+MCTS,One,26,max_nodes: 1000,126040
+RAND,Two,27,,0
+MCTS,One,28,max_nodes: 1000,10011
+RAND,Two,29,,0
+MCTS,One,18,max_nodes: 1000,287165
+RAND,Two,19,,0
+MCTS,One,30,max_nodes: 1000,30867
+RAND,Two,31,,0
+MCTS,One,4,max_nodes: 1000,200340
+RAND,Two,5,,1
+MCTS,One,32,max_nodes: 1000,23440
+RAND,Two,33,,0
+MCTS,One,34,max_nodes: 1000,492
+MCTS,One,20,max_nodes: 1000,165890
+RAND,Two,21,,0
+MCTS,One,6,max_nodes: 1000,168937
+RAND,Two,7,,0
+MCTS,One,18,max_nodes: 1000,132879
+RAND,Two,19,,0
+MCTS,One,20,max_nodes: 1000,93602
+RAND,Two,21,,0
+MCTS,One,34,max_nodes: 1000,243874
+RAND,Two,35,,0
+MCTS,One,6,max_nodes: 1000,176683
+RAND,Two,7,,1
+MCTS,One,2,max_nodes: 1000,181132
+RAND,Two,3,,1
+MCTS,One,20,max_nodes: 1000,126738
+RAND,Two,21,,0
+MCTS,One,22,max_nodes: 1000,189353
+RAND,Two,23,,0
+MCTS,One,22,max_nodes: 1000,151973
+RAND,Two,23,,0
+MCTS,One,8,max_nodes: 1000,158135
+RAND,Two,9,,0
+MCTS,One,24,max_nodes: 1000,17233
+RAND,Two,25,,0
+MCTS,One,26,max_nodes: 1000,497
+MCTS,One,22,max_nodes: 1000,118317
+RAND,Two,23,,0
+MCTS,One,8,max_nodes: 1000,153036
+RAND,Two,9,,0
+MCTS,One,4,max_nodes: 1000,166831
+RAND,Two,5,,0
+MCTS,One,10,max_nodes: 1000,142818
+RAND,Two,11,,0
+MCTS,One,36,max_nodes: 1000,228409
+RAND,Two,37,,3
+MCTS,One,38,max_nodes: 1000,12558
+RAND,Two,39,,0
+MCTS,One,40,max_nodes: 1000,1498
+MCTS,One,24,max_nodes: 1000,106913
+RAND,Two,25,,0
+MCTS,One,2,max_nodes: 1000,196383
+RAND,Two,3,,0
+MCTS,One,24,max_nodes: 1000,259288
+RAND,Two,25,,2
+MCTS,One,10,max_nodes: 1000,140297
+RAND,Two,11,,1
+MCTS,One,6,max_nodes: 1000,153597
+RAND,Two,7,,1
+MCTS,One,12,max_nodes: 1000,140175
+RAND,Two,13,,0
+MCTS,One,26,max_nodes: 1000,108160
+RAND,Two,27,,0
+MCTS,One,2,max_nodes: 1000,179342
+RAND,Two,3,,1
+MCTS,One,4,max_nodes: 1000,183429
+RAND,Two,5,,1
+MCTS,One,12,max_nodes: 1000,126463
+RAND,Two,13,,1
+MCTS,One,28,max_nodes: 1000,102252
+RAND,Two,29,,0
+MCTS,One,14,max_nodes: 1000,122112
+RAND,Two,15,,0
+MCTS,One,8,max_nodes: 1000,143899
+RAND,Two,9,,0
+MCTS,One,26,max_nodes: 1000,214411
+RAND,Two,27,,3
+MCTS,One,16,max_nodes: 1000,110572
+RAND,Two,17,,0
+MCTS,One,30,max_nodes: 1000,114028
+RAND,Two,31,,26
+MCTS,One,14,max_nodes: 1000,121654
+RAND,Two,15,,0
+MCTS,One,4,max_nodes: 1000,158087
+RAND,Two,5,,0
+MCTS,One,6,max_nodes: 1000,166148
+RAND,Two,7,,0
+MCTS,One,10,max_nodes: 1000,168677
+RAND,Two,11,,0
+MCTS,One,18,max_nodes: 1000,85660
+RAND,Two,19,,0
+MCTS,One,28,max_nodes: 1000,197990
+RAND,Two,29,,2
+MCTS,One,32,max_nodes: 1000,138244
+RAND,Two,33,,0
+MCTS,One,30,max_nodes: 1000,12404
+RAND,Two,31,,3
+MCTS,One,6,max_nodes: 1000,147914
+RAND,Two,7,,0
+MCTS,One,16,max_nodes: 1000,169602
+RAND,Two,17,,0
+MCTS,One,8,max_nodes: 1000,138841
+RAND,Two,9,,0
+MCTS,One,20,max_nodes: 1000,94537
+RAND,Two,21,,0
+MCTS,One,34,max_nodes: 1000,51345
+RAND,Two,35,,0
+MCTS,One,32,max_nodes: 1000,54252
+RAND,Two,33,,0
+MCTS,One,36,max_nodes: 1000,21290
+RAND,Two,37,,0
+MCTS,One,38,max_nodes: 1000,2022
+RAND,Two,39,,0
+MCTS,One,40,max_nodes: 1000,1136
+MCTS,One,12,max_nodes: 1000,212678
+RAND,Two,13,,0
+MCTS,One,22,max_nodes: 1000,118060
+RAND,Two,23,,0
+MCTS,One,8,max_nodes: 1000,163042
+RAND,Two,9,,1
+MCTS,One,10,max_nodes: 1000,168073
+RAND,Two,11,,1
+MCTS,One,34,max_nodes: 1000,163540
+RAND,Two,35,,3
+MCTS,One,36,max_nodes: 1000,12374
+RAND,Two,37,,4
+MCTS,One,24,max_nodes: 1000,95203
+RAND,Two,25,,0
+MCTS,One,18,max_nodes: 1000,236347
+RAND,Two,19,,1
+MCTS,One,2,max_nodes: 1000,201309
+RAND,Two,3,,0
+MCTS,One,38,max_nodes: 1000,40309
+RAND,Two,39,,0
+MCTS,One,10,max_nodes: 1000,151625
+RAND,Two,11,,0
+MCTS,One,14,max_nodes: 1000,195662
+RAND,Two,15,,0
+MCTS,One,40,max_nodes: 1000,56852
+RAND,Two,41,,4
+MCTS,One,42,max_nodes: 1000,2877
+RAND,Two,43,,0
+MCTS,One,44,max_nodes: 1000,4081
+RAND,Two,45,,2
+MCTS,One,46,max_nodes: 1000,46
+MCTS,One,26,max_nodes: 1000,101025
+RAND,Two,27,,0
+MCTS,One,12,max_nodes: 1000,155813
+RAND,Two,13,,0
+MCTS,One,28,max_nodes: 1000,91680
+RAND,Two,29,,0
+MCTS,One,4,max_nodes: 1000,193342
+MCTS,One,12,max_nodes: 1000,145606
+RAND,Two,5,,0
+RAND,Two,13,,1
+MCTS,One,20,max_nodes: 1000,228182
+MCTS,One,16,max_nodes: 1000,177177
+RAND,Two,21,,0
+RAND,Two,17,,0
+MCTS,One,2,max_nodes: 1000,178213
+MCTS,One,14,max_nodes: 1000,207383
+RAND,Two,3,,1
+MCTS,One,30,max_nodes: 1000,167672
+RAND,Two,15,,1
+RAND,Two,31,,0
+MCTS,One,14,max_nodes: 1000,172252
+RAND,Two,15,,0
+MCTS,One,6,max_nodes: 1000,219045
+RAND,Two,7,,0
+MCTS,One,18,max_nodes: 1000,191004
+RAND,Two,19,,0
+MCTS,One,32,max_nodes: 1000,103909
+RAND,Two,33,,0
+MCTS,One,22,max_nodes: 1000,264794
+MCTS,One,4,max_nodes: 1000,190577
+RAND,Two,23,,0
+MCTS,One,16,max_nodes: 1000,145366
+RAND,Two,5,,1
+RAND,Two,17,,0
+MCTS,One,34,max_nodes: 1000,113387
+RAND,Two,35,,0
+MCTS,One,8,max_nodes: 1000,162049
+RAND,Two,9,,0
+MCTS,One,16,max_nodes: 1000,269506
+RAND,Two,17,,1
+MCTS,One,20,max_nodes: 1000,190300
+RAND,Two,21,,0
+MCTS,One,18,max_nodes: 1000,134217
+RAND,Two,19,,0
+MCTS,One,36,max_nodes: 1000,126412
+MCTS,One,6,max_nodes: 1000,174194
+RAND,Two,37,,0
+RAND,Two,7,,0
+MCTS,One,24,max_nodes: 1000,190475
+MCTS,One,10,max_nodes: 1000,153768
+RAND,Two,25,,0
+RAND,Two,11,,0
+MCTS,One,22,max_nodes: 1000,165685
+MCTS,One,38,max_nodes: 1000,70142
+RAND,Two,23,,1
+RAND,Two,39,,0
+MCTS,One,12,max_nodes: 1000,138119
+RAND,Two,13,,0
+MCTS,One,26,max_nodes: 1000,213006
+MCTS,One,8,max_nodes: 1000,228408
+MCTS,One,18,max_nodes: 1000,343548
+RAND,Two,27,,0
+RAND,Two,9,,1
+MCTS,One,40,max_nodes: 1000,131181
+RAND,Two,19,,1
+RAND,Two,41,,4
+MCTS,One,42,max_nodes: 1000,27364
+MCTS,One,20,max_nodes: 1000,320320
+RAND,Two,43,,6
+MCTS,One,24,max_nodes: 1000,234808
+RAND,Two,21,,3
+RAND,Two,25,,0
+MCTS,One,44,max_nodes: 1000,3140
+RAND,Two,45,,3
+MCTS,One,46,max_nodes: 1000,941
+MCTS,One,28,max_nodes: 1000,139793
+RAND,Two,47,,0
+RAND,Two,29,,0
+MCTS,One,48,max_nodes: 1000,12157
+RAND,Two,49,,2
+MCTS,One,50,max_nodes: 1000,2654
+RAND,Two,51,,0
+MCTS,One,52,max_nodes: 1000,2485
+MCTS,One,14,max_nodes: 1000,270206
+MCTS,One,10,max_nodes: 1000,181924
+RAND,Two,11,,1
+RAND,Two,15,,1
+RAND,Two,53,,0
+MCTS,One,54,max_nodes: 1000,241
+RAND,Two,55,,0
+MCTS,One,56,max_nodes: 1000,293
+RAND,Two,57,,19
+MCTS,One,58,max_nodes: 1000,1482
+RAND,Two,59,,1
+MCTS,One,60,max_nodes: 1000,806
+RAND,Two,61,,0
+MCTS,One,62,max_nodes: 1000,425
+RAND,Two,63,,0
+MCTS,One,64,max_nodes: 1000,327
+RAND,Two,65,,0
+MCTS,One,66,max_nodes: 1000,76
+MCTS,One,22,max_nodes: 1000,176983
+MCTS,One,26,max_nodes: 1000,191273
+RAND,Two,23,,0
+RAND,Two,27,,1
+MCTS,One,30,max_nodes: 1000,168422
+RAND,Two,31,,0
+MCTS,One,20,max_nodes: 1000,358850
+MCTS,One,12,max_nodes: 1000,187593
+MCTS,One,28,max_nodes: 1000,94586
+RAND,Two,21,,3
+RAND,Two,13,,0
+RAND,Two,29,,0
+MCTS,One,16,max_nodes: 1000,248418
+RAND,Two,17,,0
+MCTS,One,30,max_nodes: 1000,59943
+RAND,Two,31,,0
+MCTS,One,32,max_nodes: 1000,3923
+RAND,Two,33,,0
+MCTS,One,32,max_nodes: 1000,108088
+MCTS,One,2,max_nodes: 1000,307084
+MCTS,One,34,max_nodes: 1000,5325
+RAND,Two,33,,0
+RAND,Two,3,,1
+RAND,Two,35,,0
+MCTS,One,36,max_nodes: 1000,2193
+RAND,Two,37,,0
+MCTS,One,38,max_nodes: 1000,4505
+RAND,Two,39,,0
+MCTS,One,40,max_nodes: 1000,82
+MCTS,One,34,max_nodes: 1000,9104
+RAND,Two,35,,0
+MCTS,One,36,max_nodes: 1000,25715
+MCTS,One,24,max_nodes: 1000,260263
+RAND,Two,37,,1
+RAND,Two,25,,0
+MCTS,One,14,max_nodes: 1000,197010
+MCTS,One,38,max_nodes: 1000,13739
+RAND,Two,15,,1
+RAND,Two,39,,8
+MCTS,One,40,max_nodes: 1000,520
+MCTS,One,22,max_nodes: 1000,255433
+RAND,Two,23,,0
+MCTS,One,2,max_nodes: 1000,177511
+RAND,Two,3,,0
+MCTS,One,18,max_nodes: 1000,256093
+RAND,Two,19,,0
+MCTS,One,4,max_nodes: 1000,239284
+MCTS,One,24,max_nodes: 1000,129044
+RAND,Two,5,,0
+RAND,Two,25,,1
+MCTS,One,2,max_nodes: 1000,264615
+MCTS,One,26,max_nodes: 1000,313617
+MCTS,One,16,max_nodes: 1000,290632
+RAND,Two,3,,5
+RAND,Two,27,,0
+RAND,Two,17,,0
+MCTS,One,4,max_nodes: 1000,198238
+RAND,Two,5,,1
+MCTS,One,28,max_nodes: 1000,127719
+MCTS,One,26,max_nodes: 1000,260798
+MCTS,One,6,max_nodes: 1000,265058
+RAND,Two,7,,0
+RAND,Two,27,,3
+RAND,Two,29,,0
+MCTS,One,20,max_nodes: 1000,354402
+RAND,Two,21,,0
+MCTS,One,6,max_nodes: 1000,165439
+RAND,Two,7,,1
+MCTS,One,30,max_nodes: 1000,36809
+MCTS,One,4,max_nodes: 1000,231965
+RAND,Two,31,,6
+RAND,Two,5,,0
+MCTS,One,22,max_nodes: 1000,106006
+RAND,Two,23,,0
+MCTS,One,32,max_nodes: 1000,7179
+RAND,Two,33,,0
+MCTS,One,34,max_nodes: 1000,127
+MCTS,One,8,max_nodes: 1000,199156
+MCTS,One,8,max_nodes: 1000,249896
+RAND,Two,9,,0
+RAND,Two,9,,0
+MCTS,One,28,max_nodes: 1000,250686
+MCTS,One,18,max_nodes: 1000,415710
+RAND,Two,29,,3
+RAND,Two,19,,6
+MCTS,One,24,max_nodes: 1000,159655
+RAND,Two,25,,0
+MCTS,One,26,max_nodes: 1000,42047
+MCTS,One,30,max_nodes: 1000,76449
+RAND,Two,27,,0
+RAND,Two,31,,1
+MCTS,One,6,max_nodes: 1000,240295
+MCTS,One,28,max_nodes: 1000,23846
+RAND,Two,7,,1
+MCTS,One,2,max_nodes: 1000,274225
+RAND,Two,29,,0
+MCTS,One,10,max_nodes: 1000,163732
+MCTS,One,32,max_nodes: 1000,79033
+RAND,Two,33,,2
+RAND,Two,3,,0
+RAND,Two,11,,0
+MCTS,One,34,max_nodes: 1000,2498
+RAND,Two,35,,2
+MCTS,One,36,max_nodes: 1000,4243
+MCTS,One,30,max_nodes: 1000,12731
+RAND,Two,37,,2
+RAND,Two,31,,0
+MCTS,One,38,max_nodes: 1000,4787
+MCTS,One,32,max_nodes: 1000,980
+RAND,Two,39,,0
+MCTS,One,40,max_nodes: 1000,85
+MCTS,One,10,max_nodes: 1000,280854
+RAND,Two,11,,1
+MCTS,One,12,max_nodes: 1000,188251
+RAND,Two,13,,1
+MCTS,One,8,max_nodes: 1000,258034
+MCTS,One,4,max_nodes: 1000,256371
+MCTS,One,20,max_nodes: 1000,428706
+MCTS,One,2,max_nodes: 1000,256423
+MCTS,One,2,max_nodes: 1000,255545
+RAND,Two,3,,1
+RAND,Two,5,,1
+RAND,Two,21,,0
+RAND,Two,3,,1
+RAND,Two,9,,0
+MCTS,One,14,max_nodes: 1000,155248
+RAND,Two,15,,0
+MCTS,One,12,max_nodes: 1000,235084
+RAND,Two,13,,0
+MCTS,One,6,max_nodes: 1000,205334
+MCTS,One,4,max_nodes: 1000,235872
+RAND,Two,7,,1
+RAND,Two,5,,0
+MCTS,One,4,max_nodes: 1000,260090
+RAND,Two,5,,1
+MCTS,One,22,max_nodes: 1000,262775
+RAND,Two,23,,0
+MCTS,One,10,max_nodes: 1000,314421
+RAND,Two,11,,1
+MCTS,One,14,max_nodes: 1000,150164
+MCTS,One,8,max_nodes: 1000,167503
+MCTS,One,6,max_nodes: 1000,163876
+RAND,Two,15,,0
+RAND,Two,9,,1
+RAND,Two,7,,1
+MCTS,One,16,max_nodes: 1000,446931
+RAND,Two,17,,3
+MCTS,One,24,max_nodes: 1000,177111
+MCTS,One,6,max_nodes: 1000,225514
+RAND,Two,25,,0
+RAND,Two,7,,0
+MCTS,One,8,max_nodes: 1000,141974
+RAND,Two,9,,1
+MCTS,One,16,max_nodes: 1000,274656
+MCTS,One,26,max_nodes: 1000,146285
+MCTS,One,10,max_nodes: 1000,300030
+RAND,Two,17,,0
+MCTS,One,12,max_nodes: 1000,405191
+MCTS,One,8,max_nodes: 1000,168157
+RAND,Two,27,,0
+RAND,Two,11,,1
+RAND,Two,13,,1
+RAND,Two,9,,1
+MCTS,One,10,max_nodes: 1000,239671
+MCTS,One,28,max_nodes: 1000,107704
+MCTS,One,18,max_nodes: 1000,412786
+RAND,Two,11,,0
+RAND,Two,29,,0
+RAND,Two,19,,2
+MCTS,One,10,max_nodes: 1000,173268
+RAND,Two,11,,0
+MCTS,One,30,max_nodes: 1000,134245
+MCTS,One,18,max_nodes: 1000,328706
+MCTS,One,12,max_nodes: 1000,206749
+RAND,Two,31,,0
+MCTS,One,12,max_nodes: 1000,370045
+RAND,Two,13,,0
+RAND,Two,13,,0
+RAND,Two,19,,1
+MCTS,One,32,max_nodes: 1000,14852
+RAND,Two,33,,0
+MCTS,One,34,max_nodes: 1000,2965
+RAND,Two,35,,0
+MCTS,One,36,max_nodes: 1000,2565
+MCTS,One,14,max_nodes: 1000,423130
+RAND,Two,37,,1
+RAND,Two,15,,0
+MCTS,One,38,max_nodes: 1000,125
+MCTS,One,12,max_nodes: 1000,286398
+RAND,Two,13,,0
+RAND,Two,39,,0
+MCTS,One,40,max_nodes: 1000,1622
+RAND,Two,41,,0
+MCTS,One,14,max_nodes: 1000,137368
+RAND,Two,15,,0
+MCTS,One,42,max_nodes: 1000,3231
+RAND,Two,43,,2
+MCTS,One,44,max_nodes: 1000,858
+RAND,Two,45,,0
+MCTS,One,46,max_nodes: 1000,3709
+RAND,Two,47,,0
+MCTS,One,48,max_nodes: 1000,919
+RAND,Two,49,,1
+MCTS,One,20,max_nodes: 1000,157314
+MCTS,One,20,max_nodes: 1000,376685
+MCTS,One,50,max_nodes: 1000,632
+RAND,Two,21,,0
+RAND,Two,21,,5
+MCTS,One,14,max_nodes: 1000,268687
+MCTS,One,22,max_nodes: 1000,57782
+MCTS,One,16,max_nodes: 1000,146739
+RAND,Two,15,,0
+RAND,Two,23,,0
+RAND,Two,17,,0
+MCTS,One,22,max_nodes: 1000,76197
+MCTS,One,24,max_nodes: 1000,10820
+RAND,Two,23,,1
+RAND,Two,25,,0
+MCTS,One,24,max_nodes: 1000,11688
+MCTS,One,26,max_nodes: 1000,7171
+MCTS,One,18,max_nodes: 1000,114516
+RAND,Two,27,,1
+RAND,Two,19,,0
+MCTS,One,28,max_nodes: 1000,8418
+RAND,Two,29,,0
+MCTS,One,30,max_nodes: 1000,5016
+MCTS,One,14,max_nodes: 1000,300059
+RAND,Two,31,,0
+RAND,Two,15,,1
+MCTS,One,32,max_nodes: 1000,5278
+RAND,Two,33,,0
+MCTS,One,2,max_nodes: 1000,231615
+RAND,Two,3,,0
+MCTS,One,34,max_nodes: 1000,5824
+RAND,Two,35,,0
+MCTS,One,36,max_nodes: 1000,180
+MCTS,One,20,max_nodes: 1000,144367
+RAND,Two,21,,0
+MCTS,One,16,max_nodes: 1000,475884
+MCTS,One,2,max_nodes: 1000,221972
+RAND,Two,17,,0
+MCTS,One,16,max_nodes: 1000,394359
+RAND,Two,17,,0
+RAND,Two,3,,1
+MCTS,One,22,max_nodes: 1000,155841
+RAND,Two,23,,0
+MCTS,One,4,max_nodes: 1000,266224
+MCTS,One,16,max_nodes: 1000,314580
+MCTS,One,2,max_nodes: 1000,236466
+RAND,Two,5,,0
+RAND,Two,17,,0
+RAND,Two,3,,1
+MCTS,One,24,max_nodes: 1000,158033
+RAND,Two,25,,0
+MCTS,One,4,max_nodes: 1000,236367
+RAND,Two,5,,1
+MCTS,One,4,max_nodes: 1000,183866
+RAND,Two,5,,1
+MCTS,One,6,max_nodes: 1000,214745
+MCTS,One,18,max_nodes: 1000,330077
+RAND,Two,7,,1
+RAND,Two,19,,0
+MCTS,One,26,max_nodes: 1000,178297
+RAND,Two,27,,0
+MCTS,One,18,max_nodes: 1000,278140
+RAND,Two,19,,0
+MCTS,One,18,max_nodes: 1000,411990
+RAND,Two,19,,1
+MCTS,One,6,max_nodes: 1000,180567
+RAND,Two,7,,1
+MCTS,One,6,max_nodes: 1000,165431
+RAND,Two,7,,1
+MCTS,One,28,max_nodes: 1000,130962
+RAND,Two,29,,0
+MCTS,One,8,max_nodes: 1000,167885
+RAND,Two,9,,0
+MCTS,One,30,max_nodes: 1000,71882
+RAND,Two,31,,0
+MCTS,One,20,max_nodes: 1000,220643
+MCTS,One,32,max_nodes: 1000,72023
+RAND,Two,21,,0
+RAND,Two,33,,2
+MCTS,One,34,max_nodes: 1000,15481
+MCTS,One,8,max_nodes: 1000,239312
+RAND,Two,9,,0
+RAND,Two,35,,0
+MCTS,One,10,max_nodes: 1000,193148
+MCTS,One,36,max_nodes: 1000,28027
+RAND,Two,11,,1
+RAND,Two,37,,0
+MCTS,One,8,max_nodes: 1000,249037
+RAND,Two,9,,1
+MCTS,One,38,max_nodes: 1000,15586
+RAND,Two,39,,0
+MCTS,One,20,max_nodes: 1000,434311
+MCTS,One,40,max_nodes: 1000,21129
+RAND,Two,21,,4
+RAND,Two,41,,3
+MCTS,One,42,max_nodes: 1000,661
+RAND,Two,43,,0
+MCTS,One,44,max_nodes: 1000,745
+RAND,Two,45,,1
+MCTS,One,46,max_nodes: 1000,1596
+RAND,Two,47,,1
+MCTS,One,48,max_nodes: 1000,1126
+RAND,Two,49,,0
+MCTS,One,50,max_nodes: 1000,202
+MCTS,One,22,max_nodes: 1000,207149
+MCTS,One,20,max_nodes: 1000,472009
+RAND,Two,23,,0
+MCTS,One,12,max_nodes: 1000,199824
+RAND,Two,13,,1
+MCTS,One,10,max_nodes: 1000,238394
+MCTS,One,10,max_nodes: 1000,208921
+RAND,Two,11,,0
+RAND,Two,11,,1
+RAND,Two,21,,0
+MCTS,One,2,max_nodes: 1000,225920
+RAND,Two,3,,1
+MCTS,One,12,max_nodes: 1000,152232
+RAND,Two,13,,0
+MCTS,One,24,max_nodes: 1000,255763
+RAND,Two,25,,0
+MCTS,One,12,max_nodes: 1000,228416
+MCTS,One,14,max_nodes: 1000,144832
+MCTS,One,4,max_nodes: 1000,206665
+RAND,Two,13,,0
+RAND,Two,15,,0
+RAND,Two,5,,1
+MCTS,One,22,max_nodes: 1000,512401
+MCTS,One,14,max_nodes: 1000,383091
+RAND,Two,23,,0
+MCTS,One,14,max_nodes: 1000,142534
+RAND,Two,15,,0
+MCTS,One,22,max_nodes: 1000,431833
+MCTS,One,16,max_nodes: 1000,163727
+RAND,Two,17,,0
+RAND,Two,15,,5
+RAND,Two,23,,1
+MCTS,One,6,max_nodes: 1000,216007
+RAND,Two,7,,0
+MCTS,One,26,max_nodes: 1000,351345
+MCTS,One,18,max_nodes: 1000,134568
+RAND,Two,19,,0
+RAND,Two,27,,4
+MCTS,One,28,max_nodes: 1000,18877
+RAND,Two,29,,1
+MCTS,One,8,max_nodes: 1000,192710
+MCTS,One,16,max_nodes: 1000,254189
+RAND,Two,9,,1
+RAND,Two,17,,2
+MCTS,One,20,max_nodes: 1000,144980
+RAND,Two,21,,0
+MCTS,One,30,max_nodes: 1000,58868
+MCTS,One,24,max_nodes: 1000,337098
+RAND,Two,31,,0
+RAND,Two,25,,0
+MCTS,One,24,max_nodes: 1000,312205
+MCTS,One,32,max_nodes: 1000,9616
+RAND,Two,25,,0
+RAND,Two,33,,0
+MCTS,One,34,max_nodes: 1000,13613
+RAND,Two,35,,0
+MCTS,One,36,max_nodes: 1000,866
+MCTS,One,16,max_nodes: 1000,380107
+MCTS,One,10,max_nodes: 1000,153963
+MCTS,One,18,max_nodes: 1000,148098
+RAND,Two,19,,0
+RAND,Two,11,,1
+RAND,Two,17,,3
+MCTS,One,22,max_nodes: 1000,223782
+RAND,Two,23,,0
+MCTS,One,2,max_nodes: 1000,219029
+MCTS,One,12,max_nodes: 1000,131949
+RAND,Two,3,,0
+RAND,Two,13,,1
+MCTS,One,20,max_nodes: 1000,227651
+RAND,Two,21,,0
+MCTS,One,14,max_nodes: 1000,159794
+MCTS,One,4,max_nodes: 1000,191458
+RAND,Two,15,,0
+RAND,Two,5,,0
+MCTS,One,24,max_nodes: 1000,267615
+RAND,Two,25,,1
+MCTS,One,26,max_nodes: 1000,506424
+MCTS,One,18,max_nodes: 1000,388565
+RAND,Two,19,,0
+RAND,Two,27,,5
+MCTS,One,26,max_nodes: 1000,553039
+MCTS,One,16,max_nodes: 1000,166213
+RAND,Two,17,,0
+RAND,Two,27,,0
+MCTS,One,22,max_nodes: 1000,177984
+RAND,Two,23,,0
+MCTS,One,6,max_nodes: 1000,195502
+RAND,Two,7,,0
+MCTS,One,28,max_nodes: 1000,65320
+RAND,Two,29,,0
+MCTS,One,30,max_nodes: 1000,12366
+MCTS,One,28,max_nodes: 1000,159458
+RAND,Two,29,,0
+RAND,Two,31,,3
+MCTS,One,26,max_nodes: 1000,265975
+RAND,Two,27,,0
+MCTS,One,32,max_nodes: 1000,9269
+MCTS,One,8,max_nodes: 1000,160284
+RAND,Two,33,,0
+RAND,Two,9,,1
+MCTS,One,20,max_nodes: 1000,257157
+MCTS,One,24,max_nodes: 1000,177085
+RAND,Two,25,,5
+RAND,Two,21,,3
+MCTS,One,34,max_nodes: 1000,10561
+RAND,Two,35,,0
+MCTS,One,36,max_nodes: 1000,4089
+MCTS,One,18,max_nodes: 1000,264991
+RAND,Two,37,,0
+RAND,Two,19,,0
+MCTS,One,38,max_nodes: 1000,4168
+RAND,Two,39,,1
+MCTS,One,40,max_nodes: 1000,421
+MCTS,One,30,max_nodes: 1000,125291
+RAND,Two,31,,0
+MCTS,One,10,max_nodes: 1000,183948
+MCTS,One,22,max_nodes: 1000,154015
+RAND,Two,11,,0
+RAND,Two,23,,0
+MCTS,One,28,max_nodes: 1000,220576
+MCTS,One,26,max_nodes: 1000,184189
+RAND,Two,27,,0
+RAND,Two,29,,0
+MCTS,One,20,max_nodes: 1000,198929
+RAND,Two,21,,0
+MCTS,One,32,max_nodes: 1000,194710
+RAND,Two,33,,2
+MCTS,One,12,max_nodes: 1000,125820
+RAND,Two,13,,0
+MCTS,One,2,max_nodes: 1000,201703
+RAND,Two,3,,0
+MCTS,One,34,max_nodes: 1000,63820
+RAND,Two,35,,28
+MCTS,One,36,max_nodes: 1000,942
+MCTS,One,28,max_nodes: 1000,210611
+MCTS,One,24,max_nodes: 1000,228986
+RAND,Two,37,,0
+RAND,Two,29,,0
+RAND,Two,25,,0
+MCTS,One,38,max_nodes: 1000,85
+MCTS,One,30,max_nodes: 1000,213011
+RAND,Two,31,,1
+MCTS,One,14,max_nodes: 1000,124480
+RAND,Two,15,,0
+MCTS,One,22,max_nodes: 1000,209039
+RAND,Two,23,,0
+MCTS,One,26,max_nodes: 1000,48914
+RAND,Two,27,,0
+MCTS,One,32,max_nodes: 1000,96549
+RAND,Two,33,,1
+MCTS,One,28,max_nodes: 1000,6548
+MCTS,One,4,max_nodes: 1000,196005
+RAND,Two,5,,1
+MCTS,One,16,max_nodes: 1000,129685
+RAND,Two,17,,0
+MCTS,One,30,max_nodes: 1000,196242
+RAND,Two,31,,0
+MCTS,One,2,max_nodes: 1000,222966
+RAND,Two,3,,0
+MCTS,One,24,max_nodes: 1000,194912
+RAND,Two,25,,2
+MCTS,One,18,max_nodes: 1000,115827
+RAND,Two,19,,0
+MCTS,One,34,max_nodes: 1000,156625
+RAND,Two,35,,37
+MCTS,One,36,max_nodes: 1000,11247
+RAND,Two,37,,0
+MCTS,One,6,max_nodes: 1000,154156
+RAND,Two,7,,0
+MCTS,One,20,max_nodes: 1000,95341
+RAND,Two,21,,0
+MCTS,One,38,max_nodes: 1000,84374
+RAND,Two,39,,2
+MCTS,One,40,max_nodes: 1000,5745
+RAND,Two,41,,0
+MCTS,One,42,max_nodes: 1000,11496
+RAND,Two,43,,2
+MCTS,One,4,max_nodes: 1000,158184
+MCTS,One,44,max_nodes: 1000,479
+RAND,Two,5,,2
+MCTS,One,32,max_nodes: 1000,210400
+RAND,Two,33,,3
+MCTS,One,8,max_nodes: 1000,135350
+RAND,Two,9,,0
+MCTS,One,26,max_nodes: 1000,185968
+RAND,Two,27,,2
+MCTS,One,22,max_nodes: 1000,86432
+RAND,Two,23,,0
+MCTS,One,34,max_nodes: 1000,53888
+RAND,Two,35,,0
+MCTS,One,36,max_nodes: 1000,3889
+RAND,Two,37,,0
+MCTS,One,38,max_nodes: 1000,3228
+RAND,Two,39,,1
+MCTS,One,40,max_nodes: 1000,1566
+RAND,Two,41,,0
+MCTS,One,42,max_nodes: 1000,55
+MCTS,One,28,max_nodes: 1000,49811
+RAND,Two,29,,2
+MCTS,One,30,max_nodes: 1000,774
+MCTS,One,6,max_nodes: 1000,124151
+RAND,Two,7,,0
+MCTS,One,10,max_nodes: 1000,109367
+RAND,Two,11,,0
+MCTS,One,24,max_nodes: 1000,88207
+RAND,Two,25,,0
+MCTS,One,26,max_nodes: 1000,73950
+RAND,Two,27,,0
+MCTS,One,8,max_nodes: 1000,109926
+RAND,Two,9,,0
+MCTS,One,12,max_nodes: 1000,91254
+RAND,Two,13,,0
+MCTS,One,28,max_nodes: 1000,77764
+RAND,Two,29,,0
+MCTS,One,14,max_nodes: 1000,93805
+RAND,Two,15,,0
+MCTS,One,10,max_nodes: 1000,105490
+RAND,Two,11,,0
+MCTS,One,30,max_nodes: 1000,72047
+RAND,Two,31,,0
+MCTS,One,16,max_nodes: 1000,86725
+RAND,Two,17,,4
+MCTS,One,32,max_nodes: 1000,54468
+RAND,Two,33,,0
+MCTS,One,34,max_nodes: 1000,8035
+RAND,Two,35,,0
+MCTS,One,12,max_nodes: 1000,102615
+RAND,Two,13,,0
+MCTS,One,36,max_nodes: 1000,1877
+MCTS,One,18,max_nodes: 1000,68992
+RAND,Two,19,,0
+MCTS,One,14,max_nodes: 1000,75093
+RAND,Two,15,,0
+MCTS,One,20,max_nodes: 1000,93671
+RAND,Two,21,,0
+MCTS,One,16,max_nodes: 1000,104844
+RAND,Two,17,,0
+MCTS,One,22,max_nodes: 1000,199666
+RAND,Two,23,,0
+MCTS,One,18,max_nodes: 1000,175815
+RAND,Two,19,,0
+MCTS,One,24,max_nodes: 1000,90428
+RAND,Two,25,,0
+MCTS,One,26,max_nodes: 1000,38372
+RAND,Two,27,,2
+MCTS,One,28,max_nodes: 1000,3010
+MCTS,One,20,max_nodes: 1000,193935
+RAND,Two,21,,0
+MCTS,One,22,max_nodes: 1000,169001
+RAND,Two,23,,0
+MCTS,One,24,max_nodes: 1000,152676
+RAND,Two,25,,3
+MCTS,One,26,max_nodes: 1000,68435
+RAND,Two,27,,1
+MCTS,One,28,max_nodes: 1000,56270
+RAND,Two,29,,3
+MCTS,One,30,max_nodes: 1000,3305
+RAND,Two,31,,0
+MCTS,One,32,max_nodes: 1000,38080
+RAND,Two,33,,0
+MCTS,One,34,max_nodes: 1000,2952
+RAND,Two,35,,6
+MCTS,One,36,max_nodes: 1000,7582
+RAND,Two,37,,0
+MCTS,One,38,max_nodes: 1000,1617
+RAND,Two,39,,0
+MCTS,One,40,max_nodes: 1000,2159
+RAND,Two,41,,2
+MCTS,One,42,max_nodes: 1000,1007
+RAND,Two,43,,0
+MCTS,One,44,max_nodes: 1000,552
+RAND,Two,45,,0
+MCTS,One,46,max_nodes: 1000,1031
+RAND,Two,47,,1
+MCTS,One,48,max_nodes: 1000,42

@@ -154,7 +154,7 @@ impl Agent for MonteCarloTreeAgent {
 
     fn get_info(&self) -> AgentInfo {
         AgentInfo::new(
-            "MonteCarloTree".to_string(),
+            "MCTS".to_string(),
             self.player,
             self.turn,
             format!("max_nodes: {}", self.iterations),

@@ -60,9 +60,9 @@ impl<H: Heuristic> MiniMaxAgent<H> {
         // https://www.chessprogramming.org/Transposition_Table
         let mut transposition_table = HashMap::new();
 
-        let possible_moves = board.get_possible_moves();
+        let mut possible_moves = board.get_possible_moves().peekable();
 
-        let mut best_move = None;
+        let mut best_move = *possible_moves.peek().unwrap();
 
         let mut alpha = MIN_VALUE;
         let beta = MAX_VALUE;
@@ -83,13 +83,13 @@ impl<H: Heuristic> MiniMaxAgent<H> {
                 &mut transposition_table,
             );
 
-            if value >= alpha {
+            if value > alpha {
                 alpha = value;
-                best_move = Some(current_move);
+                best_move = current_move;
             }
         }
 
-        best_move
+        Some(best_move)
     }
 
     /// The minimax algorithm
@@ -256,7 +256,7 @@ impl<H: Heuristic> Agent for MiniMaxAgent<H> {
 
     fn get_info(&self) -> AgentInfo {
         AgentInfo::new(
-            format!("MiniMax({})", self.heuristic.get_name()),
+            self.heuristic.get_name(),
             self.player,
             self.turn,
             format!("{}+{}", self.depth, self.quiescence_search_depth),
