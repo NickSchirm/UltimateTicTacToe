@@ -22,6 +22,7 @@ use crate::game::player::Player;
 use crate::game::ultimate_board::UltimateBoard;
 use crate::game::Game;
 use crate::heuristic::custom_heuristic::CustomHeuristic;
+use crate::heuristic::parameterized_heuristic::ParameterizedHeuristic;
 
 static HIGHLIGHT_COLOR: Lazy<CustomColor> = Lazy::new(|| CustomColor::new(87, 46, 105));
 static BACKGROUND_COLOR: Lazy<CustomColor> = Lazy::new(|| CustomColor::new(30, 31, 34));
@@ -334,6 +335,35 @@ pub fn start_game_with_human() {
         Box::new(HumanAgent::default()),
         //Box::new(MiniMaxAgent::new(8, 1, CustomHeuristic::new(Player::Two))),
         Box::new(MonteCarloTreeAgent::new(10000)),
+    );
+    HumanAgent::print_board(*game.get_board(), None);
+    println!("Result: {:?}", game.play());
+}
+
+pub fn human_against_human() {
+    let mut game = Game::new(
+        Box::new(MiniMaxAgent::new(
+            10,
+            2,
+            ParameterizedHeuristic::new(
+                Player::One,
+                vec![
+                    -0.9011298820760223,
+                    -0.9047473011303433,
+                    -1.9878186210206341,
+                    -0.940735228598089,
+                    1.3140632491937836,
+                    0.5190040302978252,
+                    0.7128491119909083,
+                    1.2756963483965846,
+                    2.264309782234436,
+                    0.14115748887705593,
+                    1.2441779567914344,
+                    2.0944754371556287,
+                ],
+            ),
+        )),
+        Box::new(HumanAgent::default()),
     );
     HumanAgent::print_board(*game.get_board(), None);
     println!("Result: {:?}", game.play());

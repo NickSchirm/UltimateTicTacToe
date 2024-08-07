@@ -261,7 +261,9 @@ impl UltimateBoard {
             None => BoardIterator::MultiBoard(
                 self.boards
                     .into_iter()
-                    .flat_map(|board| board.get_possible_moves()),
+                    .zip(self.board_status.clone().into_iter())
+                    .filter(|(_, status)| *status == Continue)
+                    .flat_map(|(board, _)| board.get_possible_moves()),
             ),
         }
     }

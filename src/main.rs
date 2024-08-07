@@ -37,6 +37,8 @@ const QUIESCENCE_SEARCH_DEPTH: u32 = 1;
 fn main() {
     //agent::human_agent::start_game_with_human();
 
+    agent::human_agent::human_against_human();
+
     rayon::ThreadPoolBuilder::new()
         .num_threads(7)
         .build_global()
@@ -46,7 +48,7 @@ fn main() {
 
     //agent::monte_carlo_tree_agent::run();
 
-    run();
+    //run();
 
     //genetic_algorithm::run();
 }
