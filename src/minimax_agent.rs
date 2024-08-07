@@ -24,17 +24,28 @@ impl<'a> MiniMaxAgent<'a> {
         let possible_moves = board.get_possible_moves();
 
         let mut best_move = None;
-        let mut best_value = isize::MIN;
 
+        let mut alpha = isize::MIN;
+        let beta = isize::MAX;
+
+        // Iterate over all possible moves
+        // Maximizing
         for current_move in possible_moves {
             let mut new_board = board.clone();
 
             if new_board.make_move(current_move) {
-                let value = self.minimax(new_board, depth - 1, true, isize::MIN, isize::MAX);
-
-                if value > best_value {
-                    best_value = value;
+                if best_move.is_none() {
                     best_move = Some(current_move);
+                }
+
+                alpha = max(
+                    alpha,
+                    self.minimax(new_board, depth - 1, false, alpha, beta),
+                );
+
+                if alpha >= beta {
+                    best_move = Some(current_move);
+                    break;
                 }
             }
         }

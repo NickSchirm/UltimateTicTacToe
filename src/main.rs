@@ -6,7 +6,7 @@ use hausarbeit::player::Player::{One, Two};
 use hausarbeit::random_agent::RandomAgent;
 
 const NUM_GAMES: u32 = 100;
-const DEPTH: u32 = 8;
+const DEPTH: u32 = 5;
 
 fn main() {
     let mut wins = [0, 0, 0];
