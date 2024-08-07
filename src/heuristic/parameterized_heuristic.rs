@@ -90,11 +90,11 @@ impl Heuristic for ParameterizedHeuristic {
         let mut value = 0.;
 
         if board.get_game_status() == GameResult::Win(self.player) {
-            return *MAX_VALUE;
+            return MAX_VALUE-1.;
         }
 
         if board.get_game_status() == GameResult::Win(self.player.get_opponent()) {
-            return *MIN_VALUE;
+            return MIN_VALUE+1.;
         }
 
         let mini_heuristic = ParameterizedMiniBoardHeuristic::new(self.values.clone());

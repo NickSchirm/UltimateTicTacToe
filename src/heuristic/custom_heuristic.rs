@@ -38,11 +38,11 @@ impl Heuristic for CustomHeuristic {
         let mut value = 0.;
 
         if board.get_game_status() == GameResult::Win(self.player) {
-            return *MAX_VALUE;
+            return MAX_VALUE-1.;
         }
 
         if board.get_game_status() == GameResult::Win(self.player.get_opponent()) {
-            return *MIN_VALUE;
+            return MIN_VALUE+1.;
         }
 
         // Reward having more positions set on small boards than the opponent

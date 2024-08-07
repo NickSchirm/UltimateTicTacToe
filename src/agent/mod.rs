@@ -12,6 +12,7 @@ pub mod human_agent;
 pub mod minimax_agent;
 pub mod monte_carlo_tree_agent;
 pub mod random_agent;
+pub mod random_start;
 
 use crate::game::player::Player;
 use crate::game::ultimate_board::UltimateBoard;

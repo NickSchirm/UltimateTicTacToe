@@ -16,19 +16,9 @@ use once_cell::sync::Lazy;
 use std::collections::HashMap;
 
 /// The minimum value a heuristic can return
-pub static MIN_VALUE: Lazy<f64> = Lazy::new(|| {
-    f64::from_be_bytes([
-        0b11111111, 0b11101111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111,
-        0b11111110,
-    ])
-});
+pub static MIN_VALUE: f64 = f64::MIN;
 /// The maximum value a heuristic can return
-pub static MAX_VALUE: Lazy<f64> = Lazy::new(|| {
-    f64::from_be_bytes([
-        0b01111111, 0b11101111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111,
-        0b11111110,
-    ])
-});
+pub static MAX_VALUE: f64 = f64::MAX;
 
 /// # Trait representing a heuristic
 ///

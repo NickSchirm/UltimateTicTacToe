@@ -8,7 +8,7 @@ use crate::agent::{Agent, AgentInfo};
 use crate::game::game_result::GameResult::Continue;
 use crate::game::player::Player;
 use crate::game::ultimate_board::UltimateBoard;
-use crate::heuristic::Heuristic;
+use crate::heuristic::{Heuristic, MAX_VALUE, MIN_VALUE};
 use std::collections::HashMap;
 
 #[allow(rustdoc::private_intra_doc_links)]
@@ -64,8 +64,8 @@ impl<H: Heuristic> MiniMaxAgent<H> {
 
         let mut best_move = None;
 
-        let mut alpha = f64::MIN;
-        let beta = f64::MAX;
+        let mut alpha = MIN_VALUE;
+        let beta = MAX_VALUE;
 
         // Iterate over all possible moves
         // Maximizing
@@ -83,7 +83,7 @@ impl<H: Heuristic> MiniMaxAgent<H> {
                 &mut transposition_table,
             );
 
-            if value > alpha {
+            if value >= alpha {
                 alpha = value;
                 best_move = Some(current_move);
             }
