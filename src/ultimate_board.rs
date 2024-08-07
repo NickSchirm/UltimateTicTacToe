@@ -1,3 +1,11 @@
+//! # Module containing the [UltimateBoard] struct
+//! The UltimateBoard struct represents the board of the ultimate Tic Tac Toe game.
+//! The board is represented as a 3x3 array of [Board] structs.
+//!
+//! The UltimateBoard also contains the status of the game and the status of each board as well as the next board to play on.
+//!
+//! The board contains a Zobrist hash used storing the evaluation of the board in a [Transposition table](https://www.chessprogramming.org/Transposition_Table).
+
 use std::fmt;
 use std::fmt::Display;
 
@@ -10,6 +18,7 @@ use crate::game_result::GameResult;
 use crate::game_result::GameResult::Continue;
 use crate::player::Player;
 
+/// All possible win positions for the ultimate board
 const WIN_POSITIONS: [[u8; 3]; 8] = [
     // Rows
     [0, 1, 2],
@@ -24,10 +33,15 @@ const WIN_POSITIONS: [[u8; 3]; 8] = [
     [2, 4, 6],
 ];
 
+/// Number of squares in Ultimate Tic Tac Toe
 const NUM_POSITIONS: usize = 9 * 9;
+
+/// Number of Zobrist values needed for the ultimate board
 const NUM_ZOBRIST_VALUES: usize = NUM_POSITIONS * 2 + 9;
 
-// https://www.chessprogramming.org/Zobrist_Hashing
+/// Values used for [Zobrist hashing](https://www.chessprogramming.org/Zobrist_Hashing)
+///
+/// The values are generated using a [ChaCha20Rng] PRNG and are lazily initialized.
 static ZOBRIST_VALUES: Lazy<[u64; NUM_ZOBRIST_VALUES]> = Lazy::new(|| {
     let mut values = [0; NUM_ZOBRIST_VALUES];
 
@@ -41,9 +55,11 @@ static ZOBRIST_VALUES: Lazy<[u64; NUM_ZOBRIST_VALUES]> = Lazy::new(|| {
     values
 });
 
+/// Offset for the Zobrist values for the next board index
 const ZOBRIST_VALUES_NEXT_BOARD_INDEX_OFFSET: usize = NUM_POSITIONS * 2;
 
-/// Struct representing the ultimate board <p>
+/// Struct representing the ultimate board
+///
 /// The ultimate board is a 3x3 board of 3x3 boards.
 /// # Fields
 /// * `board` - The 3x3 board of 3x3 boards
@@ -88,6 +104,8 @@ impl UltimateBoard {
     }
 
     /// Checks if the game has been won
+    ///
+    /// The field `self.game_status` is updated with the result of the game.
     fn check_if_won(&mut self) {
         // Check if the game has been won by a player
         for a in WIN_POSITIONS.iter() {
@@ -114,22 +132,37 @@ impl UltimateBoard {
         self.game_status = GameResult::Continue;
     }
 
+    /// Get the status of the game as a [GameResult]
+    /// # Returns
+    /// The status of the game
     pub fn get_game_status(&self) -> GameResult {
         self.game_status
     }
 
+    /// Get the status of the boards that make up the ultimate board as [GameResults](GameResult)
+    /// # Returns
+    /// The status of the boards
     pub fn get_board_status(&self) -> [GameResult; 9] {
         self.board_status
     }
 
+    /// Get the boards that make up the ultimate board
+    /// # Returns
+    /// The boards
     pub fn get_boards(&self) -> [Board; 9] {
         self.boards
     }
 
+    /// Get the Zobrist hash of the board
+    /// # Returns
+    /// The Zobrist hash of the board
     pub fn get_hash(&self) -> u64 {
         self.hash
     }
 
+    /// Get the index of the next board to play on. If the next player can play on any board, the index is None
+    /// # Returns
+    /// The index of the next board to play on
     pub fn get_next_board_index(&self) -> Option<u8> {
         self.next_board_index
     }
@@ -150,7 +183,7 @@ impl UltimateBoard {
         }
     }
 
-    /// Make a move on the ultimate board <p>
+    /// Make a move on the ultimate board
     /// # Arguments
     /// * `index` - The index of the field to play on
     pub fn make_move(&mut self, index: u8) {
@@ -245,10 +278,13 @@ impl Display for UltimateBoard {
     }
 }
 
-/// Enum representing the possible iterators for the board <p>
+/// Enum representing the possible iterators for the board
+///
 /// The Enum can either contain the possible moves for a single board or for multiple boards.
 pub enum BoardIterator<I, J> {
+    /// The possible moves for a single board
     SingleBoard(I),
+    /// The possible moves for multiple boards
     MultiBoard(J),
 }
 

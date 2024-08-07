@@ -1,3 +1,7 @@
+//! # Module containing the [MiniMaxAgent] struct
+//! The MiniMaxAgent struct represents an [Agent] that uses the minimax algorithm to determine the best move.
+//! The agent uses the provided [Heuristic] to evaluate the board state.
+
 use crate::agent::Agent;
 use crate::game_result::GameResult::Continue;
 use crate::heuristic::Heuristic;
@@ -12,7 +16,7 @@ use std::collections::HashMap;
 /// * [Alpha-beta pruning](https://www.chessprogramming.org/Alpha-Beta)
 /// * [Transposition table](https://www.chessprogramming.org/Transposition_Table) using [Zobrist Hashing](https://www.chessprogramming.org/Zobrist_Hashing)
 /// * [Quiescence search](https://www.chessprogramming.org/Quiescence_Search) to combat the [Horizon effect](https://www.chessprogramming.org/Horizon_Effect)
-/// <p>
+///
 /// Note: Quiescence search depth has a large impact on the performance of the agent. The effect of Quiescence search may be small.
 /// Quiescence search can be disabled by setting the depth to 0.
 pub struct MiniMaxAgent<H> {
@@ -30,10 +34,13 @@ impl<H: Heuristic> MiniMaxAgent<H> {
         }
     }
 
-    /// Returns the best move for the current player <p>
-    /// Uses the minimax algorithm to determine the best move <p>
-    /// Is the root call for the minimax algorithm <p>
-    /// For more info see [`MiniMaxAgent::minimax`] <p>
+    /// Returns the best move for the current player
+    ///
+    /// Uses the minimax algorithm to determine the best move
+    ///
+    /// Is the root call for the minimax algorithm
+    ///
+    /// For more info see [`MiniMaxAgent::minimax`]
     /// # Arguments
     /// * `board` - The current state of the board
     /// * `depth` - The depth of the minimax algorithm
@@ -75,9 +82,11 @@ impl<H: Heuristic> MiniMaxAgent<H> {
         best_move
     }
 
-    /// The minimax algorithm <p>
-    /// Uses alpha-beta pruning to reduce the number of nodes that need to be evaluated <p>
-    /// Uses a [transposition table](https://www.chessprogramming.org/Transposition_Table) to store the values of already evaluated nodes <p>
+    /// The minimax algorithm
+    ///
+    /// Uses alpha-beta pruning to reduce the number of nodes that need to be evaluated
+    ///
+    /// Uses a [transposition table](https://www.chessprogramming.org/Transposition_Table) to store the values of already evaluated nodes
     /// # Arguments
     /// * `board` - The current state of the board
     /// * `depth` - The depth of the minimax algorithm
@@ -160,9 +169,11 @@ impl<H: Heuristic> MiniMaxAgent<H> {
         }
     }
 
-    /// The [quiescence search](https://www.chessprogramming.org/Quiescence_Search) algorithm <p>
-    /// This algorithm is used to avoid the [horizon effect](https://www.chessprogramming.org/Horizon_Effect). <p>
-    /// Only continues searching if the next move can be made on any open square. <p>
+    /// The [quiescence search](https://www.chessprogramming.org/Quiescence_Search) algorithm
+    ///
+    /// This algorithm is used to avoid the [horizon effect](https://www.chessprogramming.org/Horizon_Effect).
+    ///
+    /// Only continues searching if the next move can be made on any open square.
     /// # Arguments
     /// * `board` - The current state of the board
     /// * `depth` - The depth of the quiescence search algorithm

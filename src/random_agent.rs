@@ -1,3 +1,7 @@
+//! # Module containing the [RandomAgent] struct
+//! The RandomAgent struct represents an [Agent] that plays randomly.
+//! The agent can be used to test other agents or to play against a human player.
+
 use crate::agent::Agent;
 use crate::ultimate_board::UltimateBoard;
 use rand::Rng;

@@ -1,8 +1,15 @@
+//! # Module containing the [CustomHeuristic] struct
+//! The CustomHeuristic struct represents a heuristic that uses a custom evaluation function.
+//! The heuristic is used by the [MiniMaxAgent](crate::minimax_agent::MiniMaxAgent) to evaluate the best move.
+
 use crate::game_result::GameResult;
 use crate::heuristic::{Heuristic, MAX_VALUE, MIN_VALUE};
 use crate::player::Player;
 use crate::ultimate_board::UltimateBoard;
 
+/// A [Heuristic] that uses a custom evaluation function to evaluate the best move
+/// # Fields
+/// * `player` - The [Player] for which the heuristic should evaluate the best move
 pub struct CustomHeuristic {
     player: Player,
 }

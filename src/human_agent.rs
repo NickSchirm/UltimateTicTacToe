@@ -1,3 +1,8 @@
+//! # Module containing the [HumanAgent] struct
+//! The HumanAgent struct represents an [Agent] that allows a human player to play the game.
+//! The human player can input the moves via the console.
+//! The board is printed to the console after each move.
+
 use colored::{Colorize, CustomColor};
 use itertools::Itertools;
 use once_cell::sync::Lazy;
@@ -14,6 +19,11 @@ static BACKGROUND_COLOR: Lazy<CustomColor> = Lazy::new(|| CustomColor::new(30, 3
 static X_COLOR: Lazy<CustomColor> = Lazy::new(|| CustomColor::new(154, 46, 34));
 static O_COLOR: Lazy<CustomColor> = Lazy::new(|| CustomColor::new(18, 128, 106));
 
+/// A [Agent] that allows a human player to play the game.
+///
+/// The human player can input the moves via the console.
+/// The board is printed to the console after each move.
+///
 pub struct HumanAgent {}
 
 impl HumanAgent {

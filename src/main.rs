@@ -4,19 +4,19 @@ use std::time::Instant;
 use rayon::iter::ParallelIterator;
 use rayon::prelude::IntoParallelRefMutIterator;
 
-use hausarbeit::custom_heuristic::CustomHeuristic;
 use hausarbeit::game::Game;
 use hausarbeit::game_result::GameResult;
 use hausarbeit::minimax_agent::MiniMaxAgent;
+use hausarbeit::monte_carlo_game_search_heuristic::MonteCarloGameSearchHeuristic;
 use hausarbeit::player::Player::One;
 use hausarbeit::random_agent::RandomAgent;
 
-const NUM_GAMES: u32 = 1000;
-const DEPTH: u32 = 3;
-const QUIESCENCE_SEARCH_DEPTH: u32 = 3;
+const NUM_GAMES: u32 = 10;
+const DEPTH: u32 = 4;
+const QUIESCENCE_SEARCH_DEPTH: u32 = 1;
 
 fn main() {
-    hausarbeit::human_agent::start_game_with_human();
+    //hausarbeit::human_agent::start_game_with_human();
 
     rayon::ThreadPoolBuilder::new()
         .num_threads(7)
@@ -27,7 +27,11 @@ fn main() {
     let mut games = vec![];
 
     for _ in 0..NUM_GAMES {
-        let agent1 = MiniMaxAgent::new(DEPTH, QUIESCENCE_SEARCH_DEPTH, CustomHeuristic::new(One));
+        let agent1 = MiniMaxAgent::new(
+            DEPTH,
+            QUIESCENCE_SEARCH_DEPTH,
+            MonteCarloGameSearchHeuristic::new(One, 10),
+        );
         let agent2 = RandomAgent::new();
 
         games.push(Game::new(Box::new(agent1), Box::new(agent2)));

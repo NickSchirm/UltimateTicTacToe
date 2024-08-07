@@ -1,7 +1,16 @@
+//! # Module containing the [BitBoard] struct
+//! The BitBoard struct represents a bitboard used for storing the state of the board.
+//! The bitboard is a 9-bit integer where each bit represents a square on the board.
+//!
+//! Two bitboards are used in [Board](crate::board::Board) to represent the state.
+//!
+//! The BitBoard struct implements the [Not], [BitOr], [BitAnd], [BitXor], [BitOrAssign], [BitAndAssign], [BitXorAssign] traits.
+
 use std::ops::{BitAnd, BitAndAssign, BitOr, BitOrAssign, BitXor, BitXorAssign, Not};
 
-/// Struct representing a bitboard <p>
-/// A bitboard is a 9-bit integer where each bit represents a square on the board
+/// # Struct representing a bitboard
+///
+/// A bitboard is a 9-bit integer where each bit represents a square on the board.
 /// # Fields
 /// * `0` - The bitboard value as an u16
 #[derive(Copy, Clone, Debug, PartialEq)]
@@ -19,8 +28,10 @@ impl BitBoard {
     /// Returns a new BitBoard with no squares set
     pub const EMPTY: BitBoard = BitBoard(0);
 
-    /// Returns the index of the first set square in the board <p>
-    /// If no square is set, returns None <p>
+    /// Returns the index of the first set square in the board
+    ///
+    /// If no square is set, returns None.
+    ///
     /// Used to iterate over the board
     /// # Returns
     /// The index of the first set square in the board
@@ -32,8 +43,10 @@ impl BitBoard {
         }
     }
 
-    /// Pops the first set square from the board <p>
-    /// If no square is set, returns None <p>
+    /// Pops the first set square from the board
+    ///
+    /// If no square is set, returns None.
+    ///
     /// Used to iterate over the board
     /// # Returns
     /// The index of the first set square in the board

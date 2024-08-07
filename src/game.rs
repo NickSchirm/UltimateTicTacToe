@@ -1,3 +1,7 @@
+//! # Module containing the [Game] struct
+//! The Game struct represents a game of Ultimate Tic Tac Toe.
+//! The game is played by two [agents](Agent).
+
 use crate::agent::Agent;
 use crate::game_result::GameResult;
 use crate::player::Player;
@@ -16,6 +20,9 @@ impl Game {
         }
     }
 
+    /// Plays the game until a result is reached
+    /// # Returns
+    /// The result of the game
     pub fn play(&mut self) -> GameResult {
         let mut game_result = self.board.get_game_status();
         let mut active_agent = Player::One;

@@ -9,6 +9,7 @@
 //!
 //! Provided heuristics:
 //! * [CustomHeuristic](custom_heuristic::CustomHeuristic): A heuristic that uses a custom evaluation function
+//! * [MonteCarloGameSearchHeuristic](monte_carlo_game_search_heuristic::MonteCarloGameSearchHeuristic): A heuristic that uses Monte Carlo Tree Search to evaluate the best move
 //!
 //! # Usage
 //! Initialize a game with two agents and play it:
@@ -33,6 +34,7 @@ pub mod game_result;
 pub mod heuristic;
 pub mod human_agent;
 pub mod minimax_agent;
+pub mod monte_carlo_game_search_heuristic;
 pub mod player;
 pub mod random_agent;
 pub mod ultimate_board;

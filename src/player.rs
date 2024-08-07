@@ -1,3 +1,7 @@
+//! # Module containing the [Player] enum
+//! The Player enum represents the two players of the game.
+//! The enum can be used to determine the current player and the opponent.
+
 /// Enum representing the two players
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum Player {

@@ -1,3 +1,19 @@
+//! # Module containing the [Board] struct
+//! The Board struct represents the board of the Tic Tac Toe game.
+//! The board is represented as 2 [BitBoard] structs.
+//! Each BitBoard represents the state of the board for one player.
+//!
+//! Nine boards are used in the [UltimateBoard](crate::ultimate_board::UltimateBoard) struct to represent the state of the game.
+//!
+//! The nine squares of the board are represented internally as follows:
+//! ```text
+//! 0 | 1 | 2
+//! --+---+--
+//! 7 | 8 | 3
+//! --+---+--
+//! 6 | 5 | 4
+//! ```
+
 use crate::bitboard::BitBoard;
 use crate::game_result::GameResult;
 use crate::game_result::GameResult::Continue;
@@ -19,28 +35,34 @@ const WIN_POSITIONS: [u16; 8] = [
     0b101000100,
 ];
 
+/// Rows of the board in the internal representation
 const ROWS: [[u8; 3]; 3] = [[0, 1, 2], [7, 8, 3], [6, 5, 4]];
 
 /// Implementation of a 3x3 board for Tic Tac Toe
 #[derive(Copy, Clone, Debug)]
+#[allow(rustdoc::invalid_html_tags)]
 pub struct Board {
     /// This represents a 3*3 board. Each char represents the state for each player.
-    /// <p>
-    /// Internal representation: <p>
-    ///  0 | 1 | 2 <p>
-    ///  --------- <p>
-    ///  7 | 8 | 3 <p>
-    ///  --------- <p>
-    ///  6 | 5 | 4 <p>
-    /// <p>
-    ///  Human-readable representation: <p>
-    ///  0 | 1 | 2 <p>
-    ///  --------- <p>
-    ///  3 | 4 | 5 <p>
-    /// --------- <p>
+    ///
+    /// Internal representation:
+    ///  ```text
+    /// 0 | 1 | 2
+    /// --+---+--
+    /// 7 | 8 | 3
+    /// --+---+--
+    /// 6 | 5 | 4
+    /// ```
+    ///  Human-readable representation:
+    ///  ```text
+    /// 0 | 1 | 2
+    /// --+---+--
+    /// 3 | 4 | 5
+    /// --+---+--
     /// 6 | 7 | 8
+    /// ```
     board: [BitBoard; 2],
-    /// The unique id of the board <p>
+    /// The unique id of the board
+    ///
     /// This is used to offset the move ids for each board
     unique_id: u8,
 }
@@ -64,9 +86,9 @@ impl Board {
             .map(move |i| Self::from_bit_to_human(i) + 9 * id)
     }
 
-    /// # <b> FOR INTERNAL USE ONLY!</b> <p>
-    /// Set the bit at the given index to the given player <p>
-    /// The human is the internal representation of the board
+    /// # <b> FOR INTERNAL USE ONLY!</b>
+    ///
+    /// Set the bit at the given index to the given player
     /// # Arguments
     /// * `index` - The index of the board
     /// * `player` - The player to set the bit to
@@ -78,7 +100,8 @@ impl Board {
         self.board[player as usize] |= BitBoard::new(1 << index);
     }
 
-    /// Set the bit at the given index to the given player <p>
+    /// Set the bit at the given index to the given player
+    ///
     /// The index is the human index (0-8)
     /// # Arguments
     /// * `index` - The index of the board
@@ -119,6 +142,11 @@ impl Board {
         Continue
     }
 
+    /// Get the positions set difference between the two players
+    /// # Arguments
+    /// * `player` - The player to get the difference for
+    /// # Returns
+    /// The difference between the two players
     pub fn get_positions_set_difference(&self, player: Player) -> i8 {
         let mut diff = 0;
 
@@ -149,6 +177,11 @@ impl Board {
         }
     }
 
+    /// Translates the index in the internal representation to the human index
+    /// # Arguments
+    /// * `index` - The index to translate
+    /// # Returns
+    /// The translated index
     pub fn from_bit_to_human(index: u8) -> u8 {
         match index {
             0 => 0,
