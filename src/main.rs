@@ -44,11 +44,11 @@ fn main() {
         .build_global()
         .unwrap();
 
-    //runtime_test::run();
+    runtime_test::run();
 
     //agent::monte_carlo_tree_agent::run();
 
-    run();
+    //run();
 
     //genetic_algorithm::run();
 }
@@ -62,7 +62,7 @@ fn run() {
     ));
 
     // MiniMaxAgent::new(DEPTH, QUIESCENCE_SEARCH_DEPTH, CustomHeuristic::new(One))
-    // MiniMaxAgent::new(DEPTH, QUIESCENCE_SEARCH_DEPTH, ParameterizedHeuristic::withLookUpTable(One, vec![-0.9011298820760223, -0.9047473011303433, -1.9878186210206341, -0.940735228598089, 1.3140632491937836, 0.5190040302978252, 0.7128491119909083, 1.2756963483965846, 2.264309782234436, 0.14115748887705593, 1.2441779567914344, 2.0944754371556287]))
+    // MiniMaxAgent::new(DEPTH, QUIESCENCE_SEARCH_DEPTH, ParameterizedHeuristic::with_look_up_table(One, vec![-0.9011298820760223, -0.9047473011303433, -1.9878186210206341, -0.940735228598089, 1.3140632491937836, 0.5190040302978252, 0.7128491119909083, 1.2756963483965846, 2.264309782234436, 0.14115748887705593, 1.2441779567914344, 2.0944754371556287]))
     // MiniMaxAgent::new(3, 1, MonteCarloGameSearchHeuristic::new(One, 10))
     // MonteCarloTreeAgent::new(10000)
     // RandomAgent::new()

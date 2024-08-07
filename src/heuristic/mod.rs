@@ -12,7 +12,6 @@ pub mod parameterized_heuristic;
 use crate::game::bitboard::BitBoard;
 use crate::game::board::{Board, LegalBoardIterator};
 use crate::game::ultimate_board::UltimateBoard;
-use once_cell::sync::Lazy;
 use std::collections::HashMap;
 
 /// The minimum value a heuristic can return

@@ -5,14 +5,14 @@ use itertools::Itertools;
 use std::collections::{HashMap, HashSet};
 
 /// Processes the benchmarking results for multiple search depths.
-/// 
+///
 /// Reads from '../res.csv' and groups the results by configuration and turn number.
-/// 
+///
 /// The results are stored in '../res_multiple.csv'.
 pub fn process() {
     let mut reader = ReaderBuilder::new()
         .has_headers(true)
-        .from_path("../res.csv")
+        .from_path("mcts 1000-10000.csv")
         .expect("Could not create CSV reader");
     let mut writer = Writer::from_path("../res_multiple.csv").expect("Could not create CSV writer");
     let mut map = HashMap::new();

@@ -5,9 +5,9 @@ use serde::Serialize;
 use std::collections::HashMap;
 
 /// Processes the benchmarking results for a single search depth.
-/// 
+///
 /// Reads from '../res.csv' and groups the results by configuration and turn number.
-/// 
+///
 /// The results are stored in '../res_single.csv'.
 pub fn process() {
     let mut reader = ReaderBuilder::new()

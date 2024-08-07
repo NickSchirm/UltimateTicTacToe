@@ -21,7 +21,6 @@ use crate::game::game_result::GameResult;
 use crate::game::player::Player;
 use crate::game::ultimate_board::UltimateBoard;
 use crate::game::Game;
-use crate::heuristic::custom_heuristic::CustomHeuristic;
 use crate::heuristic::parameterized_heuristic::ParameterizedHeuristic;
 
 static HIGHLIGHT_COLOR: Lazy<CustomColor> = Lazy::new(|| CustomColor::new(87, 46, 105));

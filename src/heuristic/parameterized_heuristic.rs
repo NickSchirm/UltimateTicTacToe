@@ -74,7 +74,7 @@ impl ParameterizedHeuristic {
     /// # Arguments
     /// * `player` - The [player](Player) for which the heuristic should evaluate the best move
     /// * `values` - The weights for the features
-    pub fn withLookUpTable(player: Player, values: Vec<f64>) -> Self {
+    pub fn with_look_up_table(player: Player, values: Vec<f64>) -> Self {
         ParameterizedHeuristic {
             player,
             values: values.clone(),

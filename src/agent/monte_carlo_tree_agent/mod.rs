@@ -3,15 +3,17 @@
 //! The [MonteCarloTreeAgent] struct represents an agent that uses the Monte Carlo Tree Search algorithm to evaluate the best move.
 //!
 //! The agent uses a [Tree] to store the game states and the statistics of the nodes.
+use crate::agent::monte_carlo_tree_agent::tree::{Node, Tree};
 use crate::agent::{Agent, AgentInfo};
 use crate::game::game_result::GameResult;
 use crate::game::player::Player;
 use crate::game::ultimate_board::UltimateBoard;
-use crate::tree::{Node, Tree};
 use rand::distributions::Uniform;
 use rand_distr::Distribution;
 use std::cell::RefCell;
 use std::rc::Rc;
+
+pub mod tree;
 
 /// # Struct representing an agent that uses the Monte Carlo Tree Search algorithm to evaluate the best move
 ///
