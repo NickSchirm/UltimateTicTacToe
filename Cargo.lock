@@ -54,7 +54,9 @@ dependencies = [
 name = "hausarbeit"
 version = "0.1.0"
 dependencies = [
+ "once_cell",
  "rand",
+ "rand_chacha",
  "rayon",
 ]
 
@@ -63,6 +65,12 @@ name = "libc"
 version = "0.2.155"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "97b3888a4aecf77e811145cadf6eef5901f4782c53886191b2f693f24761847c"
+
+[[package]]
+name = "once_cell"
+version = "1.19.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "3fdb12b2476b595f9358c5161aa467c2438859caa136dec86c26fdd2efe17b92"
 
 [[package]]
 name = "ppv-lite86"

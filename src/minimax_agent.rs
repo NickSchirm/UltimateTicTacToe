@@ -2,7 +2,8 @@ use crate::agent::Agent;
 use crate::game_result::GameResult::Continue;
 use crate::heuristic::Heuristic;
 use crate::ultimate_board::UltimateBoard;
-use std::cmp::max;
+use std::cmp::{max, min};
+use std::collections::HashMap;
 
 pub struct MiniMaxAgent {
     depth: u32,
@@ -21,6 +22,8 @@ impl MiniMaxAgent {
     /// # Returns
     /// The index of the field to play on
     fn get_best_move(&self, board: UltimateBoard, depth: u32) -> Option<u8> {
+        let mut transposition_table = HashMap::new();
+
         let possible_moves = board.get_possible_moves();
 
         let mut best_move = None;
@@ -31,11 +34,18 @@ impl MiniMaxAgent {
         // Iterate over all possible moves
         // Maximizing
         for current_move in possible_moves {
-            let mut new_board = board.clone();
+            let mut new_board = board;
 
             new_board.make_move(current_move);
 
-            let value = self.minimax(new_board, depth - 1, false, alpha, beta);
+            let value = self.minimax(
+                new_board,
+                depth - 1,
+                false,
+                alpha,
+                beta,
+                &mut transposition_table,
+            );
 
             if value > alpha {
                 alpha = value;
@@ -62,12 +72,13 @@ impl MiniMaxAgent {
         maximizing: bool,
         alpha: isize,
         beta: isize,
+        transposition_table: &mut HashMap<u64, isize>,
     ) -> isize {
-        if board.get_game_status() != Continue {
+        if depth == 0 {
             return self.heuristic.evaluate(board);
         }
 
-        if depth == 0 {
+        if board.get_game_status() != Continue {
             return self.heuristic.evaluate(board);
         }
 
@@ -80,30 +91,47 @@ impl MiniMaxAgent {
         let mut alpha = alpha;
         let mut beta = beta;
 
+        // Check if the board is in the transposition table
+        if let Some(evaluation) = transposition_table.get(&board.get_hash()) {
+            return *evaluation;
+        }
+
         if maximizing {
             for current_move in possible_moves {
-                let mut new_board = board.clone();
+                let mut new_board = board;
                 new_board.make_move(current_move);
                 alpha = max(
                     alpha,
-                    self.minimax(new_board, depth - 1, false, alpha, beta),
+                    self.minimax(
+                        new_board,
+                        depth - 1,
+                        false,
+                        alpha,
+                        beta,
+                        transposition_table,
+                    ),
                 );
 
                 if alpha >= beta {
-                    return alpha;
+                    break;
                 }
             }
+            transposition_table.insert(board.get_hash(), alpha);
             alpha
         } else {
             for current_move in possible_moves {
-                let mut new_board = board.clone();
+                let mut new_board = board;
                 new_board.make_move(current_move);
-                beta = beta.min(self.minimax(new_board, depth - 1, true, alpha, beta));
+                beta = min(
+                    beta,
+                    self.minimax(new_board, depth - 1, true, alpha, beta, transposition_table),
+                );
 
                 if alpha >= beta {
-                    return beta;
+                    break;
                 }
             }
+            transposition_table.insert(board.get_hash(), beta);
             beta
         }
     }

@@ -2,6 +2,9 @@ use crate::board::{Board, BoardSymbol};
 use crate::game_result::GameResult;
 use crate::game_result::GameResult::Continue;
 use crate::player::Player;
+use once_cell::sync::Lazy;
+use rand_chacha::rand_core::{RngCore, SeedableRng};
+use rand_chacha::ChaCha20Rng;
 use std::fmt;
 use std::fmt::Display;
 
@@ -19,6 +22,23 @@ const WIN_POSITIONS: [[u8; 3]; 8] = [
     [2, 4, 6],
 ];
 
+const NUM_POSITIONS: usize = 9 * 9;
+const NUM_ZOBRIST_VALUES: usize = NUM_POSITIONS * 2 + 9;
+
+static ZOBRIST_VALUES: Lazy<[u64; NUM_ZOBRIST_VALUES]> = Lazy::new(|| {
+    let mut values = [0; NUM_ZOBRIST_VALUES];
+
+    let mut prng = ChaCha20Rng::from_seed([0; 32]);
+
+    for value in values.iter_mut().take(NUM_ZOBRIST_VALUES) {
+        *value = prng.next_u64();
+    }
+
+    values
+});
+
+const ZOBRIST_VALUES_NEXT_BOARD_INDEX_OFFSET: usize = NUM_POSITIONS * 2;
+
 /// Struct representing the ultimate board <p>
 /// The ultimate board is a 3x3 board of 3x3 boards.
 /// # Fields
@@ -29,10 +49,11 @@ const WIN_POSITIONS: [[u8; 3]; 8] = [
 #[derive(Copy, Clone, Debug)]
 pub struct UltimateBoard {
     boards: [Board; 9],
-    next_board_index: Option<u8>,
     board_status: [GameResult; 9],
+    next_board_index: Option<u8>,
     game_status: GameResult,
     current_player: Player,
+    hash: u64,
 }
 
 impl Default for UltimateBoard {
@@ -58,6 +79,7 @@ impl UltimateBoard {
             board_status: [Continue; 9],
             game_status: Continue,
             current_player: Player::One,
+            hash: 0,
         }
     }
 
@@ -100,6 +122,10 @@ impl UltimateBoard {
         self.boards
     }
 
+    pub fn get_hash(&self) -> u64 {
+        self.hash
+    }
+
     /// Get the possible moves for the ultimate board
     /// # Returns
     /// An iterator of the possible moves
@@ -119,11 +145,10 @@ impl UltimateBoard {
     /// Make a move on the ultimate board <p>
     /// # Arguments
     /// * `index` - The index of the field to play on
-    pub fn make_move(&mut self, index: u8) -> bool {
+    pub fn make_move(&mut self, index: u8) {
         // No further moves can be made if the game is over
         if self.game_status != Continue {
-            eprintln!("Game is over");
-            return false;
+            panic!("Game is over");
         }
 
         // The board index is the index of the board the move is made on
@@ -132,8 +157,7 @@ impl UltimateBoard {
         // The next board index must be the same as the board index if it is not None
         if let Some(next_board_index) = self.next_board_index {
             if next_board_index != board_index {
-                eprintln!("Invalid move");
-                return false;
+                panic!("Invalid move");
             }
         }
 
@@ -143,6 +167,8 @@ impl UltimateBoard {
         let field_index = index % 9;
 
         board.set(field_index, self.current_player);
+        // Apply the zobrist hash for the specific square and player
+        self.hash ^= ZOBRIST_VALUES[(index * 2 + self.current_player as u8) as usize];
 
         // Update the status of the board
         self.board_status[board_index as usize] = board.check_if_won();
@@ -153,14 +179,23 @@ impl UltimateBoard {
         // Update the current player
         self.current_player = self.current_player.get_opponent();
 
+        if let Some(next_board_index) = self.next_board_index {
+            // Remove the zobrist hash for the previously set next_board_index
+            self.hash ^=
+                ZOBRIST_VALUES[next_board_index as usize + ZOBRIST_VALUES_NEXT_BOARD_INDEX_OFFSET];
+        }
+
         // Update the next_board_index
         // If the board is can't be continued, the next board index is None
         self.next_board_index = match self.board_status[field_index as usize] {
-            Continue => Some(field_index),
+            Continue => {
+                // Apply the zobrist hash for the current next board index
+                self.hash ^=
+                    ZOBRIST_VALUES[field_index as usize + ZOBRIST_VALUES_NEXT_BOARD_INDEX_OFFSET];
+                Some(field_index)
+            }
             _ => None,
         };
-
-        true
     }
 }
 
@@ -221,5 +256,28 @@ where
             BoardIterator::SingleBoard(iter) => iter.next(),
             BoardIterator::MultiBoard(iter) => iter.next(),
         }
+    }
+}
+
+#[cfg(test)]
+mod test {
+    use super::*;
+
+    #[test]
+    fn test_iterator() {
+        let mut board = UltimateBoard::new();
+
+        assert_eq!(board.get_hash(), 0);
+
+        board.make_move(0);
+
+        assert_eq!(board.get_hash(), ZOBRIST_VALUES[0] ^ ZOBRIST_VALUES[162]);
+
+        board.make_move(1);
+
+        assert_eq!(
+            board.get_hash(),
+            ZOBRIST_VALUES[0] ^ ZOBRIST_VALUES[3] ^ ZOBRIST_VALUES[163]
+        );
     }
 }

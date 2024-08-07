@@ -1,4 +1,5 @@
 use std::sync::atomic::{AtomicUsize, Ordering};
+use std::time::Instant;
 
 use rayon::iter::ParallelIterator;
 use rayon::prelude::IntoParallelRefMutIterator;
@@ -31,6 +32,8 @@ fn main() {
 
     let counter = AtomicUsize::new(0);
 
+    let pre_run = Instant::now();
+
     games
         .par_iter_mut()
         .map(|game| {
@@ -48,7 +51,7 @@ fn main() {
         .collect::<Vec<GameResult>>()
         .iter()
         .for_each(|result| match result {
-            GameResult::Win(player) => wins[player.clone() as usize] += 1,
+            GameResult::Win(player) => wins[*player as usize] += 1,
             GameResult::Draw => wins[2] += 1,
             _ => {}
         });
@@ -85,15 +88,16 @@ fn main() {
 
     println!("\nResults:");
     println!(
-        "Player 1 won {:.4}% of the time",
+        "Player 1 won {:.2}% of the time",
         (wins[0] as f64 / NUM_GAMES as f64) * 100.
     );
     println!(
-        "Player 2 won {:.4}% of the time",
+        "Player 2 won {:.2}% of the time",
         (wins[1] as f64 / NUM_GAMES as f64) * 100.
     );
     println!(
-        "Draws: {:.4}% of the time",
+        "Draws: {:.2}% of the time",
         (wins[2] as f64 / NUM_GAMES as f64) * 100.
     );
+    println!("Time taken: {:?} seconds", pre_run.elapsed().as_secs_f64());
 }

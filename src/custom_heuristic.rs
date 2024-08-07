@@ -40,15 +40,12 @@ impl Heuristic for CustomHeuristic {
 
         // Reward having more small boards won than the opponent
         for board_status in board.get_board_status() {
-            match board_status {
-                GameResult::Win(winner) => {
-                    if winner == self.player {
-                        value += 10;
-                    } else {
-                        value -= 10;
-                    }
+            if let GameResult::Win(winner) = board_status {
+                if winner == self.player {
+                    value += 10;
+                } else {
+                    value -= 10;
                 }
-                _ => {}
             }
         }
 
