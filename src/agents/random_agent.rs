@@ -3,7 +3,7 @@
 //! The agent can be used to test other agents or to play against a human player.
 
 use crate::agent::Agent;
-use crate::ultimate_board::UltimateBoard;
+use crate::game::ultimate_board::UltimateBoard;
 use rand::Rng;
 
 /// Struct representing an agent that plays randomly

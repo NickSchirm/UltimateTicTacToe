@@ -6,12 +6,12 @@ use std::collections::HashMap;
 
 use once_cell::sync::Lazy;
 
-use crate::board::Board;
-use crate::game_result::GameResult;
+use crate::agents::minimax_agent::Number;
+use crate::game::board::Board;
+use crate::game::game_result::GameResult;
+use crate::game::player::Player;
+use crate::game::ultimate_board::UltimateBoard;
 use crate::heuristic::{Heuristic, MiniBoardHeuristic, MAX_VALUE, MIN_VALUE};
-use crate::minimax_agent::Number;
-use crate::player::Player;
-use crate::ultimate_board::UltimateBoard;
 
 /// # Contains the evaluation of all legal [boards](Board) for the [CustomMiniBoardHeuristic].
 ///

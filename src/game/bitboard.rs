@@ -2,7 +2,7 @@
 //! The BitBoard struct represents a bitboard used for storing the state of the board.
 //! The bitboard is a 9-bit integer where each bit represents a square on the board.
 //!
-//! Two bitboards are used in [Board](crate::board::Board) to represent the state.
+//! Two bitboards are used in [Board](crate::game::board::Board) to represent the state.
 //!
 //! The BitBoard struct implements the [Not], [BitOr], [BitAnd], [BitXor], [BitOrAssign], [BitAndAssign], [BitXorAssign] traits.
 

@@ -3,9 +3,15 @@
 //! The game is played by two [agents](Agent).
 
 use crate::agent::Agent;
-use crate::game_result::GameResult;
-use crate::player::Player;
-use crate::ultimate_board::UltimateBoard;
+use game_result::GameResult;
+use player::Player;
+use ultimate_board::UltimateBoard;
+
+pub mod bitboard;
+pub mod board;
+pub mod game_result;
+pub mod player;
+pub mod ultimate_board;
 
 /// Struct representing a game of Ultimate Tic Tac Toe
 ///

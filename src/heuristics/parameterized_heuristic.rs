@@ -10,12 +10,12 @@
 //!
 //! The [ParameterizedMiniBoardHeuristic] struct represents a [MiniBoardHeuristic] that uses weights for the features to evaluate small boards.
 
-use crate::board::Board;
-use crate::game_result::GameResult;
+use crate::agents::minimax_agent::Number;
+use crate::game::board::Board;
+use crate::game::game_result::GameResult;
+use crate::game::player::Player;
+use crate::game::ultimate_board::{UltimateBoard, CENTER_INDEX, CORNER_INDICES, EDGE_INDICES};
 use crate::heuristic::{Heuristic, MiniBoardHeuristic, MAX_VALUE, MIN_VALUE};
-use crate::minimax_agent::Number;
-use crate::player::Player;
-use crate::ultimate_board::{UltimateBoard, CENTER_INDEX, CORNER_INDICES, EDGE_INDICES};
 use std::collections::HashMap;
 
 /// The number of features the heuristic uses

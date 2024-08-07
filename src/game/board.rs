@@ -3,7 +3,7 @@
 //! The board is represented as 2 [BitBoard] structs.
 //! Each BitBoard represents the state of the board for one player.
 //!
-//! Nine boards are used in the [UltimateBoard](crate::ultimate_board::UltimateBoard) struct to represent the state of the game.
+//! Nine boards are used in the [UltimateBoard](crate::game::ultimate_board::UltimateBoard) struct to represent the state of the game.
 //!
 //! The nine squares of the board are represented internally as follows:
 //! ```text
@@ -25,10 +25,10 @@
 //!
 //! The [LegalBoardIterator] struct is an iterator over all possible legal boards.
 
-use crate::bitboard::BitBoard;
-use crate::game_result::GameResult;
-use crate::game_result::GameResult::Continue;
-use crate::player::Player;
+use crate::game::bitboard::BitBoard;
+use crate::game::game_result::GameResult;
+use crate::game::game_result::GameResult::Continue;
+use crate::game::player::Player;
 use std::fmt::Display;
 
 /// All win positions for the board encoded in the internal representation

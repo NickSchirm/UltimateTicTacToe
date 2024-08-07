@@ -2,11 +2,11 @@
 //! The MonteCarloGameSearchHeuristic struct represents a [Heuristic] that uses Monte Carlo Tree Search to evaluate the best move.
 //! The heuristic uses random games to evaluate the best move.
 
-use crate::game_result::GameResult;
+use crate::agents::minimax_agent::Number;
+use crate::game::game_result::GameResult;
+use crate::game::player::Player;
+use crate::game::ultimate_board::UltimateBoard;
 use crate::heuristic::Heuristic;
-use crate::minimax_agent::Number;
-use crate::player::Player;
-use crate::ultimate_board::UltimateBoard;
 use rand::prelude::SliceRandom;
 
 /// A [Heuristic] that uses Monte Carlo Tree Search to evaluate the best move

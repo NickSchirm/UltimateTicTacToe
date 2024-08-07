@@ -13,10 +13,10 @@ use once_cell::sync::Lazy;
 use rand_chacha::rand_core::{RngCore, SeedableRng};
 use rand_chacha::ChaCha20Rng;
 
-use crate::board::{Board, BoardSymbol};
-use crate::game_result::GameResult;
-use crate::game_result::GameResult::Continue;
-use crate::player::Player;
+use crate::game::board::{Board, BoardSymbol};
+use crate::game::game_result::GameResult;
+use crate::game::game_result::GameResult::Continue;
+use crate::game::player::Player;
 
 /// All possible win positions for the ultimate board
 const WIN_POSITIONS: [[u8; 3]; 8] = [

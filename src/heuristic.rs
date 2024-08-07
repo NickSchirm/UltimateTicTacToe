@@ -5,10 +5,10 @@
 //! The MiniBoardHeuristic trait represents a heuristic that evaluates a [Board] state.
 //! The heuristic should return a value that represents how good the board state is.
 
-use crate::bitboard::BitBoard;
-use crate::board::{Board, LegalBoardIterator};
-use crate::minimax_agent::Number;
-use crate::ultimate_board::UltimateBoard;
+use crate::agents::minimax_agent::Number;
+use crate::game::bitboard::BitBoard;
+use crate::game::board::{Board, LegalBoardIterator};
+use crate::game::ultimate_board::UltimateBoard;
 use once_cell::sync::Lazy;
 use std::collections::HashMap;
 
@@ -56,7 +56,7 @@ pub const NUM_SMALL_BOARD_STATES: usize = usize::pow(3, 9);
 ///
 /// <div class="warning">
 ///
-/// The return value of [MiniBoardHeuristic::evaluate] must be calculated from the perspective of [Player::One](crate::player::Player::One).
+/// The return value of [MiniBoardHeuristic::evaluate] must be calculated from the perspective of [Player::One](crate::game::player::Player::One).
 ///
 /// </div>
 ///
@@ -68,7 +68,7 @@ pub trait MiniBoardHeuristic: Send + Sync {
     ///
     /// <div class="warning">
     ///
-    /// The return value must be calculated from the perspective of [Player::One](crate::player::Player::One).
+    /// The return value must be calculated from the perspective of [Player::One](crate::game::player::Player::One).
     ///
     /// </div>
     ///

@@ -1,11 +1,15 @@
-//! # Contains the [MiniMaxAgent] struct
+//! # Contains the [MiniMaxAgent] and [Number] struct
 //! The MiniMaxAgent struct represents an [Agent] that uses the minimax algorithm to determine the best move.
 //! The agent uses the provided [Heuristic] to evaluate the board state.
+//!
+//! The Number struct is used to allow for easy switching between f64 and i32.
+//!
+//! For more information see the [MiniMaxAgent](MiniMaxAgent) struct.
 
 use crate::agent::Agent;
-use crate::game_result::GameResult::Continue;
+use crate::game::game_result::GameResult::Continue;
+use crate::game::ultimate_board::UltimateBoard;
 use crate::heuristic::Heuristic;
-use crate::ultimate_board::UltimateBoard;
 use std::collections::HashMap;
 use std::ops::{Add, AddAssign, Deref, Div, DivAssign, Mul, MulAssign, Sub, SubAssign};
 
@@ -255,6 +259,9 @@ impl<H: Heuristic> Agent for MiniMaxAgent<H> {
     }
 }
 
+/// A number type that implements the basic arithmetic operations.
+///
+/// This type is used to allow for easy switching between f64 and i32.
 #[derive(Clone, Debug, PartialEq, PartialOrd, Copy)]
 pub struct Number(pub f64);
 

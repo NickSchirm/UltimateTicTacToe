@@ -18,7 +18,6 @@ pub mod selections;
 ///
 /// The genetic algorithm is used to optimize the weights of a heuristic.
 pub struct GeneticAlgorithm {
-    population_size: usize,
     generations: usize,
     genes: Vec<gene::Gene>,
     fitness_function: FitnessFunction,
@@ -40,7 +39,6 @@ impl GeneticAlgorithm {
         quiescence_depth: u32,
     ) -> Self {
         GeneticAlgorithm {
-            population_size: genes.len(),
             generations,
             genes,
             fitness_function: FitnessFunction::new(depth, quiescence_depth),
@@ -79,10 +77,10 @@ impl GeneticAlgorithm {
 mod tests {
     use super::*;
     use crate::genetic_algorithm::gene::Gene;
-    use crate::genetic_algorithm::mutations::shift_mutation::ShiftMutation;
+    use crate::genetic_algorithm::mutations::normal_distribution_mutation::NormalDistributionMutation;
     use crate::genetic_algorithm::recombinations::one_point_crossover::OnePointCrossover;
     use crate::genetic_algorithm::selections::roulette_wheel_selection::RouletteWheelSelection;
-    use crate::parameterized_heuristic::NUM_FEATURES;
+    use crate::heuristics::parameterized_heuristic::NUM_FEATURES;
 
     #[test]
     fn test_genetic_algorithm() {
@@ -97,7 +95,7 @@ mod tests {
             1,
             genes,
             Box::new(RouletteWheelSelection {}),
-            Box::new(ShiftMutation {}),
+            Box::new(NormalDistributionMutation::new(0.1)),
             Box::new(OnePointCrossover {}),
             2,
             2,

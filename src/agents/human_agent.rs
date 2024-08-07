@@ -14,11 +14,12 @@ use itertools::Itertools;
 use once_cell::sync::Lazy;
 
 use crate::agent::Agent;
-use crate::board::BoardSymbol;
-use crate::custom_heuristic::CustomHeuristic;
-use crate::game_result::GameResult;
-use crate::player::Player;
-use crate::ultimate_board::UltimateBoard;
+use crate::agents::minimax_agent::MiniMaxAgent;
+use crate::game::board::BoardSymbol;
+use crate::game::game_result::GameResult;
+use crate::game::player::Player;
+use crate::game::ultimate_board::UltimateBoard;
+use crate::heuristics::custom_heuristic::CustomHeuristic;
 
 static HIGHLIGHT_COLOR: Lazy<CustomColor> = Lazy::new(|| CustomColor::new(87, 46, 105));
 static BACKGROUND_COLOR: Lazy<CustomColor> = Lazy::new(|| CustomColor::new(30, 31, 34));
@@ -319,11 +320,7 @@ impl Agent for HumanAgent {
 pub fn start_game_with_human() {
     let mut game = crate::game::Game::new(
         Box::new(HumanAgent::default()),
-        Box::new(crate::minimax_agent::MiniMaxAgent::new(
-            8,
-            1,
-            CustomHeuristic::new(Player::Two),
-        )),
+        Box::new(MiniMaxAgent::new(8, 1, CustomHeuristic::new(Player::Two))),
     );
 
     println!("Result: {:?}", game.play());
