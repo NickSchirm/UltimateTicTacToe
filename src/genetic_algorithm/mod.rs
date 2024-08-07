@@ -8,6 +8,12 @@ use crate::genetic_algorithm::recombination::Recombination;
 use crate::genetic_algorithm::selection::Selection;
 use itertools::Itertools;
 use std::time::Instant;
+use crate::genetic_algorithm::fitness::full_ordering_fitness::FullOrderingFitness;
+use crate::genetic_algorithm::gene::Gene;
+use crate::genetic_algorithm::mutation::normal_distribution_mutation::NormalDistributionMutation;
+use crate::genetic_algorithm::recombination::two_point_crossover::TwoPointCrossover;
+use crate::genetic_algorithm::selection::roulette_wheel_selection::RouletteWheelSelection;
+use crate::heuristic::parameterized_heuristic::NUM_FEATURES;
 
 pub mod fitness;
 pub mod gene;
@@ -23,7 +29,7 @@ pub mod selection;
 /// Multiple implementations are available.
 pub struct GeneticAlgorithm {
     generations: usize,
-    genes: Vec<gene::Gene>,
+    genes: Vec<Gene>,
     fitness: Box<dyn FitnessFunction>,
     selection: Box<dyn Selection>,
     mutation: Box<dyn Mutation>,
@@ -33,11 +39,11 @@ pub struct GeneticAlgorithm {
 impl GeneticAlgorithm {
     pub fn new(
         generations: usize,
-        genes: Vec<gene::Gene>,
-        fitness: Box<dyn fitness::FitnessFunction>,
-        selection: Box<dyn selection::Selection>,
-        mutation: Box<dyn mutation::Mutation>,
-        recombination: Box<dyn recombination::Recombination>,
+        genes: Vec<Gene>,
+        fitness: Box<dyn FitnessFunction>,
+        selection: Box<dyn Selection>,
+        mutation: Box<dyn Mutation>,
+        recombination: Box<dyn Recombination>,
     ) -> Self {
         GeneticAlgorithm {
             generations,
@@ -86,6 +92,25 @@ impl GeneticAlgorithm {
     }
 }
 
+pub fn run() {
+    let mut genes = vec![];
+
+    for _ in 0..10 {
+        genes.push(Gene::new(NUM_FEATURES));
+    }
+
+    let mut genetic_algorithm = GeneticAlgorithm::new(
+        100,
+        genes,
+        Box::new(FullOrderingFitness::new(5, 1)),
+        Box::new(RouletteWheelSelection {}),
+        Box::new(NormalDistributionMutation::new(0.1)),
+        Box::new(TwoPointCrossover {}),
+    );
+
+    genetic_algorithm.run();
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -98,17 +123,16 @@ mod tests {
 
     #[test]
     fn test_genetic_algorithm() {
-        let genes = vec![
-            Gene::new(NUM_FEATURES),
-            Gene::new(NUM_FEATURES),
-            Gene::new(NUM_FEATURES),
-            Gene::new(NUM_FEATURES),
-        ];
+        let mut genes = vec![];
+
+        for _ in 0..10 {
+            genes.push(Gene::new(NUM_FEATURES));
+        }
 
         let mut genetic_algorithm = GeneticAlgorithm::new(
             1,
             genes,
-            Box::new(FullOrderingFitness::new(2, 1)),
+            Box::new(FullOrderingFitness::new(4, 1)),
             Box::new(RouletteWheelSelection {}),
             Box::new(NormalDistributionMutation::new(0.1)),
             Box::new(TwoPointCrossover {}),

@@ -15,7 +15,9 @@ use once_cell::sync::Lazy;
 
 use crate::agent::minimax_agent::MiniMaxAgent;
 use crate::agent::{Agent, AgentInfo};
+use crate::agent::monte_carlo_tree_agent::MonteCarloTreeAgent;
 use crate::game::board::BoardSymbol;
+use crate::game::Game;
 use crate::game::game_result::GameResult;
 use crate::game::player::Player;
 use crate::game::ultimate_board::UltimateBoard;
@@ -328,10 +330,11 @@ impl Agent for HumanAgent {
 ///
 /// The human player can input the moves via the console.
 pub fn start_game_with_human() {
-    let mut game = crate::game::Game::new(
+    let mut game = Game::new(
         Box::new(HumanAgent::default()),
-        Box::new(MiniMaxAgent::new(8, 1, CustomHeuristic::new(Player::Two))),
+        //Box::new(MiniMaxAgent::new(8, 1, CustomHeuristic::new(Player::Two))),
+        Box::new(MonteCarloTreeAgent::new(10000)),
     );
-
+    HumanAgent::print_board(game.get_board().clone(), None);
     println!("Result: {:?}", game.play());
 }

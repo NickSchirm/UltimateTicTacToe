@@ -361,6 +361,14 @@ impl Display for UltimateBoard {
     }
 }
 
+impl PartialEq<Self> for UltimateBoard {
+    fn eq(&self, other: &Self) -> bool {
+        self.hash == other.hash
+    }
+}
+
+impl Eq for UltimateBoard {}
+
 /// Enum representing the possible iterators for the board
 ///
 /// The Enum can either contain the possible moves for a single board or for multiple boards.

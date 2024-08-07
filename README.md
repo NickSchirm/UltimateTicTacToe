@@ -1,4 +1,8 @@
 # Ultimate Tic Tac Toe implementation, game agents, heuristics and benchmarking tools
+
+Result of genetic algorithm with 10 genes and 100 iterations: Gene { values: [-0.9011298820760223, -0.9047473011303433, -1.9878186210206341, -0.940735228598089, 1.3140632491937836, 0.5190040302978252, 0.7128491119909083, 1.2756963483965846, 2.264309782234436, 0.14115748887705593, 1.2441779567914344, 2.0944754371556287] }
+
+
 Copyright (C) 2024 Nick Schirm
 
 This program is free software: 

@@ -17,7 +17,7 @@ impl Gene {
     /// # Returns
     /// A new gene with the given number of values
     pub fn new(num_values: usize) -> Self {
-        Self::with_range(num_values, 0.0..1.0)
+        Self::with_range(num_values, -1.0..1.0)
     }
 
     /// Creates a new gene with the given number of values and range
