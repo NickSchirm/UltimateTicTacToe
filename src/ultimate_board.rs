@@ -25,9 +25,11 @@ const WIN_POSITIONS: [[u8; 3]; 8] = [
 const NUM_POSITIONS: usize = 9 * 9;
 const NUM_ZOBRIST_VALUES: usize = NUM_POSITIONS * 2 + 9;
 
+// https://www.chessprogramming.org/Zobrist_Hashing
 static ZOBRIST_VALUES: Lazy<[u64; NUM_ZOBRIST_VALUES]> = Lazy::new(|| {
     let mut values = [0; NUM_ZOBRIST_VALUES];
 
+    // PRNG for generating the zobrist values
     let mut prng = ChaCha20Rng::from_seed([0; 32]);
 
     for value in values.iter_mut().take(NUM_ZOBRIST_VALUES) {
@@ -124,6 +126,10 @@ impl UltimateBoard {
 
     pub fn get_hash(&self) -> u64 {
         self.hash
+    }
+
+    pub fn get_next_board_index(&self) -> Option<u8> {
+        self.next_board_index
     }
 
     /// Get the possible moves for the ultimate board

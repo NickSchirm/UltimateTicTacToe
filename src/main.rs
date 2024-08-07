@@ -11,8 +11,9 @@ use hausarbeit::minimax_agent::MiniMaxAgent;
 use hausarbeit::player::Player::One;
 use hausarbeit::random_agent::RandomAgent;
 
-const NUM_GAMES: u32 = 100;
-const DEPTH: u32 = 8;
+const NUM_GAMES: u32 = 1000;
+const DEPTH: u32 = 3;
+const QUIESCENCE_SEARCH_DEPTH: u32 = 3;
 
 fn main() {
     rayon::ThreadPoolBuilder::new()
@@ -24,7 +25,7 @@ fn main() {
     let mut games = vec![];
 
     for _ in 0..NUM_GAMES {
-        let agent1 = MiniMaxAgent::new(DEPTH, Box::new(CustomHeuristic::new(One)));
+        let agent1 = MiniMaxAgent::new(DEPTH, QUIESCENCE_SEARCH_DEPTH, CustomHeuristic::new(One));
         let agent2 = RandomAgent::new();
 
         games.push(Game::new(Box::new(agent1), Box::new(agent2)));

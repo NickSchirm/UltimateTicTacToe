@@ -1,3 +1,30 @@
+//! # Ultimate Tic Tac Toe implementation, game agents and benchmarking tools.
+//!
+//! This library provides a full implementation of the Ultimate Tic Tac Toe game.
+//! The game can be played by two agents.
+//!
+//! Provided agents:
+//! * [RandomAgent](random_agent::RandomAgent): An agent that plays random moves
+//! * [MiniMaxAgent](minimax_agent::MiniMaxAgent): An agent that uses the minimax algorithm to determine the best move
+//!
+//! Provided heuristics:
+//! * [CustomHeuristic](custom_heuristic::CustomHeuristic): A heuristic that uses a custom evaluation function
+//!
+//! # Usage
+//! Initialize a game with two agents and play it:
+//! ```rust
+//! use hausarbeit::game::Game;
+//! use hausarbeit::random_agent::RandomAgent;
+//!
+//! fn main() {
+//!     let agent_one = RandomAgent::new();
+//!     let agent_two = RandomAgent::new();
+//!
+//!     let mut game = Game::new(Box::new(agent_one), Box::new(agent_two));
+//!
+//!     game.play();
+//! }
+
 pub mod agent;
 pub mod bitboard;
 pub mod board;
