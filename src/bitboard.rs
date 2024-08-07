@@ -5,7 +5,7 @@ pub struct BitBoard(u16);
 
 impl BitBoard {
     pub fn new(n: u16) -> Self {
-        debug_assert!(n < 512, "BitBoard value out of bounds");
+        debug_assert!(n < 1024, "BitBoard value out of bounds");
         BitBoard(n)
     }
 

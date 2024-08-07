@@ -1,37 +1,37 @@
-use crate::board::Board;
-use crate::player::Player::{One, Two};
+use hausarbeit::game::Game;
+use hausarbeit::game_result::GameResult;
+use hausarbeit::random_agent::RandomAgent;
 
-mod bitboard;
-mod board;
-mod game_result;
-mod player;
-mod ultimate_board;
+const NUM_GAMES: u32 = 1;
+const DEPTH: u32 = 3;
 
 fn main() {
-    println!("Hello, world!");
+    let mut wins = [0, 0, 0];
 
-    let mut board = Board::new(8);
+    for num_game in 0..NUM_GAMES {
+        let mut agent1 = RandomAgent::new();
+        let mut agent2 = RandomAgent::new();
 
-    board.set(0, One);
-    board.set(1, Two);
-    board.set(2, One);
-    board.set(3, Two);
-    board.set(4, One);
-    board.set(5, Two);
-
-    println!("{:?}", board.check_if_won());
-
-    for i in board.get_possible_moves() {
-        println!("{}", i);
+        if num_game % 2 == 0 {
+            let mut game = Game::new(&mut agent1, &mut agent2);
+            let result = game.play();
+            match result {
+                GameResult::Win(player) => wins[player as usize] += 1,
+                GameResult::Draw => wins[2] += 1,
+                _ => {}
+            }
+        } else {
+            let mut game = Game::new(&mut agent2, &mut agent1);
+            let result = game.play();
+            match result {
+                GameResult::Win(player) => wins[((player as usize) + 1) % 2] += 1,
+                GameResult::Draw => wins[2] += 1,
+                _ => {}
+            }
+        }
     }
 
-    let mut moves: Vec<_> = ultimate_board::UltimateBoard::new()
-        .get_possible_moves()
-        .collect();
-
-    moves.sort();
-
-    for i in moves {
-        println!("{}", i);
-    }
+    println!("Player 1 wins: {}", wins[0]);
+    println!("Player 2 wins: {}", wins[1]);
+    println!("Draws: {}", wins[2]);
 }

@@ -1,3 +1,4 @@
+use std::fmt::Display;
 use crate::bitboard::BitBoard;
 use crate::game_result::GameResult;
 use crate::game_result::GameResult::Continue;
@@ -16,6 +17,12 @@ const WIN_POSITIONS: [u16; 8] = [
     // Diagonals
     0b100010001,
     0b101000100,
+];
+
+const ROWS: [[u8; 3]; 3] = [
+    [0, 1, 2],
+    [7, 8, 3],
+    [6, 5, 4],
 ];
 
 #[derive(Copy, Clone, Debug)]
@@ -145,6 +152,55 @@ impl Board {
             _ => panic!("Index out of bounds"),
         }
     }
+
+    /// Extracts a row from the board
+    /// # Arguments
+    /// * `row` - The row to extract
+    /// # Returns
+    /// The extracted row
+    pub fn extract_row(&self, row: u8) -> Vec<BoardSymbol> {
+        let mut res = vec![];
+        for i in ROWS[row as usize].iter() {
+            let bit = 1 << i;
+
+            if self.board[0] & BitBoard::new(bit) != BitBoard::EMPTY {
+                res.push(BoardSymbol::X);
+            } else if self.board[1] & BitBoard::new(bit) != BitBoard::EMPTY {
+                res.push(BoardSymbol::O);
+            } else {
+                res.push(BoardSymbol::Empty);
+            }
+        }
+        res
+    }
+}
+
+impl Display for Board {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        for a in ROWS.iter() {
+            for i in a.iter() {
+                let bit = 1 << i;
+
+                if self.board[0] & BitBoard::new(bit) != BitBoard::EMPTY {
+                    f.write_str("X ")?;
+                } else if self.board[1] & BitBoard::new(bit) != BitBoard::EMPTY {
+                    f.write_str("O ")?;
+                } else {
+                    f.write_str("  ")?;
+                }
+            }
+            f.write_str("\n")?;
+        }
+        
+        Ok(())
+    }
+}
+
+#[derive(Copy, Clone, Debug)]
+pub enum BoardSymbol {
+    X = 1,
+    O = 2,
+    Empty = 0,
 }
 
 #[cfg(test)]

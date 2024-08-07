@@ -1,6 +1,8 @@
-use crate::board::Board;
+use crate::board::{Board, BoardSymbol};
 use crate::game_result::GameResult;
 use crate::player::Player;
+use std::fmt;
+use std::fmt::Display;
 
 const WIN_POSITIONS: [[u8; 3]; 8] = [
     // Rows
@@ -32,6 +34,12 @@ pub struct UltimateBoard {
     current_player: Player,
 }
 
+impl Default for UltimateBoard {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl UltimateBoard {
     /// Create a new ultimate board using the default values
     /// # Returns
@@ -61,6 +69,7 @@ impl UltimateBoard {
                     .all(|&i| self.board_status[i as usize] == GameResult::Win(player))
                 {
                     self.game_status = GameResult::Win(player);
+                    return;
                 }
             }
         }
@@ -72,9 +81,14 @@ impl UltimateBoard {
             .all(|&status| status != GameResult::Continue)
         {
             self.game_status = GameResult::Draw;
+            return;
         }
 
         self.game_status = GameResult::Continue;
+    }
+
+    pub fn get_game_status(&self) -> GameResult {
+        self.game_status
     }
 
     /// Get the possible moves for the ultimate board
@@ -97,7 +111,7 @@ impl UltimateBoard {
     /// # Arguments
     /// * `index` - The index of the field to play on
     /// * `player` - The player making the move
-    pub fn make_move(&mut self, index: u8, player: Player) {
+    pub fn make_move(&mut self, index: u8) {
         // No further moves can be made if the game is over
         if self.game_status != GameResult::Continue {
             panic!("Game is over");
@@ -118,7 +132,7 @@ impl UltimateBoard {
         // The field index is the index of the field on the board
         let field_index = index % 9;
 
-        board.set(field_index, player);
+        board.set(field_index, self.current_player);
 
         // Update the status of the board
         self.board_status[board_index as usize] = board.check_if_won();
@@ -127,7 +141,7 @@ impl UltimateBoard {
         self.check_if_won();
 
         // Update the current player
-        self.current_player = player.get_opponent();
+        self.current_player = self.current_player.get_opponent();
 
         // Update the next_board_index
         // If the board is can't be continued, the next board index is None
@@ -135,6 +149,44 @@ impl UltimateBoard {
             GameResult::Continue => Some(field_index),
             _ => None,
         };
+    }
+}
+
+impl Display for UltimateBoard {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        for sub_row in 0..9 {
+            for i in (sub_row - (sub_row % 3))..(sub_row - (sub_row % 3) + 3) {
+                let row = &self.boards[i as usize].extract_row(sub_row % 3);
+
+                for item in row.iter().take(3) {
+                    f.write_str(match item {
+                        BoardSymbol::X => "X ",
+                        BoardSymbol::O => "O ",
+                        BoardSymbol::Empty => "  ",
+                    })?;
+                }
+
+                if i % 3 != 2 {
+                    f.write_str("| ")?;
+                }
+            }
+
+            if sub_row == 2 || sub_row == 5 {
+                f.write_str("\n- - - + - - - + - - - \n")?;
+            } else {
+                f.write_str("\n")?;
+            }
+        }
+
+        f.write_fmt(format_args!("Game status: {:?}\n", self.game_status))?;
+        f.write_fmt(format_args!("Board status: {:?}\n", self.board_status))?;
+        f.write_fmt(format_args!(
+            "Next board index: {:?}\n",
+            self.next_board_index
+        ))?;
+        f.write_fmt(format_args!("Current player: {:?}\n", self.current_player))?;
+
+        Ok(())
     }
 }
 
