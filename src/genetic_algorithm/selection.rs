@@ -1,3 +1,4 @@
+//! # Contains the [Selection] trait
 use crate::genetic_algorithm::gene::Gene;
 
 /// # Trait representing a selection

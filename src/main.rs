@@ -8,6 +8,7 @@ use hausarbeit::custom_heuristic::CustomHeuristic;
 use hausarbeit::game::Game;
 use hausarbeit::game_result::GameResult;
 use hausarbeit::genetic_algorithm::gene::Gene;
+use hausarbeit::genetic_algorithm::mutations::normal_distribution_mutation::NormalDistributionMutation;
 use hausarbeit::genetic_algorithm::mutations::shift_mutation::ShiftMutation;
 use hausarbeit::genetic_algorithm::recombinations::one_point_crossover::OnePointCrossover;
 use hausarbeit::genetic_algorithm::selections::roulette_wheel_selection::RouletteWheelSelection;
@@ -30,15 +31,15 @@ fn main() {
 
     let mut genes = vec![];
 
-    for _ in 0..100 {
+    for _ in 0..10 {
         genes.push(Gene::new(NUM_FEATURES));
     }
 
     let mut genetic_algorithm = GeneticAlgorithm::new(
-        1,
+        100,
         genes,
         Box::new(RouletteWheelSelection {}),
-        Box::new(ShiftMutation {}),
+        Box::new(NormalDistributionMutation::new(0.1)),
         Box::new(OnePointCrossover {}),
         2,
         1,

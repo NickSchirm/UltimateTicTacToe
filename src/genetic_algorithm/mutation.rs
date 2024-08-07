@@ -10,7 +10,7 @@ pub trait Mutation {
     /// * `gene` - The gene to mutate
     /// # Returns
     /// The mutated gene
-    fn mutate(&self, gene: Gene) -> Gene;
+    fn mutate(&mut self, gene: Gene) -> Gene;
 
     /// Mutates all the given genes
     ///
@@ -20,7 +20,7 @@ pub trait Mutation {
     /// * `genes` - The genes to mutate
     /// # Returns
     /// The mutated genes
-    fn mutate_all(&self, genes: Vec<Gene>) -> Vec<Gene> {
+    fn mutate_all(&mut self, genes: Vec<Gene>) -> Vec<Gene> {
         genes.into_iter().map(|gene| self.mutate(gene)).collect()
     }
 }

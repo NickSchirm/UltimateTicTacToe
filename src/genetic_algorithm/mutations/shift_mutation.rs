@@ -10,7 +10,7 @@ use rand::{thread_rng, Rng};
 pub struct ShiftMutation {}
 
 impl Mutation for ShiftMutation {
-    fn mutate(&self, gene: Gene) -> Gene {
+    fn mutate(&mut self, gene: Gene) -> Gene {
         let len = gene.get_values().len();
         let mut res = Vec::from(vec![0.0; len]);
 

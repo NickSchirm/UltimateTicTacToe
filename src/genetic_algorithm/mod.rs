@@ -1,4 +1,6 @@
 //! # Contains various modules for the genetic algorithm
+//!
+//! The genetic algorithm is used to optimize the weights of [ParametrizedHeuristic](crate::parameterized_heuristic::ParameterizedHeuristic).
 
 use crate::genetic_algorithm::fitness_function::FitnessFunction;
 use itertools::Itertools;
