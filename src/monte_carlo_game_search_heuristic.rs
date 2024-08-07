@@ -4,6 +4,7 @@
 
 use crate::game_result::GameResult;
 use crate::heuristic::Heuristic;
+use crate::minimax_agent::Number;
 use crate::player::Player;
 use crate::ultimate_board::UltimateBoard;
 use rand::prelude::SliceRandom;
@@ -53,7 +54,7 @@ impl MonteCarloGameSearchHeuristic {
 }
 
 impl Heuristic for MonteCarloGameSearchHeuristic {
-    fn evaluate(&self, board: UltimateBoard) -> i32 {
+    fn evaluate(&self, board: UltimateBoard) -> Number {
         let possible_moves = board.get_possible_moves();
         let mut results = vec![];
 
@@ -101,6 +102,12 @@ impl Heuristic for MonteCarloGameSearchHeuristic {
             }
         }
 
-        0
+        if best_move.is_none() {
+            return Number::ZERO;
+        }
+
+        let (_, wins, losses, _) = best_move.unwrap();
+
+        Number::from(wins - losses)
     }
 }

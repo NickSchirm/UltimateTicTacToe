@@ -7,13 +7,25 @@
 
 use crate::bitboard::BitBoard;
 use crate::board::{Board, LegalBoardIterator};
+use crate::minimax_agent::Number;
 use crate::ultimate_board::UltimateBoard;
+use once_cell::sync::Lazy;
 use std::collections::HashMap;
 
 /// The minimum value a heuristic can return
-pub const MIN_VALUE: i32 = i32::MIN + 1;
+pub static MIN_VALUE: Lazy<Number> = Lazy::new(|| {
+    Number(f64::from_be_bytes([
+        0b11111111, 0b11101111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111,
+        0b11111110,
+    ]))
+});
 /// The maximum value a heuristic can return
-pub const MAX_VALUE: i32 = i32::MAX - 1;
+pub const MAX_VALUE: Lazy<Number> = Lazy::new(|| {
+    Number(f64::from_be_bytes([
+        0b01111111, 0b11101111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111,
+        0b11111110,
+    ]))
+});
 
 /// # Trait representing a heuristic
 ///
@@ -30,7 +42,7 @@ pub trait Heuristic: Clone + Send + Sync {
     /// * `board` - The board state to evaluate
     /// # Returns
     /// The value of the board state, always between [MIN_VALUE] and [MAX_VALUE]
-    fn evaluate(&self, board: UltimateBoard) -> i32;
+    fn evaluate(&self, board: UltimateBoard) -> Number;
 }
 
 /// The number of possible legal small board states
@@ -64,7 +76,7 @@ pub trait MiniBoardHeuristic: Send + Sync {
     /// * `board` - The small board state to evaluate
     /// # Returns
     /// The value of the small board state, always between [MIN_VALUE] and [MAX_VALUE]
-    fn evaluate(&self, board: Board) -> i32;
+    fn evaluate(&self, board: Board) -> Number;
 
     /// Initialize the cache for the heuristic
     ///
@@ -72,7 +84,7 @@ pub trait MiniBoardHeuristic: Send + Sync {
     /// The cache is used to speed up the evaluation of the heuristic.
     /// # Returns
     /// The cache for the heuristic
-    fn initialize(&self) -> HashMap<u32, i32> {
+    fn initialize(&self) -> HashMap<u32, Number> {
         let mut cache = HashMap::with_capacity(NUM_SMALL_BOARD_STATES);
 
         for (first, second) in LegalBoardIterator::default() {

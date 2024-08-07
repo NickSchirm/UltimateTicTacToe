@@ -91,6 +91,7 @@ static ZOBRIST_VALUES: Lazy<[u64; NUM_ZOBRIST_VALUES]> = Lazy::new(|| {
     values
 });
 
+#[allow(rustdoc::private_intra_doc_links)]
 /// Offset of the `next_board_index` hashes in [Zobrist values](ZOBRIST_VALUES)
 pub const ZOBRIST_VALUES_NEXT_BOARD_INDEX_OFFSET: usize = NUM_POSITIONS * 2;
 

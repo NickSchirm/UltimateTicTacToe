@@ -7,8 +7,9 @@ use rayon::prelude::IntoParallelRefMutIterator;
 use hausarbeit::custom_heuristic::CustomHeuristic;
 use hausarbeit::game::Game;
 use hausarbeit::game_result::GameResult;
+use hausarbeit::genetic_algorithm::gene::Gene;
 use hausarbeit::minimax_agent::MiniMaxAgent;
-use hausarbeit::parameterized_heuristic::ParameterizedHeuristic;
+use hausarbeit::parameterized_heuristic::{ParameterizedHeuristic, NUM_FEATURES};
 use hausarbeit::player::Player::{One, Two};
 
 const NUM_GAMES: u32 = 100;
@@ -31,7 +32,7 @@ fn main() {
         let agent2 = MiniMaxAgent::new(
             DEPTH,
             QUIESCENCE_SEARCH_DEPTH,
-            ParameterizedHeuristic::new(Two, [1; 13]),
+            ParameterizedHeuristic::new(Two, Gene::new(NUM_FEATURES).get_values()),
         );
 
         games.push(Game::new(Box::new(agent1), Box::new(agent2)));

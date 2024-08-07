@@ -13,13 +13,15 @@
 use crate::board::Board;
 use crate::game_result::GameResult;
 use crate::heuristic::{Heuristic, MiniBoardHeuristic, MAX_VALUE, MIN_VALUE};
+use crate::minimax_agent::Number;
 use crate::player::Player;
 use crate::ultimate_board::{UltimateBoard, CENTER_INDEX, CORNER_INDICES, EDGE_INDICES};
 use std::collections::HashMap;
 
 /// The number of features the heuristic uses
-const NUM_FEATURES: usize = 13;
+pub const NUM_FEATURES: usize = 13;
 
+#[allow(rustdoc::private_intra_doc_links)]
 /// # Struct representing a [Heuristic] that weights for the features to evaluate the best move
 ///
 /// The weights may be optimized using a genetic algorithm.
@@ -48,38 +50,38 @@ pub struct ParameterizedHeuristic {
     /// 11. Number of edges of the entire board won
     /// 12. Number of partial wins difference on the entire board
     /// 13. Whether the current player can freely choose a small board
-    values: [i32; NUM_FEATURES],
-    small_board_lookup_table: HashMap<u32, i32>,
+    pub values: Vec<f64>,
+    small_board_lookup_table: HashMap<u32, Number>,
 }
 
 impl ParameterizedHeuristic {
-    pub fn new(player: Player, values: [i32; NUM_FEATURES]) -> Self {
+    pub fn new(player: Player, values: Vec<f64>) -> Self {
         ParameterizedHeuristic {
             player,
-            values,
+            values: values.clone(),
             small_board_lookup_table: ParameterizedMiniBoardHeuristic::new(values).initialize(),
         }
     }
 }
 
 impl Heuristic for ParameterizedHeuristic {
-    fn evaluate(&self, board: UltimateBoard) -> i32 {
-        let mut value = 0;
+    fn evaluate(&self, board: UltimateBoard) -> Number {
+        let mut value = Number::ZERO;
 
         if board.get_game_status() == GameResult::Win(self.player) {
-            return MAX_VALUE;
+            return *MAX_VALUE;
         }
 
         if board.get_game_status() == GameResult::Win(self.player.get_opponent()) {
-            return MIN_VALUE;
+            return *MIN_VALUE;
         }
 
         for small_board in board.get_boards() {
-            value += self
+            value += *self
                 .small_board_lookup_table
                 .get(&small_board.to_key())
                 .unwrap()
-                * (if self.player == Player::One { 1 } else { -1 });
+                * (if self.player == Player::One { 1 } else { -1 }) as f64;
         }
 
         for board_status in board.get_board_status() {
@@ -116,7 +118,7 @@ impl Heuristic for ParameterizedHeuristic {
             };
         }
 
-        value += board.get_partial_wins_difference(self.player) as i32 * self.values[11];
+        value += board.get_partial_wins_difference(self.player) as f64 * self.values[11];
 
         value += if board.get_next_board_index().is_none() {
             self.values[12]
@@ -133,31 +135,31 @@ pub struct ParameterizedMiniBoardHeuristic {
     /// The weights for the features
     ///
     /// For the features, see [ParameterizedHeuristic::values]
-    values: [i32; NUM_FEATURES],
+    values: Vec<f64>,
 }
 
 impl ParameterizedMiniBoardHeuristic {
-    pub fn new(values: [i32; NUM_FEATURES]) -> Self {
+    pub fn new(values: Vec<f64>) -> Self {
         ParameterizedMiniBoardHeuristic { values }
     }
 }
 
 impl MiniBoardHeuristic for ParameterizedMiniBoardHeuristic {
-    fn evaluate(&self, board: Board) -> i32 {
-        let mut value = 0;
+    fn evaluate(&self, board: Board) -> Number {
+        let mut value = Number::ZERO;
 
-        let positions_set_difference = board.get_positions_set_difference(Player::One) as i32;
-        if positions_set_difference > 0 {
+        let positions_set_difference = board.get_positions_set_difference(Player::One) as f64;
+        if positions_set_difference > 0. {
             value += positions_set_difference * self.values[3];
         }
 
-        value += board.get_partial_wins_difference(Player::One) as i32 * self.values[4];
+        value += board.get_partial_wins_difference(Player::One) as f64 * self.values[4];
 
-        value += board.center_occupied(Player::One) as i32 * self.values[5];
+        value += board.center_occupied(Player::One) as f64 * self.values[5];
 
-        value += board.get_corners_difference(Player::One) as i32 * self.values[6];
+        value += board.get_corners_difference(Player::One) as f64 * self.values[6];
 
-        value += board.get_edges_difference(Player::One) as i32 * self.values[7];
+        value += board.get_edges_difference(Player::One) as f64 * self.values[7];
 
         value
     }
