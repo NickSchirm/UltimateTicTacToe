@@ -1,8 +1,11 @@
+pub mod agent;
 pub mod bitboard;
 pub mod board;
-pub mod game_result;
-pub mod player;
-pub mod ultimate_board;
-pub mod agent;
-pub mod random_agent;
+pub mod custom_heuristic;
 pub mod game;
+pub mod game_result;
+pub mod heuristic;
+pub mod minimax_agent;
+pub mod player;
+pub mod random_agent;
+pub mod ultimate_board;

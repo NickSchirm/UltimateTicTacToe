@@ -1,8 +1,8 @@
-use std::fmt::Display;
 use crate::bitboard::BitBoard;
 use crate::game_result::GameResult;
 use crate::game_result::GameResult::Continue;
 use crate::player::Player;
+use std::fmt::Display;
 
 /// All win positions for the board encoded in the internal representation
 const WIN_POSITIONS: [u16; 8] = [
@@ -19,12 +19,9 @@ const WIN_POSITIONS: [u16; 8] = [
     0b101000100,
 ];
 
-const ROWS: [[u8; 3]; 3] = [
-    [0, 1, 2],
-    [7, 8, 3],
-    [6, 5, 4],
-];
+const ROWS: [[u8; 3]; 3] = [[0, 1, 2], [7, 8, 3], [6, 5, 4]];
 
+/// Implementation of a 3x3 board for Tic Tac Toe
 #[derive(Copy, Clone, Debug)]
 pub struct Board {
     /// This represents a 3*3 board. Each char represents the state for each player.
@@ -191,7 +188,7 @@ impl Display for Board {
             }
             f.write_str("\n")?;
         }
-        
+
         Ok(())
     }
 }

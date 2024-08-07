@@ -1,16 +1,29 @@
 use std::ops::{BitAnd, BitAndAssign, BitOr, BitOrAssign, BitXor, BitXorAssign, Not};
 
+/// Struct representing a bitboard <p>
+/// A bitboard is a 9-bit integer where each bit represents a square on the board
+/// # Fields
+/// * `0` - The bitboard value as an u16
 #[derive(Copy, Clone, Debug, PartialEq)]
 pub struct BitBoard(u16);
 
 impl BitBoard {
+    /// Creates a new BitBoard with the given value
+    /// # Arguments
+    /// * `n` - The value of the bitboard, must be in 0..=1023
     pub fn new(n: u16) -> Self {
         debug_assert!(n < 1024, "BitBoard value out of bounds");
         BitBoard(n)
     }
 
+    /// Returns a new BitBoard with no squares set
     pub const EMPTY: BitBoard = BitBoard(0);
 
+    /// Returns the index of the first set square in the board <p>
+    /// If no square is set, returns None <p>
+    /// Used to iterate over the board
+    /// # Returns
+    /// The index of the first set square in the board
     pub fn first_square(&self) -> Option<u8> {
         if self.0 == 0 {
             None
@@ -19,6 +32,11 @@ impl BitBoard {
         }
     }
 
+    /// Pops the first set square from the board <p>
+    /// If no square is set, returns None <p>
+    /// Used to iterate over the board
+    /// # Returns
+    /// The index of the first set square in the board
     pub fn pop_first_square(&mut self) -> Option<u8> {
         let square = self.first_square();
         square.inspect(|s| self.0 ^= 1 << *s as u16);
@@ -95,4 +113,12 @@ impl Iterator for BitBoardIterator {
     fn next(&mut self) -> Option<Self::Item> {
         self.board.pop_first_square()
     }
+}
+
+#[test]
+fn test_iterator() {
+    let one = BitBoard::new(187);
+    let two = BitBoard::new(64);
+    let b = !(one | two);
+    println!("{:?}", b.into_iter().collect::<Vec<_>>());
 }

@@ -1,5 +1,6 @@
 use crate::board::{Board, BoardSymbol};
 use crate::game_result::GameResult;
+use crate::game_result::GameResult::Continue;
 use crate::player::Player;
 use std::fmt;
 use std::fmt::Display;
@@ -54,8 +55,8 @@ impl UltimateBoard {
         UltimateBoard {
             boards,
             next_board_index: None,
-            board_status: [GameResult::Continue; 9],
-            game_status: GameResult::Continue,
+            board_status: [Continue; 9],
+            game_status: Continue,
             current_player: Player::One,
         }
     }
@@ -91,6 +92,10 @@ impl UltimateBoard {
         self.game_status
     }
 
+    pub fn get_board_status(&self) -> [GameResult; 9] {
+        self.board_status
+    }
+
     /// Get the possible moves for the ultimate board
     /// # Returns
     /// An iterator of the possible moves
@@ -110,11 +115,11 @@ impl UltimateBoard {
     /// Make a move on the ultimate board <p>
     /// # Arguments
     /// * `index` - The index of the field to play on
-    /// * `player` - The player making the move
-    pub fn make_move(&mut self, index: u8) {
+    pub fn make_move(&mut self, index: u8) -> bool {
         // No further moves can be made if the game is over
-        if self.game_status != GameResult::Continue {
-            panic!("Game is over");
+        if self.game_status != Continue {
+            eprintln!("Game is over");
+            return false;
         }
 
         // The board index is the index of the board the move is made on
@@ -123,7 +128,8 @@ impl UltimateBoard {
         // The next board index must be the same as the board index if it is not None
         if let Some(next_board_index) = self.next_board_index {
             if next_board_index != board_index {
-                panic!("Invalid move");
+                eprintln!("Invalid move");
+                return false;
             }
         }
 
@@ -146,9 +152,11 @@ impl UltimateBoard {
         // Update the next_board_index
         // If the board is can't be continued, the next board index is None
         self.next_board_index = match self.board_status[field_index as usize] {
-            GameResult::Continue => Some(field_index),
+            Continue => Some(field_index),
             _ => None,
         };
+
+        true
     }
 }
 
