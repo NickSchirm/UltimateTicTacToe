@@ -20,7 +20,7 @@ use hausarbeit::genetic_algorithm::GeneticAlgorithm;
 use hausarbeit::heuristic::custom_heuristic::CustomHeuristic;
 use hausarbeit::heuristic::monte_carlo_game_search_heuristic::MonteCarloGameSearchHeuristic;
 use hausarbeit::heuristic::parameterized_heuristic::{ParameterizedHeuristic, NUM_FEATURES};
-use hausarbeit::{agent, genetic_algorithm, runtime_test};
+use hausarbeit::{agent, genetic_algorithm, quality_test, runtime_test};
 use rayon::iter::ParallelIterator;
 use rayon::prelude::IntoParallelRefMutIterator;
 use std::cell::RefCell;
@@ -44,7 +44,9 @@ fn main() {
         .build_global()
         .unwrap();
 
-    runtime_test::run();
+    //runtime_test::run();
+
+    //quality_test::run();
 
     //agent::monte_carlo_tree_agent::run();
 

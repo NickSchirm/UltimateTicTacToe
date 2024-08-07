@@ -33,6 +33,11 @@ pub trait Agent: Send + Sync {
     /// # Returns
     /// The index of the field to play on
     fn act(&mut self, board: UltimateBoard, player: Player, turn: u32) -> Option<u8>;
+
+    /// Returns the information of the agent
+    ///
+    /// # Returns
+    /// The information of the agent
     fn get_info(&self) -> AgentInfo;
 }
 

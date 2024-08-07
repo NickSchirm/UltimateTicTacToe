@@ -1,4 +1,4 @@
-//! # Ultimate Tic Tac Toe implementation, game agent, heuristic and benchmarking tools
+//! # Ultimate Tic Tac Toe implementation, game agents, heuristics and benchmarking tools
 //!
 //! This library provides a full implementation of the Ultimate Tic Tac Toe game.
 //! The game can be played by two agents.
@@ -46,4 +46,5 @@ pub mod agent;
 pub mod game;
 pub mod genetic_algorithm;
 pub mod heuristic;
+pub mod quality_test;
 pub mod runtime_test;

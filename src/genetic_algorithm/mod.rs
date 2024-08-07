@@ -1,4 +1,4 @@
-//! # Contains various modules for the genetic algorithm
+//! # Contains the [GeneticAlgorithm] struct as well as the genetic algorithm operators
 //!
 //! The genetic algorithm is used to optimize the weights of [ParameterizedHeuristic](crate::heuristic::parameterized_heuristic::ParameterizedHeuristic).
 

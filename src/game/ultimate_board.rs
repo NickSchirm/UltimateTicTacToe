@@ -112,6 +112,8 @@ pub const CENTER_INDEX: usize = 4;
 /// * `next_board` - The index of the next board to play on
 /// * `board_status` - The status of each board
 /// * `game_status` - The status of the game
+/// * `current_player` - The current player
+/// * `hash` - The Zobrist hash of the board
 #[derive(Copy, Clone, Debug)]
 pub struct UltimateBoard {
     boards: [Board; 9],

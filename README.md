@@ -1,7 +1,31 @@
 # Ultimate Tic Tac Toe implementation, game agents, heuristics and benchmarking tools
 
-Result of genetic algorithm with 10 genes and 100 iterations: Gene { values: [-0.9011298820760223, -0.9047473011303433, -1.9878186210206341, -0.940735228598089, 1.3140632491937836, 0.5190040302978252, 0.7128491119909083, 1.2756963483965846, 2.264309782234436, 0.14115748887705593, 1.2441779567914344, 2.0944754371556287] }
+This repository contains an implementation of the Ultimate Tic Tac Toe game, as well as a number of game agents, heuristics and benchmarking tools.
 
+## Game agents
+
+The following game agents are implemented:
+
+- MiniMax agent
+- Monte Carlo Tree Search agent
+- Random agent
+- Human agent
+- RandomStart agent
+- Benched agent
+
+## Heuristics
+
+The following heuristics are implemented:
+
+- Custom heuristic
+- Parameterized heuristic
+- Monte Carlo Game Search heuristic
+
+The parameterized heuristic can be used to optimize the weights of the heuristic using a genetic algorithm.
+
+The gene used for the experiments is stored [here](/tests/used%20for%20experiments.gene).
+
+## LICENSE
 
 Copyright (C) 2024 Nick Schirm
 

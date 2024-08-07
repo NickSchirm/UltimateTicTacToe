@@ -10,11 +10,19 @@ use std::collections::{HashMap, HashSet};
 ///
 /// The results are stored in '../res_multiple.csv'.
 pub fn process() {
+    println!("Enter the path to the input CSV file:");
+
+    let mut input_path = String::new();
+    std::io::stdin()
+        .read_line(&mut input_path)
+        .expect("Could not read line");
+
     let mut reader = ReaderBuilder::new()
         .has_headers(true)
-        .from_path("mcts 1000-10000.csv")
+        .from_path(format!("{}.csv", input_path.trim()))
         .expect("Could not create CSV reader");
-    let mut writer = Writer::from_path("../res_multiple.csv").expect("Could not create CSV writer");
+    let mut writer = Writer::from_path(format!("res {}.csv", input_path.trim()))
+        .expect("Could not create CSV writer");
     let mut map = HashMap::new();
 
     for result in reader.records() {
