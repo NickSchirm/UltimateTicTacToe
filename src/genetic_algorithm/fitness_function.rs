@@ -1,5 +1,10 @@
 //! # Contains the [FitnessFunction] struct
 
+use std::collections::HashMap;
+
+use itertools::Itertools;
+use rayon::iter::{IntoParallelIterator, ParallelIterator};
+
 use crate::game::Game;
 use crate::game_result::GameResult;
 use crate::game_result::GameResult::Win;
@@ -7,7 +12,6 @@ use crate::genetic_algorithm::gene::Gene;
 use crate::minimax_agent::MiniMaxAgent;
 use crate::parameterized_heuristic::ParameterizedHeuristic;
 use crate::player::Player::{One, Two};
-use std::collections::HashMap;
 
 /// # Struct representing a fitness function
 ///
@@ -34,18 +38,23 @@ impl FitnessFunction {
     /// * `genes` - The genes to calculate the fitness for
     /// # Returns
     /// The genes with their fitness
-    pub(crate) fn calculate_fitness(&self, genes: Vec<Gene>) -> Vec<(Gene, f64)> {
-        let len = genes.len();
-        let mut genes_with_fitness: HashMap<usize, f64> = HashMap::with_capacity(len);
+    pub fn calculate_fitness(&self, genes: Vec<Gene>) -> Vec<(Gene, f64)> {
+        let enriched_genes: Vec<Vec<(usize, Gene)>> = genes
+            .clone()
+            .into_iter()
+            .enumerate()
+            .combinations(2)
+            .collect();
+        let mut genes_with_fitness = HashMap::with_capacity(genes.len());
 
-        for i in 0..len {
-            let lhs = genes[i].clone();
-            let mut lhs_fitness = genes_with_fitness.get(&i).unwrap_or(&0.0).clone();
+        enriched_genes
+            .into_par_iter()
+            .map(|pair| {
+                let (lhs_index, lhs) = pair[0].clone();
+                let (rhs_index, rhs) = pair[1].clone();
 
-            for j in i + 1..len {
-                let rhs = genes[j].clone();
-
-                let mut rhs_fitness = genes_with_fitness.get(&j).unwrap_or(&0.0).clone();
+                let mut lhs_fitness = 0.;
+                let mut rhs_fitness = 0.;
 
                 match self.play_game_with(lhs.clone(), rhs.clone()) {
                     Win(One) => {
@@ -71,15 +80,21 @@ impl FitnessFunction {
                     _ => (),
                 }
 
-                genes_with_fitness.insert(j, rhs_fitness);
-            }
+                ((lhs_index, lhs_fitness), (rhs_index, rhs_fitness))
+            })
+            .collect::<Vec<((usize, f64), (usize, f64))>>()
+            .into_iter()
+            .for_each(|((lhs_index, lhs_fitness), (rhs_index, rhs_fitness))| {
+                let lhs = genes_with_fitness.entry(lhs_index).or_insert(0.);
+                *lhs += lhs_fitness;
 
-            genes_with_fitness.insert(i, lhs_fitness);
-        }
+                let rhs = genes_with_fitness.entry(rhs_index).or_insert(0.);
+                *rhs += rhs_fitness;
+            });
 
         genes_with_fitness
-            .iter()
-            .map(|(i, fitness)| (genes[*i].clone(), *fitness))
+            .into_iter()
+            .map(|(i, fitness)| (genes[i].clone(), fitness))
             .collect()
     }
 

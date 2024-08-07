@@ -92,7 +92,7 @@ mod tests {
         ];
 
         let mut genetic_algorithm = GeneticAlgorithm::new(
-            10,
+            1,
             genes,
             Box::new(RouletteWheelSelection {}),
             Box::new(ShiftMutation {}),
