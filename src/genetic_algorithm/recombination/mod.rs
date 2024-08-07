@@ -1,4 +1,10 @@
 //! # Contains the [Recombination] trait and implementations
+//!
+//! A recombination is used to recombine two genes.
+//! The recombination can be used to create new genes from two given genes.
+//!
+//! The way the genes are recombined is determined by the implementation.
+
 pub mod one_point_crossover;
 pub mod two_point_crossover;
 
@@ -6,8 +12,15 @@ use itertools::Itertools;
 use crate::genetic_algorithm::gene::Gene;
 
 /// # Trait representing a recombination
+/// 
+/// A recombination is used to recombine two genes.
+/// The recombination can be used to create new genes from two given genes.
 pub trait Recombination {
 	/// Recombines the given genes
+	/// 
+	/// Two genes are recombined to create two new genes.
+	/// 
+	/// If the amount of genes is odd, then the last gene will be copied without modification.
 	/// # Arguments
 	/// * `genes` - The genes to recombine
 	/// # Returns

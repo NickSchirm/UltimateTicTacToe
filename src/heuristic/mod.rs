@@ -23,7 +23,7 @@ pub static MIN_VALUE: Lazy<f64> = Lazy::new(|| {
 	])
 });
 /// The maximum value a heuristic can return
-pub const MAX_VALUE: Lazy<f64> = Lazy::new(|| {
+pub static MAX_VALUE: Lazy<f64> = Lazy::new(|| {
 	f64::from_be_bytes([
 		0b01111111, 0b11101111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111,
 		0b11111110,

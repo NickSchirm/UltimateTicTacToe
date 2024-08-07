@@ -50,7 +50,7 @@ pub struct ParameterizedHeuristic {
     /// 12. Number of partial wins difference on the entire board
     /// 13. Whether the current player can freely choose a small board
     pub values: Vec<f64>,
-    small_board_lookup_table: HashMap<u32, f64>,
+    //small_board_lookup_table: HashMap<u32, f64>,
 }
 
 impl ParameterizedHeuristic {
@@ -58,7 +58,7 @@ impl ParameterizedHeuristic {
         ParameterizedHeuristic {
             player,
             values: values.clone(),
-            small_board_lookup_table: ParameterizedMiniBoardHeuristic::new(values).initialize(),
+            //small_board_lookup_table: ParameterizedMiniBoardHeuristic::new(values).initialize(),
         }
     }
 }
@@ -74,12 +74,16 @@ impl Heuristic for ParameterizedHeuristic {
         if board.get_game_status() == GameResult::Win(self.player.get_opponent()) {
             return *MIN_VALUE;
         }
+        
+        let mini_heuristic = ParameterizedMiniBoardHeuristic::new(self.values.clone());
 
         for small_board in board.get_boards() {
-            value += *self
-                .small_board_lookup_table
-                .get(&small_board.to_key())
-                .unwrap()
+            // value += *self
+            //     .small_board_lookup_table
+            //     .get(&small_board.to_key())
+            //     .unwrap()
+            //     * (if self.player == Player::One { 1 } else { -1 }) as f64;
+            value += mini_heuristic.evaluate(small_board)
                 * (if self.player == Player::One { 1 } else { -1 }) as f64;
         }
 

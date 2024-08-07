@@ -1,3 +1,4 @@
+#![allow(unused_imports)]
 use std::sync::atomic::{AtomicUsize, Ordering};
 use std::time::Instant;
 
@@ -8,6 +9,7 @@ use hausarbeit::agent::minimax_agent::MiniMaxAgent;
 use hausarbeit::game::game_result::GameResult;
 use hausarbeit::game::player::Player::{One, Two};
 use hausarbeit::game::Game;
+use hausarbeit::genetic_algorithm::fitness::full_ordering_fitness::FullOrderingFitness;
 use hausarbeit::genetic_algorithm::gene::Gene;
 use hausarbeit::genetic_algorithm::mutation::normal_distribution_mutation::NormalDistributionMutation;
 use hausarbeit::genetic_algorithm::mutation::shift_mutation::ShiftMutation;
@@ -38,11 +40,10 @@ fn main() {
     let mut genetic_algorithm = GeneticAlgorithm::new(
         10,
         genes,
+        Box::new(FullOrderingFitness::new(4,1)),
         Box::new(RouletteWheelSelection {}),
         Box::new(NormalDistributionMutation::new(0.1)),
         Box::new(OnePointCrossover {}),
-        2,
-        1,
     );
 
     genetic_algorithm.run();

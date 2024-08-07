@@ -7,6 +7,7 @@ use crate::genetic_algorithm::gene::Gene;
 /// # Trait representing a mutation
 ///
 /// A mutation is a function that changes a gene.
+/// The way the gene is changed is determined by the implementation.
 pub trait Mutation {
 	/// Mutates the given gene
 	/// # Arguments

@@ -1,4 +1,4 @@
-# Ultimate Tic Tac Toe, implementation of game and agents
+# Ultimate Tic Tac Toe implementation, game agents, heuristics and benchmarking tools
 Copyright (C) 2024 Nick Schirm
 
 This program is free software: 

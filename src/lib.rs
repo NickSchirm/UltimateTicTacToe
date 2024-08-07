@@ -1,7 +1,7 @@
-//! # Ultimate Tic Tac Toe implementation, game agent, heuristic and benchmarking tools.
+//! # Ultimate Tic Tac Toe implementation, game agent, heuristic and benchmarking tools
 //!
 //! This library provides a full implementation of the Ultimate Tic Tac Toe game.
-//! The game can be played by two agent.
+//! The game can be played by two agents.
 //!
 //! ## Provided agents:
 //! * [HumanAgent](agent::human_agent::HumanAgent): An agent that requires user input to play.

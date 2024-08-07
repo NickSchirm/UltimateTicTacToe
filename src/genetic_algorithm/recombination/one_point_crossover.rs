@@ -1,8 +1,14 @@
+//! # Contains the [OnePointCrossover] struct
 use rand::distributions::Uniform;
 use crate::genetic_algorithm::gene::Gene;
 use crate::genetic_algorithm::recombination::Recombination;
 use rand::Rng;
 
+/// # Recombination that uses one point crossover
+/// 
+/// This recombination chooses a random point in the genes and swaps the values after that point.
+/// 
+/// The point is chosen randomly from a uniform distribution.
 pub struct OnePointCrossover {}
 
 impl Recombination for OnePointCrossover {

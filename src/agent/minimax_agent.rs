@@ -125,11 +125,7 @@ impl<H: Heuristic> MiniMaxAgent<H> {
             return self.heuristic.evaluate(board);
         }
 
-        let mut possible_moves = board.get_possible_moves().peekable();
-
-        if possible_moves.peek().is_none() {
-            return self.heuristic.evaluate(board);
-        }
+        let possible_moves = board.get_possible_moves();
 
         // Check if the board is in the transposition table
         if let Some(evaluation) = transposition_table.get(&board.get_hash()) {
@@ -212,11 +208,7 @@ impl<H: Heuristic> MiniMaxAgent<H> {
             return self.heuristic.evaluate(board);
         }
 
-        let mut possible_moves = board.get_possible_moves().peekable();
-
-        if possible_moves.peek().is_none() {
-            return self.heuristic.evaluate(board);
-        }
+        let possible_moves = board.get_possible_moves();
 
         if maximizing {
             for current_move in possible_moves {

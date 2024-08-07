@@ -2,41 +2,47 @@
 //!
 //! The genetic algorithm is used to optimize the weights of [ParameterizedHeuristic](crate::heuristic::parameterized_heuristic::ParameterizedHeuristic).
 
-use crate::genetic_algorithm::fitness_function::FitnessFunction;
+use std::time::Instant;
 use itertools::Itertools;
+use crate::genetic_algorithm::fitness::FitnessFunction;
+use crate::genetic_algorithm::mutation::Mutation;
+use crate::genetic_algorithm::recombination::Recombination;
+use crate::genetic_algorithm::selection::Selection;
 
-pub mod fitness_function;
 pub mod gene;
 pub mod mutation;
 pub mod recombination;
 pub mod selection;
+pub mod fitness;
 
 /// # Struct representing a genetic algorithm
 ///
 /// The genetic algorithm is used to optimize the weights of a heuristic.
+/// 
+/// The fitness, selection, mutation and recombination operators can be set. 
+/// Multiple implementations are available.
 pub struct GeneticAlgorithm {
     generations: usize,
     genes: Vec<gene::Gene>,
-    fitness_function: FitnessFunction,
-    selection: Box<dyn selection::Selection>,
-    mutation: Box<dyn mutation::Mutation>,
-    recombination: Box<dyn recombination::Recombination>,
+    fitness: Box<dyn FitnessFunction>,
+    selection: Box<dyn Selection>,
+    mutation: Box<dyn Mutation>,
+    recombination: Box<dyn Recombination>,
 }
 
 impl GeneticAlgorithm {
     pub fn new(
         generations: usize,
         genes: Vec<gene::Gene>,
+        fitness: Box<dyn fitness::FitnessFunction>,
         selection: Box<dyn selection::Selection>,
         mutation: Box<dyn mutation::Mutation>,
         recombination: Box<dyn recombination::Recombination>,
-        depth: u32,
-        quiescence_depth: u32,
     ) -> Self {
         GeneticAlgorithm {
             generations,
             genes,
-            fitness_function: FitnessFunction::new(depth, quiescence_depth),
+            fitness,
             selection,
             mutation,
             recombination,
@@ -47,18 +53,26 @@ impl GeneticAlgorithm {
     ///
     /// This function runs the genetic algorithm for the given number of generations.
     pub fn run(&mut self) {
-        for _ in 0..self.generations {
-            let genes_with_fitness = self.fitness_function.calculate_fitness(self.genes.clone());
+        let pre_run = Instant::now();
+        let mut pre_gen = Instant::now();
+        for i in 0..self.generations {
+            let genes_with_fitness = self.fitness.calculate_fitness(self.genes.clone());
 
             let selected_genes = self.selection.select(genes_with_fitness);
 
             let mutated_genes = self.mutation.mutate_all(selected_genes);
 
             self.genes = self.recombination.recombine_all(mutated_genes);
-        }
 
-        let best = self
-            .fitness_function
+            println!("Generation {} done in {} seconds", i, pre_gen.elapsed().as_secs_f32());
+            pre_gen = Instant::now();
+        }
+        println!();
+        println!("Genetic algorithm done in {:?}", pre_run.elapsed());
+        println!();
+
+        println!("Calculating best gene");
+        let best = self.fitness
             .calculate_fitness(self.genes.clone())
             .into_iter()
             .sorted_by(|(_, a), (_, b)| b.partial_cmp(a).unwrap())
@@ -67,7 +81,9 @@ impl GeneticAlgorithm {
     }
 }
 
+#[cfg(test)]
 mod tests {
+    use crate::genetic_algorithm::fitness::full_ordering_fitness::FullOrderingFitness;
     use super::*;
     use crate::genetic_algorithm::gene::Gene;
     use crate::genetic_algorithm::mutation::normal_distribution_mutation::NormalDistributionMutation;
@@ -87,11 +103,10 @@ mod tests {
         let mut genetic_algorithm = GeneticAlgorithm::new(
             1,
             genes,
+            Box::new(FullOrderingFitness::new(2, 1)),
             Box::new(RouletteWheelSelection {}),
             Box::new(NormalDistributionMutation::new(0.1)),
             Box::new(TwoPointCrossover {}),
-            2,
-            2,
         );
 
         genetic_algorithm.run();

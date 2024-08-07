@@ -1,8 +1,14 @@
+//! # Contains the [TwoPointCrossover] struct
 use rand::distributions::Uniform;
 use rand::Rng;
 use crate::genetic_algorithm::gene::Gene;
 use crate::genetic_algorithm::recombination::Recombination;
 
+/// # Recombination that uses two point crossover
+/// 
+/// This recombination chooses two random points in the genes and swaps the values between those points.
+/// 
+/// The points are chosen randomly from a uniform distribution.
 pub struct TwoPointCrossover {}
 
 impl Recombination for TwoPointCrossover {
