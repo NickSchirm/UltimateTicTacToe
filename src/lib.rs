@@ -21,13 +21,13 @@
 //! The library also contains a [GeneticAlgorithm](genetic_algorithm::GeneticAlgorithm) as well as various [Selection](genetic_algorithm::selection), [Mutation](genetic_algorithm::mutation) and [Recombination](genetic_algorithm::recombination) operators to optimize the weights of the [ParameterizedHeuristic](heuristic::parameterized_heuristic::ParameterizedHeuristic).
 //!
 //! # Usage
-//! Initialize a game with two agent and play it:
+//! Initialize a game with two agents and play it:
 //! ```rust
+//! use hausarbeit::agent::minimax_agent::MiniMaxAgent;
+//! use hausarbeit::agent::random_agent::RandomAgent;
 //! use hausarbeit::heuristic::custom_heuristic::CustomHeuristic;
 //! use hausarbeit::game::Game;
-//! use hausarbeit::agent::minimax_agent::MiniMaxAgent;
 //! use hausarbeit::game::player::Player;
-//! use hausarbeit::agent::random_agent::RandomAgent;
 //!
 //! let agent_one = MiniMaxAgent::new(2, 1, CustomHeuristic::new(Player::One));
 //! let agent_two = RandomAgent::new();
