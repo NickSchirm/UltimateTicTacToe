@@ -1,127 +1,98 @@
-use crate::game_result::GameResult;
-use crate::game_result::GameResult::Continue;
-use crate::player::Player;
+use std::ops::{BitAnd, BitAndAssign, BitOr, BitOrAssign, BitXor, BitXorAssign, Not};
 
-/// All win positions for the board encoded in the internal representation
-static WIN_POSITIONS: [u16; 8] = [
-    // Rows
-    0b111,
-    0b110001000,
-    0b1110000,
-    // Columns
-    0b11000001,
-    0b100100010,
-    0b11100,
-    // Diagonals
-    0b100010001,
-    0b101000100,
-];
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct BitBoard(u16);
 
-#[derive(Copy, Clone, Debug)]
-pub struct Bitboard {
-    /// This represents a 3*3 board. Each char represents the state for each player.
-    /// <p>
-    /// Internal representation: <p>
-    ///  0 | 1 | 2 <p>
-    ///  --------- <p>
-    ///  7 | 8 | 3 <p>
-    ///  --------- <p>
-    ///  6 | 5 | 4 <p>
-    /// <p>
-    ///  Human-readable representation: <p>
-    ///  0 | 1 | 2 <p>
-    ///  --------- <p>
-    ///  3 | 4 | 5 <p>
-    /// --------- <p>
-    /// 6 | 7 | 8
-    board: [u16; 2],
-    /// The unique id of the board <p>
-    /// This is used to offset the move ids for each board
-    unique_id: u16,
+impl BitBoard {
+    pub fn new(n: u16) -> Self {
+        debug_assert!(n < 512, "BitBoard value out of bounds");
+        BitBoard(n)
+    }
+
+    pub const EMPTY: BitBoard = BitBoard(0);
+
+    pub fn first_square(&self) -> Option<u8> {
+        if self.0 == 0 {
+            None
+        } else {
+            Some(self.0.trailing_zeros() as u8)
+        }
+    }
+
+    pub fn pop_first_square(&mut self) -> Option<u8> {
+        let square = self.first_square();
+        square.inspect(|s| self.0 ^= 1 << *s as u16);
+        square
+    }
 }
 
-impl Bitboard {
-    pub fn new(unique_id: u16) -> Bitboard {
-        Bitboard {
-            board: [0, 0],
-            unique_id,
-        }
+impl IntoIterator for BitBoard {
+    type Item = u8;
+    type IntoIter = BitBoardIterator;
+
+    fn into_iter(self) -> Self::IntoIter {
+        BitBoardIterator { board: self }
     }
+}
 
-    /// Returns the possible moves for the current board as an iterator. <p>
-    /// The unique id * 9 is used to offset the moves for each board.
-    /// # Returns
-    /// An iterator of possible moves
-    pub fn get_possible_moves(&self) -> impl Iterator<Item = u16> {
-        let combined = self.board[0] | self.board[1];
-        let id = self.unique_id;
-        (0..9)
-            .map(move |i| i + 9 * id)
-            .filter(move |i| (combined & (1 << i) as u16) == 0)
+impl Not for BitBoard {
+    type Output = Self;
+
+    fn not(self) -> Self::Output {
+        BitBoard(!self.0 & 0b111111111)
     }
+}
 
-    /// # <b> FOR INTERNAL USE ONLY!</b> <p>
-    /// Set the bit at the given index to the given player <p>
-    /// The human is the internal representation of the board
-    /// # Arguments
-    /// * `index` - The index of the board
-    /// * `player` - The player to set the bit to
-    pub(crate) fn set_internal(&mut self, index: u8, player: Player) {
-        if index > 8 {
-            panic!("Index out of bounds");
-        }
+impl BitOr for BitBoard {
+    type Output = Self;
 
-        self.board[player as usize] |= 1 << index;
+    fn bitor(self, rhs: Self) -> Self {
+        BitBoard(self.0 | rhs.0)
     }
+}
 
-    /// Set the bit at the given index to the given player <p>
-    /// The index is the human index (0-8)
-    /// # Arguments
-    /// * `index` - The index of the board
-    /// * `player` - The player to set the bit to
-    pub fn set(&mut self, index: u8, player: Player) {
-        if index > 8 {
-            panic!("Index out of bounds");
-        }
-
-        let translated_index = Self::from_human_to_bit(index);
-
-        self.board[player as usize] |= 1 << translated_index;
+impl BitOrAssign for BitBoard {
+    fn bitor_assign(&mut self, rhs: Self) {
+        self.0 |= rhs.0;
     }
+}
 
-    /// Check if the game has been won
-    /// # Returns
-    /// The result of the game
-    pub fn check_if_won(&self) -> GameResult {
-        for i in WIN_POSITIONS.iter() {
-            for player in Player::iter() {
-                // If the result of the bitwise AND is the same as the input, the player has won
-                if (i & self.board[player as usize]) == *i {
-                    return GameResult::from(player);
-                }
-            }
-        }
+impl BitAnd for BitBoard {
+    type Output = Self;
 
-        if self.board[0] | self.board[1] == 0b111111111 {
-            return GameResult::Draw;
-        }
-
-        Continue
+    fn bitand(self, rhs: Self) -> Self::Output {
+        BitBoard(self.0 & rhs.0)
     }
+}
 
-    /// Translates the human index to the index in the internal representation
-    fn from_human_to_bit(index: u8) -> u8 {
-        match index {
-            0 => 0,
-            1 => 1,
-            2 => 2,
-            3 => 7,
-            4 => 8,
-            5 => 3,
-            6 => 6,
-            7 => 5,
-            8 => 4,
-            _ => panic!("Index out of bounds"),
-        }
+impl BitAndAssign for BitBoard {
+    fn bitand_assign(&mut self, rhs: Self) {
+        self.0 &= rhs.0
+    }
+}
+
+impl BitXor for BitBoard {
+    type Output = Self;
+
+    fn bitxor(self, rhs: Self) -> Self::Output {
+        BitBoard(self.0 ^ rhs.0)
+    }
+}
+
+impl BitXorAssign for BitBoard {
+    fn bitxor_assign(&mut self, rhs: Self) {
+        self.0 ^= rhs.0;
+    }
+}
+
+pub struct BitBoardIterator {
+    board: BitBoard,
+}
+
+impl Iterator for BitBoardIterator {
+    type Item = u8;
+
+    fn next(&mut self) -> Option<Self::Item> {
+        self.board.pop_first_square()
     }
 }

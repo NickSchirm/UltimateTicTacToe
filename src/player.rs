@@ -1,5 +1,5 @@
 /// Enum representing the two players
-#[derive(Clone, Copy, Debug)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum Player {
     One = 0,
     Two = 1,

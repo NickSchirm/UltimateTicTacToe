@@ -1,7 +1,7 @@
 use crate::player::Player;
 
 /// Enum representing the possible game results
-#[derive(Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub enum GameResult {
     Win(Player),
     Draw,
