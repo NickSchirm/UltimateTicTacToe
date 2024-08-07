@@ -5,7 +5,7 @@
 use serde::{Deserialize, Serialize};
 
 /// Enum representing the two players
-#[derive(Clone, Copy, Debug, PartialEq, Deserialize, Serialize, Default)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, Deserialize, Serialize, Default)]
 pub enum Player {
     #[default]
     One = 0,
