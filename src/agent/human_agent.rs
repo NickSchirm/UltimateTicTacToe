@@ -14,13 +14,13 @@ use itertools::Itertools;
 use once_cell::sync::Lazy;
 
 use crate::agent::minimax_agent::MiniMaxAgent;
-use crate::agent::{Agent, AgentInfo};
 use crate::agent::monte_carlo_tree_agent::MonteCarloTreeAgent;
+use crate::agent::{Agent, AgentInfo};
 use crate::game::board::BoardSymbol;
-use crate::game::Game;
 use crate::game::game_result::GameResult;
 use crate::game::player::Player;
 use crate::game::ultimate_board::UltimateBoard;
+use crate::game::Game;
 use crate::heuristic::custom_heuristic::CustomHeuristic;
 
 static HIGHLIGHT_COLOR: Lazy<CustomColor> = Lazy::new(|| CustomColor::new(87, 46, 105));
@@ -335,6 +335,6 @@ pub fn start_game_with_human() {
         //Box::new(MiniMaxAgent::new(8, 1, CustomHeuristic::new(Player::Two))),
         Box::new(MonteCarloTreeAgent::new(10000)),
     );
-    HumanAgent::print_board(game.get_board().clone(), None);
+    HumanAgent::print_board(*game.get_board(), None);
     println!("Result: {:?}", game.play());
 }

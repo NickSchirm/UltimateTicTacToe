@@ -9,12 +9,12 @@
 //!
 //! The [ParameterizedMiniBoardHeuristic] struct represents a [MiniBoardHeuristic] that uses weights for the features to evaluate small boards.
 
-use std::collections::HashMap;
 use crate::game::board::Board;
 use crate::game::game_result::GameResult;
 use crate::game::player::Player;
 use crate::game::ultimate_board::{UltimateBoard, CENTER_INDEX, CORNER_INDICES, EDGE_INDICES};
 use crate::heuristic::{Heuristic, MiniBoardHeuristic, MAX_VALUE, MIN_VALUE};
+use std::collections::HashMap;
 
 /// The number of features the heuristic uses
 pub const NUM_FEATURES: usize = 12;
@@ -52,9 +52,9 @@ pub struct ParameterizedHeuristic {
 
 impl ParameterizedHeuristic {
     /// Creates a new [ParameterizedHeuristic]
-    /// 
+    ///
     /// The values are used as weights for the features.
-    /// 
+    ///
     /// # Arguments
     /// * `player` - The [player](Player) for which the heuristic should evaluate the best move
     /// * `values` - The weights for the features
@@ -65,12 +65,12 @@ impl ParameterizedHeuristic {
             small_board_lookup_table: None,
         }
     }
-    
+
     /// Creates a new [ParameterizedHeuristic] with a lookup table for small boards
-    /// 
+    ///
     /// The lookup table is used to evaluate small boards.
     /// The values are used as weights for the features.
-    /// 
+    ///
     /// # Arguments
     /// * `player` - The [player](Player) for which the heuristic should evaluate the best move
     /// * `values` - The weights for the features
@@ -78,7 +78,9 @@ impl ParameterizedHeuristic {
         ParameterizedHeuristic {
             player,
             values: values.clone(),
-            small_board_lookup_table: Some(ParameterizedMiniBoardHeuristic::new(values).initialize()),
+            small_board_lookup_table: Some(
+                ParameterizedMiniBoardHeuristic::new(values).initialize(),
+            ),
         }
     }
 }

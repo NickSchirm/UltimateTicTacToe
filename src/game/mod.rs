@@ -70,7 +70,7 @@ impl Game {
 
         game_result
     }
-    
+
     pub fn get_board(&self) -> &UltimateBoard {
         &self.board
     }

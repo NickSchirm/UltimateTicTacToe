@@ -3,6 +3,7 @@
 use csv::Writer;
 use hausarbeit::agent::benched::BenchedAgent;
 use hausarbeit::agent::minimax_agent::MiniMaxAgent;
+use hausarbeit::agent::monte_carlo_tree_agent::MonteCarloTreeAgent;
 use hausarbeit::game::game_result::GameResult;
 use hausarbeit::game::player::Player::{One, Two};
 use hausarbeit::game::Game;
@@ -24,7 +25,6 @@ use std::path::Path;
 use std::sync::atomic::{AtomicUsize, Ordering};
 use std::sync::{Arc, Mutex};
 use std::time::Instant;
-use hausarbeit::agent::monte_carlo_tree_agent::MonteCarloTreeAgent;
 
 const NUM_GAMES: u32 = 100;
 const DEPTH: u32 = 7;
@@ -41,7 +41,7 @@ fn main() {
     //runtime_test::run();
 
     //agent::monte_carlo_tree_agent::run();
-    
+
     //run();
 
     genetic_algorithm::run();
@@ -51,7 +51,9 @@ fn run() {
     let mut wins = [0, 0, 0];
     let mut games = vec![];
 
-    let writer = Arc::new(Mutex::new(Writer::from_path("res.csv").expect("Could not create CSV writer")));
+    let writer = Arc::new(Mutex::new(
+        Writer::from_path("res.csv").expect("Could not create CSV writer"),
+    ));
 
     for _ in 0..NUM_GAMES {
         let agent1 = MiniMaxAgent::new(DEPTH, QUIESCENCE_SEARCH_DEPTH, CustomHeuristic::new(One));

@@ -2,18 +2,18 @@
 //!
 //! The genetic algorithm is used to optimize the weights of [ParameterizedHeuristic](crate::heuristic::parameterized_heuristic::ParameterizedHeuristic).
 
-use crate::genetic_algorithm::fitness::FitnessFunction;
-use crate::genetic_algorithm::mutation::Mutation;
-use crate::genetic_algorithm::recombination::Recombination;
-use crate::genetic_algorithm::selection::Selection;
-use itertools::Itertools;
-use std::time::Instant;
 use crate::genetic_algorithm::fitness::full_ordering_fitness::FullOrderingFitness;
+use crate::genetic_algorithm::fitness::FitnessFunction;
 use crate::genetic_algorithm::gene::Gene;
 use crate::genetic_algorithm::mutation::normal_distribution_mutation::NormalDistributionMutation;
+use crate::genetic_algorithm::mutation::Mutation;
 use crate::genetic_algorithm::recombination::two_point_crossover::TwoPointCrossover;
+use crate::genetic_algorithm::recombination::Recombination;
 use crate::genetic_algorithm::selection::roulette_wheel_selection::RouletteWheelSelection;
+use crate::genetic_algorithm::selection::Selection;
 use crate::heuristic::parameterized_heuristic::NUM_FEATURES;
+use itertools::Itertools;
+use std::time::Instant;
 
 pub mod fitness;
 pub mod gene;
