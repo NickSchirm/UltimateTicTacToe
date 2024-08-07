@@ -119,6 +119,20 @@ impl Board {
         Continue
     }
 
+    pub fn get_positions_set_difference(&self, player: Player) -> i8 {
+        let mut diff = 0;
+
+        for _ in self.board[player as usize].into_iter() {
+            diff += 1;
+        }
+
+        for _ in self.board[(player as usize + 1) % 2].into_iter() {
+            diff -= 1;
+        }
+
+        diff
+    }
+
     /// Translates the human index to the index in the internal representation
     pub fn from_human_to_bit(index: u8) -> u8 {
         match index {

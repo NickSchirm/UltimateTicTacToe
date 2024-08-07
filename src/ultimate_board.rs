@@ -96,6 +96,10 @@ impl UltimateBoard {
         self.board_status
     }
 
+    pub fn get_boards(&self) -> [Board; 9] {
+        self.boards
+    }
+
     /// Get the possible moves for the ultimate board
     /// # Returns
     /// An iterator of the possible moves

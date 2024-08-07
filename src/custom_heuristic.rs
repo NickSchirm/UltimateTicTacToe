@@ -18,24 +18,35 @@ impl Heuristic for CustomHeuristic {
         let mut value = 0;
 
         if board.get_game_status() == GameResult::Win(self.player) {
-            return MIN_VALUE;
-        }
-
-        if board.get_game_status() == GameResult::Win(self.player.get_opponent()) {
             return MAX_VALUE;
         }
 
+        if board.get_game_status() == GameResult::Win(self.player.get_opponent()) {
+            return MIN_VALUE;
+        }
+
+        // Reward having more positions set on small boards than the opponent
+        for board in board.get_boards() {
+            let positions_set_difference = board.get_positions_set_difference(self.player) as isize;
+            if positions_set_difference > 0 {
+                value += positions_set_difference;
+            }
+        }
+
+        // Reward controlLing the center of the board
+        if board.get_board_status()[4] == GameResult::Win(self.player) {
+            value += 10;
+        }
+
+        // Reward having more small boards won than the opponent
         for board_status in board.get_board_status() {
             match board_status {
-                GameResult::Win(player) => {
-                    if player == self.player {
-                        value += 100;
+                GameResult::Win(winner) => {
+                    if winner == self.player {
+                        value += 10;
                     } else {
-                        value -= 100;
+                        value -= 10;
                     }
-                }
-                GameResult::Draw => {
-                    value += -50;
                 }
                 _ => {}
             }

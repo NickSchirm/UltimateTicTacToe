@@ -1,7 +1,7 @@
 use crate::ultimate_board::UltimateBoard;
 
 /// Trait representing an agent that can play Ultimate Tic Tac Toe
-pub trait Agent {
+pub trait Agent: Send + Sync {
     /// The act method is called to get the agent's move. <p>
     /// The agent should return the index of the field to play on. <p>
     /// The index is the human index (0-80) over all boards. <p>
@@ -11,5 +11,4 @@ pub trait Agent {
     /// # Returns
     /// The index of the field to play on
     fn act(&mut self, board: UltimateBoard) -> Option<u8>;
-    fn reset(&mut self);
 }

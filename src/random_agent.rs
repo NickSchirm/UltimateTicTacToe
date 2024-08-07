@@ -23,5 +23,4 @@ impl Agent for RandomAgent {
 
         Some(possible_moves[rand::thread_rng().gen_range(0..possible_moves.len())])
     }
-    fn reset(&mut self) {}
 }

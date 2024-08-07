@@ -3,13 +3,13 @@ use crate::game_result::GameResult;
 use crate::player::Player;
 use crate::ultimate_board::UltimateBoard;
 
-pub struct Game<'a> {
-    agents: Vec<&'a mut dyn Agent>,
+pub struct Game {
+    agents: Vec<Box<dyn Agent>>,
     board: UltimateBoard,
 }
 
-impl<'a> Game<'a> {
-    pub fn new(agent_one: &'a mut dyn Agent, agent_two: &'a mut dyn Agent) -> Game<'a> {
+impl Game {
+    pub fn new(agent_one: Box<dyn Agent>, agent_two: Box<dyn Agent>) -> Game {
         Game {
             agents: vec![agent_one, agent_two],
             board: UltimateBoard::new(),

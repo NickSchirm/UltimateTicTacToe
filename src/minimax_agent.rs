@@ -4,13 +4,13 @@ use crate::heuristic::Heuristic;
 use crate::ultimate_board::UltimateBoard;
 use std::cmp::max;
 
-pub struct MiniMaxAgent<'a> {
+pub struct MiniMaxAgent {
     depth: u32,
-    heuristic: &'a mut dyn Heuristic,
+    heuristic: Box<dyn Heuristic>,
 }
 
-impl<'a> MiniMaxAgent<'a> {
-    pub fn new(depth: u32, heuristic: &'a mut dyn Heuristic) -> MiniMaxAgent {
+impl MiniMaxAgent {
+    pub fn new(depth: u32, heuristic: Box<dyn Heuristic>) -> MiniMaxAgent {
         MiniMaxAgent { depth, heuristic }
     }
 
@@ -33,20 +33,13 @@ impl<'a> MiniMaxAgent<'a> {
         for current_move in possible_moves {
             let mut new_board = board.clone();
 
-            if new_board.make_move(current_move) {
-                if best_move.is_none() {
-                    best_move = Some(current_move);
-                }
+            new_board.make_move(current_move);
 
-                alpha = max(
-                    alpha,
-                    self.minimax(new_board, depth - 1, false, alpha, beta),
-                );
+            let value = self.minimax(new_board, depth - 1, false, alpha, beta);
 
-                if alpha >= beta {
-                    best_move = Some(current_move);
-                    break;
-                }
+            if value > alpha {
+                alpha = value;
+                best_move = Some(current_move);
             }
         }
 
@@ -70,11 +63,11 @@ impl<'a> MiniMaxAgent<'a> {
         alpha: isize,
         beta: isize,
     ) -> isize {
-        if depth == 0 {
+        if board.get_game_status() != Continue {
             return self.heuristic.evaluate(board);
         }
 
-        if board.get_game_status() != Continue {
+        if depth == 0 {
             return self.heuristic.evaluate(board);
         }
 
@@ -116,9 +109,8 @@ impl<'a> MiniMaxAgent<'a> {
     }
 }
 
-impl Agent for MiniMaxAgent<'_> {
+impl Agent for MiniMaxAgent {
     fn act(&mut self, board: UltimateBoard) -> Option<u8> {
         self.get_best_move(board, self.depth)
     }
-    fn reset(&mut self) {}
 }
